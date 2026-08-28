@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Electro Badr | About Us</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:wght@300;400;500;600;700;800&family=Rajdhani:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+
+    .ab-hero { position:relative; padding:160px 8% 80px; text-align:center; background:radial-gradient(ellipse 80% 60% at 50% 0%,rgba(255,123,34,0.08) 0%,transparent 70%); border-bottom:1px solid rgba(255,123,34,0.10); overflow:hidden; }
+    .ab-hero-year-bg { position:absolute; inset:0; display:flex; align-items:center; justify-content:center; pointer-events:none; overflow:hidden; }
+    .ab-hero-year-bg span { font-size:260px; font-weight:700; color:rgba(255,123,34,0.04); line-height:1; letter-spacing:-12px; user-select:none; font-family:'Bebas Neue',sans-serif; transition:transform .1s ease-out; }
+    .ab-badge { position:relative; display:inline-flex; align-items:center; gap:8px; background:rgba(255,123,34,0.10); border:1px solid rgba(255,123,34,0.25); color:#ff7b22; font-size:11px; letter-spacing:3px; padding:6px 18px; border-radius:20px; margin-bottom:24px; }
+    .ab-badge-dot { width:7px; height:7px; border-radius:50%; background:#ff7b22; animation:abPulse 2s ease-in-out infinite; }
+    @keyframes abPulse { 0%,100%{opacity:1;} 50%{opacity:0.3;} }
+    .ab-hero h1 { position:relative; font-family:'Bebas Neue',sans-serif; font-size:clamp(40px,7vw,72px); font-weight:400; color:white; letter-spacing:4px; margin:0 0 16px; line-height:1.1; text-shadow:0 0 60px rgba(255,123,34,0.15); transition:transform .1s ease-out; }
+    .ab-hero h1 span { color:#ff7b22; }
+    .ab-hero-sub { position:relative; font-size:16px; color:#a1a1aa; max-width:520px; margin:0 auto 40px; line-height:1.7; transition:transform .1s ease-out; }
+    .ab-stats { position:relative; display:flex; justify-content:center; gap:16px; flex-wrap:wrap; }
+    .ab-stat-pill { background:rgba(255,123,34,0.08); border:1px solid rgba(255,123,34,0.20); border-radius:50px; padding:12px 28px; text-align:center; transition:transform .3s ease,box-shadow .3s ease; }
+    .ab-stat-pill:hover { transform:translateY(-4px); box-shadow:0 10px 30px rgba(255,123,34,0.20); }
+    .ab-stat-num { font-family:'Bebas Neue',sans-serif; font-size:28px; color:#ff7b22; display:block; line-height:1; letter-spacing:2px; }
+    .ab-stat-lbl { font-size:10px; color:#666; letter-spacing:2px; text-transform:uppercase; margin-top:4px; display:block; }
+    .ab-marquee-wrap { overflow:hidden; border-top:1px solid rgba(255,123,34,0.08); border-bottom:1px solid rgba(255,123,34,0.08); padding:12px 0; background:rgba(255,123,34,0.03); }
+    .ab-marquee { display:flex; width:max-content; animation:abScroll 22s linear infinite; }
+    .ab-marquee:hover { animation-play-state:paused; }
+    @keyframes abScroll { from{transform:translateX(0);} to{transform:translateX(-50%);} }
+    .ab-marquee-item { display:flex; align-items:center; gap:8px; padding:0 32px; font-size:11px; letter-spacing:2px; color:#555; white-space:nowrap; border-right:1px solid rgba(255,123,34,0.10); text-transform:uppercase; }
+    .ab-marquee-item .m-accent { color:#ff7b22; }
+    .ab-section-label { font-size:11px; letter-spacing:3px; color:#ff7b22; text-transform:uppercase; margin-bottom:18px; }
+    .ab-story { display:grid; grid-template-columns:1fr 1fr; gap:0; border-bottom:1px solid rgba(255,255,255,0.05); }
+    .ab-story-left { padding:60px 6%; border-right:1px solid rgba(255,255,255,0.05); }
+    .ab-story-text { font-size:15px; color:#a1a1aa; line-height:1.9; margin-bottom:28px; }
+    .ab-story-text strong { color:white; font-weight:600; }
+    .ab-quote { padding:20px 24px; background:rgba(255,123,34,0.05); border-left:3px solid #ff7b22; border-radius:0 12px 12px 0; transition:transform .4s cubic-bezier(.22,.61,.36,1),box-shadow .4s ease; }
+    .ab-quote:hover { transform:translateX(6px); box-shadow:-4px 0 20px rgba(255,123,34,0.15); }
+    .ab-quote-text { font-size:14px; color:#d1d1d1; font-style:italic; line-height:1.7; }
+    .ab-quote-author { font-size:12px; color:#ff7b22; margin-top:10px; font-weight:600; letter-spacing:1px; }
+    .ab-timeline { padding:60px 6%; }
+    .ab-tl-item { display:flex; gap:18px; margin-bottom:28px; opacity:0; transform:translateX(40px) rotateY(15deg); transition:opacity .7s cubic-bezier(.22,.61,.36,1),transform .7s cubic-bezier(.22,.61,.36,1); }
+    .ab-tl-item.tl-visible { opacity:1; transform:translateX(0) rotateY(0deg); }
+    .ab-tl-item:nth-child(2){transition-delay:.1s;} .ab-tl-item:nth-child(3){transition-delay:.2s;} .ab-tl-item:nth-child(4){transition-delay:.3s;} .ab-tl-item:nth-child(5){transition-delay:.4s;} .ab-tl-item:nth-child(6){transition-delay:.5s;}
+    .ab-tl-track { display:flex; flex-direction:column; align-items:center; flex-shrink:0; width:14px; }
+    .ab-tl-dot { width:14px; height:14px; border-radius:50%; background:#ff7b22; border:2px solid rgba(255,123,34,0.30); box-shadow:0 0 10px rgba(255,123,34,0.35); flex-shrink:0; transition:transform .3s ease,box-shadow .3s ease; }
+    .ab-tl-item:hover .ab-tl-dot { transform:scale(1.4); box-shadow:0 0 20px rgba(255,123,34,0.7); }
+    .ab-tl-dot.current { box-shadow:0 0 18px rgba(255,123,34,0.70); animation:abPulse 2s ease-in-out infinite; }
+    .ab-tl-line { width:1px; flex:1; background:rgba(255,123,34,0.15); margin-top:5px; min-height:20px; transform-origin:top; transform:scaleY(0); transition:transform .6s ease; }
+    .ab-tl-item.tl-visible .ab-tl-line { transform:scaleY(1); }
+    .ab-tl-year { font-family:'Bebas Neue',sans-serif; font-size:18px; letter-spacing:2px; color:#ff7b22; line-height:1; margin-bottom:4px; }
+    .ab-tl-event { font-size:13px; color:#a1a1aa; line-height:1.6; }
+    .ab-tl-tag { display:inline-block; background:rgba(255,123,34,0.10); border:1px solid rgba(255,123,34,0.20); color:#ff7b22; font-size:9px; letter-spacing:2px; padding:3px 9px; border-radius:10px; margin-top:6px; text-transform:uppercase; }
+    .ab-values { padding:70px 8%; border-bottom:1px solid rgba(255,255,255,0.05); }
+    .ab-values-grid { display:grid; grid-template-columns:repeat(4,1fr); gap:16px; margin-top:24px; perspective:1000px; }
+    .ab-val { background:rgba(255,255,255,0.02); border:1px solid rgba(255,255,255,0.06); border-radius:20px; padding:28px 20px; text-align:center; transition:box-shadow .4s ease,border-color .4s ease; transform-style:preserve-3d; will-change:transform; opacity:0; transform:translateY(40px); }
+    .ab-val.val-visible { opacity:1; transform:translateY(0); transition:opacity .6s cubic-bezier(.22,.61,.36,1),transform .6s cubic-bezier(.22,.61,.36,1),box-shadow .4s ease,border-color .4s ease; }
+    .ab-val:nth-child(1){transition-delay:.05s;} .ab-val:nth-child(2){transition-delay:.15s;} .ab-val:nth-child(3){transition-delay:.25s;} .ab-val:nth-child(4){transition-delay:.35s;}
+    .ab-val-icon { width:52px; height:52px; border-radius:14px; background:rgba(255,123,34,0.10); display:flex; align-items:center; justify-content:center; margin:0 auto 16px; font-size:24px; transition:transform .4s cubic-bezier(.22,.61,.36,1),box-shadow .4s ease; }
+    .ab-val:hover .ab-val-icon { transform:translateZ(20px) scale(1.15) rotateY(360deg); box-shadow:0 10px 25px rgba(255,123,34,0.30); transition:transform .6s cubic-bezier(.22,.61,.36,1),box-shadow .4s ease; }
+    .ab-val-name { font-family:'Bebas Neue',sans-serif; font-size:16px; letter-spacing:2px; color:white; margin-bottom:8px; transition:color .3s ease; }
+    .ab-val:hover .ab-val-name { color:#ff7b22; }
+    .ab-val-desc { font-size:12px; color:#555; line-height:1.6; }
+    .ab-brands { padding:60px 8%; border-bottom:1px solid rgba(255,255,255,0.05); }
+    .ab-brands-grid { display:flex; flex-wrap:wrap; gap:10px; margin-top:24px; }
+    .ab-brand-chip { background:rgba(255,123,34,0.05); border:1px solid rgba(255,123,34,0.12); border-radius:10px; padding:10px 20px; font-family:'Bebas Neue',sans-serif; font-size:14px; letter-spacing:3px; color:#666; transition:background .3s ease,border-color .3s ease,color .3s ease,transform .3s ease; opacity:0; transform:scale(0.8); }
+    .ab-brand-chip.chip-visible { opacity:1; transform:scale(1); transition:background .3s ease,border-color .3s ease,color .3s ease,transform .4s cubic-bezier(.22,.61,.36,1),opacity .4s ease; }
+    .ab-brand-chip:hover { background:rgba(255,123,34,0.12); border-color:rgba(255,123,34,0.35); color:#ff7b22; transform:translateY(-3px) scale(1.05); }
+    .ab-cta { display:grid; grid-template-columns:1fr 1fr; gap:0; }
+    .ab-cta-left { padding:60px 6%; border-right:1px solid rgba(255,255,255,0.05); }
+    .ab-cta-title { font-family:'Bebas Neue',sans-serif; font-size:36px; letter-spacing:3px; color:white; margin-bottom:12px; line-height:1.1; }
+    .ab-cta-title span { color:#ff7b22; }
+    .ab-cta-sub { font-size:14px; color:#a1a1aa; line-height:1.7; margin-bottom:28px; }
+    .ab-btn-group { display:flex; gap:12px; flex-wrap:wrap; margin-bottom:24px; }
+    .ab-btn { display:inline-flex; align-items:center; gap:8px; background:#ff7b22; color:white; padding:14px 28px; border-radius:30px; font-size:14px; font-weight:600; text-decoration:none; border:none; transition:transform .3s cubic-bezier(.22,.61,.36,1),box-shadow .3s ease; position:relative; overflow:hidden; }
+    .ab-btn::before { content:''; position:absolute; top:0; left:-80%; width:60%; height:100%; background:linear-gradient(120deg,transparent,rgba(255,255,255,0.18),transparent); transform:skewX(-20deg); transition:left .5s ease; pointer-events:none; }
+    .ab-btn:hover::before { left:160%; }
+    .ab-btn:hover { transform:translateY(-3px); box-shadow:0 12px 30px rgba(255,123,34,0.45); }
+    .ab-btn-ghost { background:transparent; border:1px solid rgba(255,123,34,0.30); color:#ff7b22; }
+    .ab-btn-ghost:hover { background:rgba(255,123,34,0.08); box-shadow:0 8px 20px rgba(255,123,34,0.20); }
+    .ab-location-pill { display:flex; align-items:center; gap:12px; background:rgba(255,255,255,0.03); border:1px solid rgba(255,255,255,0.07); border-radius:12px; padding:14px 18px; transition:border-color .3s ease,transform .3s ease; }
+    .ab-location-pill:hover { border-color:rgba(255,123,34,0.25); transform:translateY(-2px); }
+    .ab-loc-dot { width:10px; height:10px; border-radius:50%; background:#ff7b22; flex-shrink:0; box-shadow:0 0 8px rgba(255,123,34,0.6); animation:abPulse 2s ease-in-out infinite; }
+    .ab-loc-text { font-size:13px; color:#a1a1aa; }
+    .ab-loc-text strong { color:white; font-weight:600; }
+    .ab-cta-right { padding:60px 6%; }
+    .ab-contact-cards { display:flex; flex-direction:column; gap:14px; margin-top:8px; }
+    .ab-contact-card { display:flex; align-items:center; gap:16px; padding:18px 20px; background:rgba(255,255,255,0.02); border:1px solid rgba(255,255,255,0.06); border-radius:16px; transition:border-color .3s ease,transform .3s ease,box-shadow .3s ease; opacity:0; transform:translateX(30px); }
+    .ab-contact-card.card-visible { opacity:1; transform:translateX(0); transition:border-color .3s ease,transform .4s cubic-bezier(.22,.61,.36,1),box-shadow .3s ease,opacity .4s ease; }
+    .ab-contact-card:nth-child(1){transition-delay:.05s;} .ab-contact-card:nth-child(2){transition-delay:.15s;} .ab-contact-card:nth-child(3){transition-delay:.25s;} .ab-contact-card:nth-child(4){transition-delay:.35s;}
+    .ab-contact-card:hover { border-color:rgba(255,123,34,0.25); transform:translateX(8px); box-shadow:0 8px 24px rgba(255,123,34,0.08); }
+    .ab-contact-icon { width:44px; height:44px; border-radius:12px; background:rgba(255,123,34,0.10); display:flex; align-items:center; justify-content:center; font-size:20px; flex-shrink:0; color:#ff7b22; transition:transform .4s cubic-bezier(.22,.61,.36,1),box-shadow .3s ease; }
+    .ab-contact-card:hover .ab-contact-icon { transform:rotateY(360deg) scale(1.1); box-shadow:0 6px 16px rgba(255,123,34,0.30); }
+    .ab-contact-label { font-size:10px; color:#555; letter-spacing:2px; text-transform:uppercase; margin-bottom:3px; }
+    .ab-contact-val { font-size:14px; color:white; font-weight:500; }
+    @media (max-width:900px) {
+      .ab-story { grid-template-columns:1fr; }
+      .ab-story-left { border-right:none; border-bottom:1px solid rgba(255,255,255,0.05); padding:40px 6%; }
+      .ab-timeline { padding:40px 6%; }
+      .ab-values-grid { grid-template-columns:1fr 1fr; }
+      .ab-cta { grid-template-columns:1fr; }
+      .ab-cta-left { border-right:none; border-bottom:1px solid rgba(255,255,255,0.05); }
+    }
+
+  </style>
+</head>
+<body>
+<div class="page-transition" id="pageTransition"></div>
+
+<!-- HAMBURGER -->
+<button class="hamburger-btn" id="hamburgerBtn" aria-label="Menu">
+  <span class="hb-line"></span><span class="hb-line"></span><span class="hb-line"></span>
+</button>
+<div class="hb-overlay" id="hbOverlay"></div>
+<div class="hb-menu" id="hbMenu">
+  <div class="hb-menu-logo"><img src="IMAGES/logoblack-removebg.png" alt="Electro Badr"></div>
+  <div class="hb-menu-links">
+    <a href="index.html" class="hb-link" data-page="index"><div class="hb-link-icon"><i class="fas fa-home"></i></div><span data-i18n="home">Home</span></a>
+    <a href="shop.html" class="hb-link" data-page="shop"><div class="hb-link-icon"><i class="fas fa-shopping-bag"></i></div><span data-i18n="shop">Shop</span></a>
+    <a href="aboutus.html" class="hb-link" data-page="about"><div class="hb-link-icon"><i class="fas fa-info-circle"></i></div><span data-i18n="about">About Us</span></a>
+    <a href="contact.html" class="hb-link" data-page="contact"><div class="hb-link-icon"><i class="fas fa-envelope"></i></div><span data-i18n="contact">Contact</span></a>
+  </div>
+  <div class="hb-menu-footer">
+    <p data-i18n="follow_us">FOLLOW US</p>
+    <div class="hb-footer-socials">
+      <a href="https://wa.me/212664700752" target="_blank" class="hb-soc"><i class="fab fa-whatsapp"></i></a>
+      <a href="#" class="hb-soc"><i class="fab fa-instagram"></i></a>
+      <a href="#" class="hb-soc"><i class="fab fa-facebook"></i></a>
+      <a href="#" class="hb-soc"><i class="fab fa-tiktok"></i></a>
+    </div>
+  </div>
+</div>
+
+<!-- NAVBAR -->
+<header class="navbar">
+  <div class="logo"><a href="index.html"><img src="IMAGES/logoblack-removebg.png" alt="Electro Badr"></a></div>
+  <nav>
+    <a href="index.html" id="nav-home">HOME</a>
+    <a href="shop.html" id="nav-shop">SHOP</a>
+    <a href="aboutus.html" id="nav-about">ABOUT US</a>
+    <a href="contact.html" id="nav-contact">CONTACT</a>
+  </nav>
+  <div class="nav-actions">
+    <div class="search-wrapper">
+      <input type="text" id="searchInput" placeholder="Search Products..." class="search-bar" autocomplete="off">
+      <div class="search-dropdown" id="searchDropdown"></div>
+    </div>
+    <select id="languageSwitcher"><option value="en">EN</option><option value="fr">FR</option><option value="ar">AR</option></select>
+    <button id="theme-toggle">🌙</button>
+    <div class="cart-icon"><i class="fas fa-shopping-cart"></i><span id="cart-count">0</span></div>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="ab-hero" id="abHero">
+  <div class="ab-hero-year-bg"><span id="heroYearBg">1983</span></div>
+  <div class="ab-badge">
+    <div class="ab-badge-dot"></div>
+    <span data-i18n="ab_badge">ELECTRO BADR · CASABLANCA</span>
+  </div>
+  <h1 id="heroTitle" data-i18n="ab_hero_title">+40 Years of <span>Trusted</span> Electronics in Morocco</h1>
+  <p class="ab-hero-sub" id="heroSub" data-i18n="ab_hero_sub">From a small shop in Casablanca to Morocco's most trusted electronics destination — we've been serving families since 1983.</p>
+  <div class="ab-stats">
+    <div class="ab-stat-pill">
+      <span class="ab-stat-num">40+</span>
+      <span class="ab-stat-lbl" data-i18n="ab_stat_years">Years of trust</span>
+    </div>
+    <div class="ab-stat-pill">
+      <span class="ab-stat-num">200+</span>
+      <span class="ab-stat-lbl" data-i18n="ab_stat_products">Products</span>
+    </div>
+    <div class="ab-stat-pill">
+      <span class="ab-stat-num">50K+</span>
+      <span class="ab-stat-lbl" data-i18n="ab_stat_customers">Happy customers</span>
+    </div>
+  </div>
+</section>
+
+<!-- MARQUEE -->
+<div class="ab-marquee-wrap">
+  <div class="ab-marquee">
+    <div class="ab-marquee-item"><span class="m-accent">🇲🇦</span> <span data-i18n="mq_morocco">Made for Morocco</span></div>
+    <div class="ab-marquee-item"><span class="m-accent">★</span> <span data-i18n="mq_quality">Quality Guaranteed</span></div>
+    <div class="ab-marquee-item"><span class="m-accent">📦</span> <span data-i18n="mq_cod">Cash on Delivery</span></div>
+    <div class="ab-marquee-item"><span class="m-accent">🚀</span> <span data-i18n="mq_shipping">Fast Nationwide Shipping</span></div>
+    <div class="ab-marquee-item"><span class="m-accent">💬</span> <span data-i18n="mq_support">24/7 WhatsApp Support</span></div>
+    <div class="ab-marquee-item"><span class="m-accent">🛡️</span> <span data-i18n="mq_certified">Certified Products Only</span></div>
+    <div class="ab-marquee-item"><span class="m-accent">🏆</span> <span data-i18n="mq_since">Since 1983</span></div>
+    <div class="ab-marquee-item"><span class="m-accent">🇲🇦</span> <span data-i18n="mq_morocco">Made for Morocco</span></div>
+    <div class="ab-marquee-item"><span class="m-accent">★</span> <span data-i18n="mq_quality">Quality Guaranteed</span></div>
+    <div class="ab-marquee-item"><span class="m-accent">📦</span> <span data-i18n="mq_cod">Cash on Delivery</span></div>
+    <div class="ab-marquee-item"><span class="m-accent">🚀</span> <span data-i18n="mq_shipping">Fast Nationwide Shipping</span></div>
+    <div class="ab-marquee-item"><span class="m-accent">💬</span> <span data-i18n="mq_support">24/7 WhatsApp Support</span></div>
+    <div class="ab-marquee-item"><span class="m-accent">🛡️</span> <span data-i18n="mq_certified">Certified Products Only</span></div>
+    <div class="ab-marquee-item"><span class="m-accent">🏆</span> <span data-i18n="mq_since">Since 1983</span></div>
+  </div>
+</div>
+
+<!-- STORY + TIMELINE -->
+<div class="ab-story">
+  <div class="ab-story-left">
+    <p class="ab-section-label" data-i18n="ab_who">Who We Are</p>
+    <p class="ab-story-text" data-i18n="ab_story">
+      Electro Badr was born in Casablanca in 1883 as a specialist watch house — a family business built on one simple belief: every Moroccan family deserves access to quality timepieces at honest prices.
+    </p>
+    <div class="ab-quote">
+      <p class="ab-quote-text" data-i18n="ab_quote">"We don't just sell electronics — we build relationships that last generations."</p>
+      <p class="ab-quote-author" data-i18n="ab_quote_author">— Badr, Founder</p>
+    </div>
+  </div>
+
+  <div class="ab-timeline">
+    <p class="ab-section-label" data-i18n="ab_journey">Our Journey</p>
+    <div class="ab-tl-item">
+      <div class="ab-tl-track"><div class="ab-tl-dot"></div><div class="ab-tl-line"></div></div>
+      <div>
+        <p class="ab-tl-year">1883</p>
+        <p class="ab-tl-event" data-i18n="tl_1883">Electro Badr is founded in Casablanca — a small watch house built on a passion for high-quality timepieces.</p>
+        <span class="ab-tl-tag" data-i18n="tl_tag_founded">Founded</span>
+      </div>
+    </div>
+    <div class="ab-tl-item">
+      <div class="ab-tl-track"><div class="ab-tl-dot"></div><div class="ab-tl-line"></div></div>
+      <div>
+        <p class="ab-tl-year">1995</p>
+        <p class="ab-tl-event" data-i18n="tl_1995">Expanded product range to include audio equipment, cameras and mobile accessories.</p>
+        <span class="ab-tl-tag" data-i18n="tl_tag_expansion">Expansion</span>
+      </div>
+    </div>
+    <div class="ab-tl-item">
+      <div class="ab-tl-track"><div class="ab-tl-dot"></div><div class="ab-tl-line"></div></div>
+      <div>
+        <p class="ab-tl-year">2014</p>
+        <p class="ab-tl-event" data-i18n="tl_2014">Opens Electro Badr 2 — a dedicated branch focused entirely on consumer electronics.</p>
+        <span class="ab-tl-tag" data-i18n="tl_tag_milestone">Milestone</span>
+      </div>
+    </div>
+    <div class="ab-tl-item">
+      <div class="ab-tl-track"><div class="ab-tl-dot"></div><div class="ab-tl-line"></div></div>
+      <div>
+        <p class="ab-tl-year">2022</p>
+        <p class="ab-tl-event" data-i18n="tl_2022">Launches Badr Luxury — our dedicated line of original luxury watches and accessories.</p>
+        <span class="ab-tl-tag" data-i18n="tl_tag_innovation">Innovation</span>
+      </div>
+    </div>
+    <div class="ab-tl-item">
+      <div class="ab-tl-track"><div class="ab-tl-dot current"></div></div>
+      <div>
+        <p class="ab-tl-year">2026 →</p>
+        <p class="ab-tl-event" data-i18n="tl_2026">Launched full online ordering with cash on delivery, nationwide across Morocco.</p>
+        <span class="ab-tl-tag" data-i18n="tl_tag_today">Today</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- VALUES -->
+<section class="ab-values">
+  <p class="ab-section-label" data-i18n="ab_why">Why Choose Us</p>
+  <div class="ab-values-grid">
+    <div class="ab-val">
+      <div class="ab-val-icon"><i class="fas fa-shield-alt"></i></div>
+      <p class="ab-val-name" data-i18n="ab_val1_title">Quality First</p>
+      <p class="ab-val-desc" data-i18n="ab_val1_desc">Every product certified and tested before we sell it. No compromises.</p>
+    </div>
+    <div class="ab-val">
+      <div class="ab-val-icon"><i class="fas fa-money-bill-wave"></i></div>
+      <p class="ab-val-name" data-i18n="ab_val2_title">Cash on Delivery</p>
+      <p class="ab-val-desc" data-i18n="ab_val2_desc">Pay only when your order arrives safely at your door.</p>
+    </div>
+    <div class="ab-val">
+      <div class="ab-val-icon"><i class="fas fa-truck"></i></div>
+      <p class="ab-val-name" data-i18n="ab_val3_title">Fast Shipping</p>
+      <p class="ab-val-desc" data-i18n="ab_val3_desc">Nationwide delivery across all of Morocco — fast and reliable.</p>
+    </div>
+    <div class="ab-val">
+      <div class="ab-val-icon"><i class="fab fa-whatsapp"></i></div>
+      <p class="ab-val-name" data-i18n="ab_val4_title">Always Here</p>
+      <p class="ab-val-desc" data-i18n="ab_val4_desc">24/7 WhatsApp support — real people, real answers, instantly.</p>
+    </div>
+  </div>
+</section>
+
+<!-- BRANDS -->
+<section class="ab-brands">
+  <p class="ab-section-label" data-i18n="ab_brands">Brands We Carry</p>
+  <div class="ab-brands-grid">
+    <div class="ab-brand-chip">Hikvision</div>
+    <div class="ab-brand-chip">Sony</div>
+    <div class="ab-brand-chip">Samsung</div>
+    <div class="ab-brand-chip">JBL</div>
+    <div class="ab-brand-chip">Xiaomi</div>
+    <div class="ab-brand-chip">Oraimo</div>
+    <div class="ab-brand-chip">Philips</div>
+    <div class="ab-brand-chip">Kemei</div>
+    <div class="ab-brand-chip">Imou</div>
+    <div class="ab-brand-chip">Casio</div>
+    <div class="ab-brand-chip">Revoox</div>
+    <div class="ab-brand-chip">Riversong</div>
+    <div class="ab-brand-chip">Braun</div>
+    <div class="ab-brand-chip">Wahl</div>
+    <div class="ab-brand-chip">Dinex</div>
+    <div class="ab-brand-chip" data-i18n="ab_more">+ More</div>
+  </div>
+</section>
+
+<!-- CTA + CONTACT -->
+<div class="ab-cta">
+  <div class="ab-cta-left">
+    <p class="ab-section-label" data-i18n="ab_visit">Visit Us</p>
+    <h2 class="ab-cta-title" data-i18n="ab_cta_title">Come see us in Casablanca</h2>
+    <p class="ab-cta-sub" data-i18n="ab_cta_sub">Our team is always ready to help you find the right device. Visit our store or shop online with fast nationwide delivery.</p>
+    <div class="ab-btn-group">
+      <a href="shop.html" class="ab-btn" data-i18n="ab_shop_btn"><i class="fas fa-shopping-bag"></i> Shop Now</a>
+      <a href="https://wa.me/212664700752" target="_blank" class="ab-btn ab-btn-ghost" data-i18n="ab_wa_btn"><i class="fab fa-whatsapp"></i> WhatsApp Us</a>
+    </div>
+    <div class="ab-location-pill">
+      <div class="ab-loc-dot"></div>
+      <p class="ab-loc-text">
+        <strong>Electro Badr</strong> · <span data-i18n="map_location">Casablanca, Morocco</span> ·
+        <a href="https://maps.app.goo.gl/WChzUCFQ3cTbmTMi9" target="_blank" style="color:#ff7b22;text-decoration:none;" data-i18n="map_directions">Get Directions →</a>
+      </p>
+    </div>
+  </div>
+  <div class="ab-cta-right">
+    <p class="ab-section-label" data-i18n="ab_contact">Contact Us</p>
+    <div class="ab-contact-cards">
+      <div class="ab-contact-card">
+        <div class="ab-contact-icon"><i class="fas fa-phone"></i></div>
+        <div><p class="ab-contact-label" data-i18n="ab_phone_label">Phone</p><p class="ab-contact-val">+212 664 700 752</p></div>
+      </div>
+      <div class="ab-contact-card">
+        <div class="ab-contact-icon"><i class="fas fa-envelope"></i></div>
+        <div><p class="ab-contact-label" data-i18n="ab_email_label">Email</p><p class="ab-contact-val">badrelectro173@gmail.com</p></div>
+      </div>
+      <div class="ab-contact-card">
+        <div class="ab-contact-icon"><i class="fas fa-map-marker-alt"></i></div>
+        <div><p class="ab-contact-label" data-i18n="ab_location_label">Location</p><p class="ab-contact-val" data-i18n="map_location">Casablanca, Morocco</p></div>
+      </div>
+      <div class="ab-contact-card">
+        <div class="ab-contact-icon"><i class="fas fa-clock"></i></div>
+        <div><p class="ab-contact-label" data-i18n="ab_hours_label">Support Hours</p><p class="ab-contact-val" data-i18n="ab_hours_val">24/7 via WhatsApp</p></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <canvas class="footer-canvas" id="footerCanvas"></canvas>
+  <div class="footer-glow-line"></div>
+  <div class="footer-inner">
+    <div class="footer-col footer-brand">
+      <img src="IMAGES/logoblack-removebg.png" class="footer-logo" alt="Electro Badr">
+      <p class="footer-tagline" data-i18n="footer_tagline">Premium Electronics Since 1983</p>
+      <p class="footer-desc" data-i18n="footer_desc">Morocco's trusted destination for quality gadgets. Cash on delivery, nationwide.</p>
+      <div class="footer-socials">
+        <a href="https://wa.me/212664700752" target="_blank" class="fsocial"><i class="fab fa-whatsapp"></i></a>
+        <a href="#" class="fsocial"><i class="fab fa-instagram"></i></a>
+        <a href="#" class="fsocial"><i class="fab fa-facebook"></i></a>
+        <a href="#" class="fsocial"><i class="fab fa-tiktok"></i></a>
+      </div>
+    </div>
+    <div class="footer-col">
+      <h4 class="footer-col-title" data-i18n="footer_quick_links">Quick Links</h4>
+      <ul class="footer-links">
+        <li><a href="index.html" data-i18n="home">Home</a></li>
+        <li><a href="shop.html" data-i18n="shop">Shop</a></li>
+        <li><a href="aboutus.html" data-i18n="about">About Us</a></li>
+        <li><a href="contact.html" data-i18n="contact">Contact</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4 class="footer-col-title" data-i18n="footer_categories">Categories</h4>
+      <ul class="footer-links">
+        <li><a href="shop.html?cat=powerbanks" data-i18n="cat_powerbanks">Power Banks</a></li>
+        <li><a href="shop.html?cat=cameras" data-i18n="cat_cameras">Security Cameras</a></li>
+        <li><a href="shop.html?cat=speakers" data-i18n="cat_speakers">Speakers & Radios</a></li>
+        <li><a href="shop.html?cat=watches" data-i18n="cat_watches">Smart Watches</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4 class="footer-col-title" data-i18n="footer_contact_col">Contact Us</h4>
+      <ul class="footer-contact-list">
+        <li><i class="fas fa-phone"></i><span>+212 664 700 752</span></li>
+        <li><i class="fas fa-envelope"></i><span>badrelectro173@gmail.com</span></li>
+        <li><i class="fas fa-map-marker-alt"></i><span data-i18n="footer_location">Morocco</span></li>
+        <li><i class="fas fa-clock"></i><span data-i18n="footer_hours">24/7 Support via WhatsApp</span></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p data-i18n="footer_copy">© 2026 Electro Badr</p>
+    <p class="footer-bottom-right" data-i18n="footer_made">Made with ❤️ in Morocco</p>
+  </div>
+</footer>
+
+<!-- WHATSAPP -->
+<a href="https://wa.me/212664700752" class="whatsapp-btn" target="_blank"><i class="fab fa-whatsapp"></i></a>
+
+<!-- BACK TO TOP -->
+<button class="back-to-top" id="backToTop"><i class="fas fa-chevron-up"></i></button>
+
+<!-- CART SIDEBAR -->
+<div class="cart-sidebar-overlay" id="cartOverlay" onclick="closeCart()"></div>
+<div class="cart-sidebar-panel" id="cartPanel">
+  <div class="cart-sidebar-header">
+    <h3 data-i18n="cart_title">🛒 Your Cart</h3>
+    <button class="cart-sidebar-close" onclick="closeCart()">✕</button>
+  </div>
+  <div class="cart-sidebar-items" id="cartSidebarItems">
+    <p class="cart-empty" data-i18n="cart_empty">Your cart is empty.</p>
+  </div>
+  <div class="cart-sidebar-footer">
+    <div class="cart-total-row">
+      <span data-i18n="cart_total">Total</span>
+      <span id="cartTotalPrice">0 DH</span>
+    </div>
+    <a href="shop.html" class="cart-checkout-btn" data-i18n="go_shop">Go to Shop →</a>
+  </div>
+</div>
+
+<script>
+(function() {
+  const btn = document.getElementById('hamburgerBtn');
+  const menu = document.getElementById('hbMenu');
+  const overlay = document.getElementById('hbOverlay');
+  function openMenu() { btn.classList.add('open'); menu.classList.add('open'); overlay.classList.add('open'); document.body.style.overflow = 'hidden'; }
+  function closeMenu() { btn.classList.remove('open'); menu.classList.remove('open'); overlay.classList.remove('open'); document.body.style.overflow = ''; }
+  btn.addEventListener('click', () => { btn.classList.contains('open') ? closeMenu() : openMenu(); });
+  overlay.addEventListener('click', closeMenu);
+  const page = window.location.pathname.split('/').pop().replace('.html','') || 'index';
+  document.querySelectorAll('.hb-link').forEach(link => {
+    if (link.dataset.page === page || (page === '' && link.dataset.page === 'index')) link.classList.add('active-page');
+  });
+  document.addEventListener('keydown', e => { if (e.key === 'Escape') closeMenu(); });
+})();
+</script>
+
+<script src="script.js"></script>
+
+<script>
+const abHero    = document.getElementById('abHero');
+const heroTitle = document.getElementById('heroTitle');
+const heroSub   = document.getElementById('heroSub');
+const heroYearBg = document.getElementById('heroYearBg');
+
+if (abHero) {
+  abHero.addEventListener('mousemove', e => {
+    const rect = abHero.getBoundingClientRect();
+    const cx = rect.width / 2; const cy = rect.height / 2;
+    const dx = (e.clientX - rect.left - cx) / cx;
+    const dy = (e.clientY - rect.top  - cy) / cy;
+    if (heroTitle)  heroTitle.style.transform  = `translate(${dx * -12}px, ${dy * -8}px) rotateX(${dy * -3}deg) rotateY(${dx * 3}deg)`;
+    if (heroSub)    heroSub.style.transform    = `translate(${dx * -6}px, ${dy * -4}px)`;
+    if (heroYearBg) heroYearBg.style.transform = `translate(${dx * 20}px, ${dy * 10}px)`;
+  });
+  abHero.addEventListener('mouseleave', () => {
+    if (heroTitle)  heroTitle.style.transform  = '';
+    if (heroSub)    heroSub.style.transform    = '';
+    if (heroYearBg) heroYearBg.style.transform = '';
+  });
+}
+
+document.querySelectorAll('.ab-val').forEach(card => {
+  card.addEventListener('mousemove', e => {
+    const rect = card.getBoundingClientRect();
+    const dx = (e.clientX - rect.left - rect.width  / 2) / (rect.width  / 2);
+    const dy = (e.clientY - rect.top  - rect.height / 2) / (rect.height / 2);
+    card.style.transform   = `perspective(600px) rotateX(${dy * -12}deg) rotateY(${dx * 12}deg) translateY(-8px) scale(1.02)`;
+    card.style.boxShadow   = `${dx * -15}px ${dy * -10}px 40px rgba(255,123,34,0.15), 0 20px 40px rgba(0,0,0,0.3)`;
+    card.style.borderColor = 'rgba(255,123,34,0.35)';
+  });
+  card.addEventListener('mouseleave', () => {
+    card.style.transform   = '';
+    card.style.boxShadow   = '';
+    card.style.borderColor = '';
+  });
+});
+
+function makeObserver(selector, visibleClass, threshold = 0.15) {
+  const obs = new IntersectionObserver(entries => {
+    entries.forEach(entry => { if (entry.isIntersecting) entry.target.classList.add(visibleClass); });
+  }, { threshold });
+  document.querySelectorAll(selector).forEach(el => obs.observe(el));
+}
+
+makeObserver('.ab-tl-item',     'tl-visible',   0.2);
+makeObserver('.ab-val',         'val-visible',  0.15);
+makeObserver('.ab-contact-card','card-visible', 0.15);
+
+document.querySelectorAll('.ab-brand-chip').forEach((chip, i) => {
+  chip.style.transitionDelay = `${i * 0.05}s`;
+  const obs = new IntersectionObserver(entries => {
+    entries.forEach(entry => { if (entry.isIntersecting) chip.classList.add('chip-visible'); });
+  }, { threshold: 0.1 });
+  obs.observe(chip);
+});
+
+(function() {
+  const canvas = document.getElementById('footerCanvas');
+  if (!canvas) return;
+  const ctx = canvas.getContext('2d');
+  function resize() { canvas.width = canvas.offsetWidth; canvas.height = canvas.offsetHeight; }
+  resize();
+  window.addEventListener('resize', resize);
+  const particles = [];
+  for (let i = 0; i < 30; i++) {
+    particles.push({ x:Math.random()*canvas.width, y:Math.random()*canvas.height, vx:(Math.random()-0.5)*0.4, vy:(Math.random()-0.5)*0.4, r:Math.random()*2+0.5, alpha:Math.random()*0.4+0.1 });
+  }
+  function animate() {
+    ctx.clearRect(0,0,canvas.width,canvas.height);
+    for (let i=0;i<particles.length;i++) for (let j=i+1;j<particles.length;j++) {
+      const dx=particles[i].x-particles[j].x, dy=particles[i].y-particles[j].y;
+      const dist=Math.sqrt(dx*dx+dy*dy);
+      if (dist<100) { ctx.beginPath(); ctx.moveTo(particles[i].x,particles[i].y); ctx.lineTo(particles[j].x,particles[j].y); ctx.strokeStyle=`rgba(255,123,34,${(1-dist/100)*0.20})`; ctx.lineWidth=1; ctx.stroke(); }
+    }
+    particles.forEach(p => {
+      p.x+=p.vx; p.y+=p.vy;
+      if(p.x<0||p.x>canvas.width) p.vx*=-1;
+      if(p.y<0||p.y>canvas.height) p.vy*=-1;
+      ctx.beginPath(); ctx.arc(p.x,p.y,p.r,0,Math.PI*2);
+      ctx.fillStyle=`rgba(255,123,34,${p.alpha})`; ctx.fill();
+    });
+    requestAnimationFrame(animate);
+  }
+  animate();
+})();
+</script>
+
+<!-- CURSOR — MUST BE ABSOLUTE LAST -->
+<div class="hero-cursor-dot" id="heroCursorDot"></div>
+
+</body>
+</html>

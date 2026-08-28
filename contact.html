@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Electro Badr | Contact Us</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:wght@300;400;500;600;700;800&family=Rajdhani:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+
+    .ct-hero { position:relative; padding:160px 8% 80px; text-align:center; border-bottom:1px solid rgba(255,123,34,0.08); overflow:hidden; }
+    .ct-hero-bg { position:absolute; inset:0; display:flex; align-items:center; justify-content:center; pointer-events:none; overflow:hidden; }
+    .ct-hero-bg span { font-family:'Bebas Neue',sans-serif; font-size:220px; color:rgba(255,123,34,0.03); letter-spacing:-8px; user-select:none; line-height:1; }
+    .ct-badge { position:relative; display:inline-flex; align-items:center; gap:8px; background:rgba(255,123,34,0.10); border:1px solid rgba(255,123,34,0.25); color:#ff7b22; font-family:'Bebas Neue',sans-serif; font-size:13px; letter-spacing:4px; padding:6px 18px; border-radius:20px; margin-bottom:22px; }
+    .ct-badge-dot { width:7px; height:7px; border-radius:50%; background:#ff7b22; animation:ctPulse 2s ease-in-out infinite; }
+    @keyframes ctPulse { 0%,100%{opacity:1;} 50%{opacity:0.3;} }
+    .ct-hero h1 { position:relative; font-family:'Bebas Neue',sans-serif; font-size:clamp(44px,7vw,76px); font-weight:400; color:white; letter-spacing:5px; margin:0 0 16px; line-height:1.05; text-shadow:0 0 60px rgba(255,123,34,0.12); }
+    .ct-hero h1 span { color:#ff7b22; }
+    .ct-hero-sub { position:relative; font-size:16px; color:#a1a1aa; max-width:480px; margin:0 auto 36px; line-height:1.7; }
+    .ct-channel-pills { position:relative; display:flex; justify-content:center; gap:10px; flex-wrap:wrap; }
+    .ct-cpill { display:flex; align-items:center; gap:8px; background:rgba(255,255,255,0.03); border:1px solid rgba(255,255,255,0.07); border-radius:25px; padding:9px 18px; font-family:'Bebas Neue',sans-serif; font-size:13px; letter-spacing:2px; color:#a1a1aa; }
+    .ct-cpill-dot { width:7px; height:7px; border-radius:50%; background:#ff7b22; flex-shrink:0; }
+    .ct-cpill.wa .ct-cpill-dot { background:#25D366; }
+    .ct-channels { display:grid; grid-template-columns:repeat(4,1fr); gap:16px; padding:40px 8%; border-bottom:1px solid rgba(255,255,255,0.04); }
+    .ct-ch { background:rgba(255,255,255,0.02); border:1px solid rgba(255,255,255,0.06); border-radius:20px; padding:24px 18px; text-align:center; transition:transform .4s cubic-bezier(.22,.61,.36,1),box-shadow .4s ease,border-color .4s ease; }
+    .ct-ch:hover { transform:translateY(-6px); box-shadow:0 20px 40px rgba(255,123,34,0.10); border-color:rgba(255,123,34,0.25); }
+    .ct-ch.wa { border-color:rgba(37,211,102,0.18); background:rgba(37,211,102,0.04); }
+    .ct-ch.wa:hover { border-color:rgba(37,211,102,0.40); box-shadow:0 20px 40px rgba(37,211,102,0.10); }
+    .ct-ch-icon { width:52px; height:52px; border-radius:14px; display:flex; align-items:center; justify-content:center; font-size:24px; margin:0 auto 16px; }
+    .ct-ch-icon.orange { background:rgba(255,123,34,0.12); color:#ff7b22; }
+    .ct-ch-icon.green  { background:rgba(37,211,102,0.12); color:#25D366; }
+    .ct-ch-title { font-family:'Bebas Neue',sans-serif; font-size:20px; letter-spacing:3px; color:white; margin-bottom:6px; }
+    .ct-ch-val { font-family:'Bebas Neue',sans-serif; font-size:12px; letter-spacing:1px; color:#a1a1aa; margin-bottom:4px; line-height:1.4; }
+    .ct-ch-speed { font-family:'Bebas Neue',sans-serif; font-size:11px; letter-spacing:1px; color:#555; margin-bottom:16px; }
+    .ct-ch-btn { display:inline-block; padding:9px 22px; border-radius:25px; font-family:'Bebas Neue',sans-serif; font-size:14px; letter-spacing:2px; text-decoration:none; border:none; transition:transform .3s ease,box-shadow .3s ease; }
+    .ct-ch-btn:hover { transform:translateY(-2px); }
+    .ct-ch-btn.orange { background:#ff7b22; color:white; }
+    .ct-ch-btn.green  { background:#25D366; color:white; }
+    .ct-ch-btn.ghost  { background:transparent; border:1px solid rgba(255,123,34,0.30); color:#ff7b22; }
+    .ct-ch-btn.orange:hover { box-shadow:0 8px 20px rgba(255,123,34,0.40); }
+    .ct-ch-btn.green:hover  { box-shadow:0 8px 20px rgba(37,211,102,0.30); }
+    .ct-body { display:grid; grid-template-columns:1fr 1.4fr; gap:0; border-bottom:1px solid rgba(255,255,255,0.04); }
+    .ct-section-label { font-family:'Bebas Neue',sans-serif; font-size:13px; letter-spacing:4px; color:#ff7b22; text-transform:uppercase; margin-bottom:18px; }
+    .ct-left { padding:50px 6%; border-right:1px solid rgba(255,255,255,0.04); }
+    .ct-wa-banner { display:flex; align-items:center; gap:14px; background:rgba(37,211,102,0.07); border:1px solid rgba(37,211,102,0.18); border-radius:16px; padding:16px 18px; margin-bottom:28px; }
+    .ct-wa-avatar { width:42px; height:42px; border-radius:50%; background:#25D366; display:flex; align-items:center; justify-content:center; font-size:20px; color:white; flex-shrink:0; }
+    .ct-wa-title { font-family:'Bebas Neue',sans-serif; font-size:18px; letter-spacing:2px; color:white; margin-bottom:3px; }
+    .ct-wa-sub { font-family:'Bebas Neue',sans-serif; font-size:12px; letter-spacing:1px; color:#a1a1aa; }
+    .ct-wa-btn { margin-left:auto; padding:9px 18px; background:#25D366; color:white; border:none; border-radius:20px; font-family:'Bebas Neue',sans-serif; font-size:14px; letter-spacing:2px; flex-shrink:0; text-decoration:none; transition:transform .3s ease,box-shadow .3s ease; }
+    .ct-wa-btn:hover { transform:translateY(-2px); box-shadow:0 8px 20px rgba(37,211,102,0.30); }
+    .ct-info-row { display:flex; align-items:center; gap:14px; padding:13px 0; border-bottom:1px solid rgba(255,255,255,0.04); transition:transform .3s ease; }
+    .ct-info-row:hover { transform:translateX(6px); }
+    .ct-info-row:last-of-type { border-bottom:none; }
+    .ct-info-icon { width:36px; height:36px; border-radius:10px; background:rgba(255,123,34,0.10); display:flex; align-items:center; justify-content:center; font-size:16px; color:#ff7b22; flex-shrink:0; }
+    .ct-info-label { font-family:'Bebas Neue',sans-serif; font-size:11px; color:#555; letter-spacing:3px; text-transform:uppercase; margin-bottom:2px; }
+    .ct-info-val { font-family:'Bebas Neue',sans-serif; font-size:16px; letter-spacing:1px; color:white; }
+    .ct-map-pill { margin-top:20px; display:flex; align-items:center; gap:12px; background:rgba(255,255,255,0.02); border:1px solid rgba(255,255,255,0.06); border-radius:14px; padding:14px 18px; text-decoration:none; transition:border-color .3s ease; }
+    .ct-map-pill:hover { border-color:rgba(255,123,34,0.25); }
+    .ct-map-dot { width:10px; height:10px; border-radius:50%; background:#ff7b22; flex-shrink:0; box-shadow:0 0 8px rgba(255,123,34,0.5); animation:ctPulse 2s ease-in-out infinite; }
+    .ct-map-text { font-family:'Bebas Neue',sans-serif; font-size:13px; letter-spacing:1px; color:#a1a1aa; }
+    .ct-map-text strong { font-family:'Bebas Neue',sans-serif; color:white; letter-spacing:2px; display:block; }
+    .ct-socials { display:flex; gap:10px; margin-top:24px; }
+    .ct-social { width:40px; height:40px; border-radius:50%; background:rgba(255,123,34,0.08); border:1px solid rgba(255,123,34,0.15); display:flex; align-items:center; justify-content:center; color:#a1a1aa; font-size:16px; text-decoration:none; transition:background .3s ease,color .3s ease,transform .3s cubic-bezier(.22,.61,.36,1),box-shadow .3s ease; }
+    .ct-social:hover { background:#ff7b22; border-color:#ff7b22; color:white; transform:translateY(-4px) rotate(8deg) scale(1.1); box-shadow:0 8px 20px rgba(255,123,34,0.40); }
+    .ct-right { padding:50px 6%; }
+    .ct-tabs { display:flex; gap:8px; margin-bottom:24px; flex-wrap:wrap; }
+    .ct-tab { padding:8px 18px; border-radius:25px; font-family:'Bebas Neue',sans-serif; font-size:14px; letter-spacing:2px; border:1px solid rgba(255,255,255,0.08); color:#555; background:transparent; transition:background .3s ease,border-color .3s ease,color .3s ease; }
+    .ct-tab:hover { border-color:rgba(255,123,34,0.25); color:#a1a1aa; }
+    .ct-tab.active { background:#ff7b22; border-color:#ff7b22; color:white; }
+    .ct-frow { display:grid; grid-template-columns:1fr 1fr; gap:14px; margin-bottom:14px; }
+    .ct-field { margin-bottom:14px; }
+    .ct-field label { font-family:'Bebas Neue',sans-serif; font-size:12px; letter-spacing:3px; color:#555; display:block; margin-bottom:7px; text-transform:uppercase; }
+    .ct-field input,.ct-field textarea { width:100%; background:rgba(255,255,255,0.04); border:1px solid rgba(255,255,255,0.08); border-radius:12px; padding:13px 16px; color:white; font-family:'Poppins',sans-serif; font-size:14px; outline:none; transition:border-color .3s ease,box-shadow .3s ease,background .3s ease; box-sizing:border-box; }
+    .ct-field input:focus,.ct-field textarea:focus { border-color:rgba(255,123,34,0.50); box-shadow:0 0 0 3px rgba(255,123,34,0.10); background:rgba(255,123,34,0.04); }
+    .ct-field textarea { height:120px; resize:none; }
+    .ct-submit { width:100%; padding:16px; background:#ff7b22; color:white; border:none; border-radius:30px; font-family:'Bebas Neue',sans-serif; font-size:20px; letter-spacing:4px; margin-top:6px; transition:transform .3s cubic-bezier(.22,.61,.36,1),box-shadow .3s ease; position:relative; overflow:hidden; }
+    .ct-submit::before { content:''; position:absolute; top:0; left:-80%; width:60%; height:100%; background:linear-gradient(120deg,transparent,rgba(255,255,255,0.18),transparent); transform:skewX(-20deg); transition:left .5s ease; pointer-events:none; }
+    .ct-submit:hover::before { left:160%; }
+    .ct-submit:hover { transform:translateY(-3px); box-shadow:0 14px 35px rgba(255,123,34,0.50); }
+    .ct-faq { padding:50px 8%; border-top:1px solid rgba(255,255,255,0.04); }
+    .ct-faq-grid { display:grid; grid-template-columns:repeat(2,1fr); gap:14px; margin-top:24px; }
+    .ct-faq-item { background:rgba(255,255,255,0.02); border:1px solid rgba(255,255,255,0.05); border-radius:16px; padding:20px 22px; transition:border-color .3s ease,transform .3s ease; }
+    .ct-faq-item:hover { border-color:rgba(255,123,34,0.20); transform:translateY(-4px); }
+    .ct-faq-icon { font-size:22px; margin-bottom:10px; display:block; }
+    .ct-faq-q { font-family:'Bebas Neue',sans-serif; font-size:18px; letter-spacing:2px; color:white; margin-bottom:8px; }
+    .ct-faq-a { font-size:13px; color:#a1a1aa; line-height:1.6; }
+    @media (max-width:900px) {
+      .ct-channels { grid-template-columns:repeat(2,1fr); }
+      .ct-body { grid-template-columns:1fr; }
+      .ct-left { border-right:none; border-bottom:1px solid rgba(255,255,255,0.04); }
+      .ct-frow { grid-template-columns:1fr; }
+      .ct-faq-grid { grid-template-columns:1fr; }
+    }
+
+  </style>
+</head>
+<body>
+<div class="page-transition" id="pageTransition"></div>
+
+<!-- HAMBURGER -->
+<button class="hamburger-btn" id="hamburgerBtn" aria-label="Menu">
+  <span class="hb-line"></span><span class="hb-line"></span><span class="hb-line"></span>
+</button>
+<div class="hb-overlay" id="hbOverlay"></div>
+<div class="hb-menu" id="hbMenu">
+  <div class="hb-menu-logo"><img src="IMAGES/logoblack-removebg.png" alt="Electro Badr"></div>
+  <div class="hb-menu-links">
+    <a href="index.html" class="hb-link" data-page="index"><div class="hb-link-icon"><i class="fas fa-home"></i></div><span data-i18n="home">Home</span></a>
+    <a href="shop.html" class="hb-link" data-page="shop"><div class="hb-link-icon"><i class="fas fa-shopping-bag"></i></div><span data-i18n="shop">Shop</span></a>
+    <a href="aboutus.html" class="hb-link" data-page="about"><div class="hb-link-icon"><i class="fas fa-info-circle"></i></div><span data-i18n="about">About Us</span></a>
+    <a href="contact.html" class="hb-link" data-page="contact"><div class="hb-link-icon"><i class="fas fa-envelope"></i></div><span data-i18n="contact">Contact</span></a>
+  </div>
+  <div class="hb-menu-footer">
+    <p data-i18n="follow_us">FOLLOW US</p>
+    <div class="hb-footer-socials">
+      <a href="https://wa.me/212664700752" target="_blank" class="hb-soc"><i class="fab fa-whatsapp"></i></a>
+      <a href="#" class="hb-soc"><i class="fab fa-instagram"></i></a>
+      <a href="#" class="hb-soc"><i class="fab fa-facebook"></i></a>
+      <a href="#" class="hb-soc"><i class="fab fa-tiktok"></i></a>
+    </div>
+  </div>
+</div>
+
+<!-- NAVBAR -->
+<header class="navbar">
+  <div class="logo"><a href="index.html"><img src="IMAGES/logoblack-removebg.png" alt="Electro Badr"></a></div>
+  <nav>
+    <a href="index.html" id="nav-home">HOME</a>
+    <a href="shop.html" id="nav-shop">SHOP</a>
+    <a href="aboutus.html" id="nav-about">ABOUT US</a>
+    <a href="contact.html" id="nav-contact">CONTACT</a>
+  </nav>
+  <div class="nav-actions">
+    <div class="search-wrapper">
+      <input type="text" id="searchInput" placeholder="Search Products..." class="search-bar" autocomplete="off">
+      <div class="search-dropdown" id="searchDropdown"></div>
+    </div>
+    <select id="languageSwitcher"><option value="en">EN</option><option value="fr">FR</option><option value="ar">AR</option></select>
+    <button id="theme-toggle">🌙</button>
+    <div class="cart-icon"><i class="fas fa-shopping-cart"></i><span id="cart-count">0</span></div>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="ct-hero">
+  <div class="ct-hero-bg"><span>CONTACT</span></div>
+  <div class="ct-badge">
+    <div class="ct-badge-dot"></div>
+    <span data-i18n="ct_badge">GET IN TOUCH</span>
+  </div>
+  <h1 data-i18n="ct_hero_title">Talk to <span>Electro Badr</span></h1>
+  <p class="ct-hero-sub" data-i18n="ct_hero_sub">Whether it's an order question, delivery inquiry, or just a hello — our team is always here for you, 24/7.</p>
+  <div class="ct-channel-pills">
+    <div class="ct-cpill wa"><div class="ct-cpill-dot"></div><span data-i18n="ct_pill1">WhatsApp · Fastest</span></div>
+    <div class="ct-cpill"><div class="ct-cpill-dot"></div><span data-i18n="ct_pill2">Email us</span></div>
+    <div class="ct-cpill"><div class="ct-cpill-dot"></div><span data-i18n="ct_pill3">Visit our store</span></div>
+    <div class="ct-cpill"><div class="ct-cpill-dot"></div><span data-i18n="ct_pill4">Call us</span></div>
+  </div>
+</section>
+
+<!-- CHANNEL CARDS -->
+<div class="ct-channels">
+  <div class="ct-ch wa">
+    <div class="ct-ch-icon green"><i class="fab fa-whatsapp"></i></div>
+    <p class="ct-ch-title" data-i18n="ct_ch1_title">WhatsApp</p>
+    <p class="ct-ch-val">+212 664 700 752</p>
+    <p class="ct-ch-speed" data-i18n="ct_ch1_speed">Reply in minutes · 24/7</p>
+    <a href="https://wa.me/212664700752" target="_blank" class="ct-ch-btn green" data-i18n="ct_ch1_btn">Chat now</a>
+  </div>
+  <div class="ct-ch">
+    <div class="ct-ch-icon orange"><i class="fas fa-envelope"></i></div>
+    <p class="ct-ch-title" data-i18n="ct_ch2_title">Email</p>
+    <p class="ct-ch-val">badrelectro173@gmail.com</p>
+    <p class="ct-ch-speed" data-i18n="ct_ch2_speed">Reply within 24 hours</p>
+    <a href="mailto:badrelectro173@gmail.com" class="ct-ch-btn ghost" data-i18n="ct_ch2_btn">Send email</a>
+  </div>
+  <div class="ct-ch">
+    <div class="ct-ch-icon orange"><i class="fas fa-map-marker-alt"></i></div>
+    <p class="ct-ch-title" data-i18n="ct_ch3_title">Visit Us</p>
+    <p class="ct-ch-val" data-i18n="ct_ch3_val">Electro Badr, Casablanca</p>
+    <p class="ct-ch-speed" data-i18n="ct_ch3_speed">Come see us in person</p>
+    <a href="https://maps.app.goo.gl/WChzUCFQ3cTbmTMi9" target="_blank" class="ct-ch-btn ghost" data-i18n="ct_ch3_btn">Get directions</a>
+  </div>
+  <div class="ct-ch">
+    <div class="ct-ch-icon orange"><i class="fas fa-phone"></i></div>
+    <p class="ct-ch-title" data-i18n="ct_ch4_title">Call Us</p>
+    <p class="ct-ch-val">+212 664 700 752</p>
+    <p class="ct-ch-speed" data-i18n="ct_ch4_speed">Available 10am – 7pm</p>
+    <a href="tel:+212664700752" class="ct-ch-btn orange" data-i18n="ct_ch4_btn">Call now</a>
+  </div>
+</div>
+
+<!-- BODY -->
+<div class="ct-body">
+
+  <!-- LEFT -->
+  <div class="ct-left">
+    <p class="ct-section-label" data-i18n="ct_fastest">Fastest way to reach us</p>
+    <div class="ct-wa-banner">
+      <div class="ct-wa-avatar"><i class="fab fa-whatsapp"></i></div>
+      <div>
+        <p class="ct-wa-title" data-i18n="ct_wa_title">WhatsApp us directly</p>
+        <p class="ct-wa-sub" data-i18n="ct_wa_sub">We reply in minutes — available 24/7</p>
+      </div>
+      <a href="https://wa.me/212664700752" target="_blank" class="ct-wa-btn" data-i18n="ct_wa_btn">Chat now</a>
+    </div>
+
+    <p class="ct-section-label" style="margin-top:28px;" data-i18n="ct_details">Contact details</p>
+    <div class="ct-info-row">
+      <div class="ct-info-icon"><i class="fas fa-phone"></i></div>
+      <div><p class="ct-info-label" data-i18n="ct_phone_label">Phone</p><p class="ct-info-val">+212 664 700 752</p></div>
+    </div>
+    <div class="ct-info-row">
+      <div class="ct-info-icon"><i class="fas fa-envelope"></i></div>
+      <div><p class="ct-info-label" data-i18n="ct_email_label">Email</p><p class="ct-info-val">badrelectro173@gmail.com</p></div>
+    </div>
+    <div class="ct-info-row">
+      <div class="ct-info-icon"><i class="fas fa-map-marker-alt"></i></div>
+      <div><p class="ct-info-label" data-i18n="ct_location_label">Location</p><p class="ct-info-val">Casablanca, Morocco</p></div>
+    </div>
+    <div class="ct-info-row">
+      <div class="ct-info-icon"><i class="fas fa-clock"></i></div>
+      <div><p class="ct-info-label" data-i18n="ct_hours_label">Support hours</p><p class="ct-info-val" data-i18n="ct_hours_val">24/7 via WhatsApp</p></div>
+    </div>
+
+    <a href="https://maps.app.goo.gl/WChzUCFQ3cTbmTMi9" target="_blank" class="ct-map-pill">
+      <div class="ct-map-dot"></div>
+      <div class="ct-map-text">
+        <strong>Electro Badr</strong>
+        <span data-i18n="map_location">Casablanca, Morocco</span> · <span data-i18n="map_directions">Get directions →</span>
+      </div>
+    </a>
+
+    <div class="ct-socials">
+      <a href="https://wa.me/212664700752" target="_blank" class="ct-social"><i class="fab fa-whatsapp"></i></a>
+      <a href="#" class="ct-social"><i class="fab fa-instagram"></i></a>
+      <a href="#" class="ct-social"><i class="fab fa-facebook"></i></a>
+      <a href="#" class="ct-social"><i class="fab fa-tiktok"></i></a>
+    </div>
+  </div>
+
+  <!-- RIGHT (FORM) -->
+  <div class="ct-right">
+    <p class="ct-section-label" data-i18n="ct_send">Send a message</p>
+    <div class="ct-tabs">
+      <button class="ct-tab active" onclick="setTab(this)" data-i18n="ct_tab1">Order inquiry</button>
+      <button class="ct-tab" onclick="setTab(this)" data-i18n="ct_tab2">Support</button>
+      <button class="ct-tab" onclick="setTab(this)" data-i18n="ct_tab3">Other</button>
+    </div>
+    <div class="ct-frow">
+      <div class="ct-field">
+        <label data-i18n="ct_name_label">Full name</label>
+        <input type="text" id="ct-name" placeholder="Ahmed Benali">
+      </div>
+      <div class="ct-field">
+        <label data-i18n="ct_phone_label">Phone</label>
+        <input type="tel" id="ct-phone" placeholder="0661 234 567">
+      </div>
+    </div>
+    <div class="ct-field">
+      <label data-i18n="ct_email_label">Email</label>
+      <input type="email" id="ct-email" placeholder="ahmed@email.com">
+    </div>
+    <div class="ct-field">
+      <label data-i18n="ct_subject_label">Subject</label>
+      <input type="text" id="ct-subject" placeholder="What's this about?">
+    </div>
+    <div class="ct-field">
+      <label data-i18n="ct_msg_label">Message</label>
+      <textarea id="ct-message" placeholder="Write your message here..."></textarea>
+    </div>
+    <button class="ct-submit" onclick="sendContact()" data-i18n="ct_submit">Send Message →</button>
+  </div>
+
+</div>
+
+<!-- FAQ -->
+<section class="ct-faq">
+  <p class="ct-section-label" data-i18n="ct_faq">Common questions</p>
+  <div class="ct-faq-grid">
+    <div class="ct-faq-item">
+      <span class="ct-faq-icon"><i class="fas fa-truck" style="color:#ff7b22;"></i></span>
+      <p class="ct-faq-q" data-i18n="ct_faq1_q">How long does delivery take?</p>
+      <p class="ct-faq-a" data-i18n="ct_faq1_a">Usually 2–4 business days across all of Morocco.</p>
+    </div>
+    <div class="ct-faq-item">
+      <span class="ct-faq-icon"><i class="fas fa-money-bill-wave" style="color:#ff7b22;"></i></span>
+      <p class="ct-faq-q" data-i18n="ct_faq2_q">Can I pay on delivery?</p>
+      <p class="ct-faq-a" data-i18n="ct_faq2_a">Yes — cash on delivery is available nationwide.</p>
+    </div>
+    <div class="ct-faq-item">
+      <span class="ct-faq-icon"><i class="fas fa-undo" style="color:#ff7b22;"></i></span>
+      <p class="ct-faq-q" data-i18n="ct_faq3_q">Can I return a product?</p>
+      <p class="ct-faq-a" data-i18n="ct_faq3_a">Contact us within 7 days of receiving your order.</p>
+    </div>
+    <div class="ct-faq-item">
+      <span class="ct-faq-icon"><i class="fas fa-shield-alt" style="color:#ff7b22;"></i></span>
+      <p class="ct-faq-q" data-i18n="ct_faq4_q">Are products guaranteed?</p>
+      <p class="ct-faq-a" data-i18n="ct_faq4_a">Yes — all products are quality-tested and certified.</p>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <canvas class="footer-canvas" id="footerCanvas"></canvas>
+  <div class="footer-glow-line"></div>
+  <div class="footer-inner">
+    <div class="footer-col footer-brand">
+      <img src="IMAGES/logoblack-removebg.png" class="footer-logo" alt="Electro Badr">
+      <p class="footer-tagline" data-i18n="footer_tagline">Premium Electronics Since 1983</p>
+      <p class="footer-desc" data-i18n="footer_desc">Morocco's trusted destination for quality gadgets. Cash on delivery, nationwide.</p>
+      <div class="footer-socials">
+        <a href="https://wa.me/212664700752" target="_blank" class="fsocial"><i class="fab fa-whatsapp"></i></a>
+        <a href="#" class="fsocial"><i class="fab fa-instagram"></i></a>
+        <a href="#" class="fsocial"><i class="fab fa-facebook"></i></a>
+        <a href="#" class="fsocial"><i class="fab fa-tiktok"></i></a>
+      </div>
+    </div>
+    <div class="footer-col">
+      <h4 class="footer-col-title" data-i18n="footer_quick_links">Quick Links</h4>
+      <ul class="footer-links">
+        <li><a href="index.html" data-i18n="home">Home</a></li>
+        <li><a href="shop.html" data-i18n="shop">Shop</a></li>
+        <li><a href="aboutus.html" data-i18n="about">About Us</a></li>
+        <li><a href="contact.html" data-i18n="contact">Contact</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4 class="footer-col-title" data-i18n="footer_categories">Categories</h4>
+      <ul class="footer-links">
+        <li><a href="shop.html?cat=powerbanks" data-i18n="cat_powerbanks">Power Banks</a></li>
+        <li><a href="shop.html?cat=cameras" data-i18n="cat_cameras">Security Cameras</a></li>
+        <li><a href="shop.html?cat=speakers" data-i18n="cat_speakers">Speakers & Radios</a></li>
+        <li><a href="shop.html?cat=watches" data-i18n="cat_watches">Smart Watches</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4 class="footer-col-title" data-i18n="footer_contact_col">Contact Us</h4>
+      <ul class="footer-contact-list">
+        <li><i class="fas fa-phone"></i><span>+212 664 700 752</span></li>
+        <li><i class="fas fa-envelope"></i><span>badrelectro173@gmail.com</span></li>
+        <li><i class="fas fa-map-marker-alt"></i><span data-i18n="footer_location">Morocco</span></li>
+        <li><i class="fas fa-clock"></i><span data-i18n="footer_hours">24/7 Support via WhatsApp</span></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p data-i18n="footer_copy">© 2026 Electro Badr</p>
+    <p class="footer-bottom-right" data-i18n="footer_made">Made with ❤️ in Morocco</p>
+  </div>
+</footer>
+
+<!-- WHATSAPP -->
+<a href="https://wa.me/212664700752" class="whatsapp-btn" target="_blank"><i class="fab fa-whatsapp"></i></a>
+
+<!-- BACK TO TOP -->
+<button class="back-to-top" id="backToTop"><i class="fas fa-chevron-up"></i></button>
+
+<!-- CART SIDEBAR -->
+<div class="cart-sidebar-overlay" id="cartOverlay" onclick="closeCart()"></div>
+<div class="cart-sidebar-panel" id="cartPanel">
+  <div class="cart-sidebar-header">
+    <h3 data-i18n="cart_title">🛒 Your Cart</h3>
+    <button class="cart-sidebar-close" onclick="closeCart()">✕</button>
+  </div>
+  <div class="cart-sidebar-items" id="cartSidebarItems">
+    <p class="cart-empty" data-i18n="cart_empty">Your cart is empty.</p>
+  </div>
+  <div class="cart-sidebar-footer">
+    <div class="cart-total-row">
+      <span data-i18n="cart_total">Total</span>
+      <span id="cartTotalPrice">0 DH</span>
+    </div>
+    <a href="shop.html" class="cart-checkout-btn" data-i18n="go_shop">Go to Shop →</a>
+  </div>
+</div>
+
+<script>
+(function() {
+  const btn = document.getElementById('hamburgerBtn');
+  const menu = document.getElementById('hbMenu');
+  const overlay = document.getElementById('hbOverlay');
+  function openMenu() { btn.classList.add('open'); menu.classList.add('open'); overlay.classList.add('open'); document.body.style.overflow = 'hidden'; }
+  function closeMenu() { btn.classList.remove('open'); menu.classList.remove('open'); overlay.classList.remove('open'); document.body.style.overflow = ''; }
+  btn.addEventListener('click', () => { btn.classList.contains('open') ? closeMenu() : openMenu(); });
+  overlay.addEventListener('click', closeMenu);
+  const page = window.location.pathname.split('/').pop().replace('.html','') || 'index';
+  document.querySelectorAll('.hb-link').forEach(link => {
+    if (link.dataset.page === page || (page === '' && link.dataset.page === 'index')) link.classList.add('active-page');
+  });
+  document.addEventListener('keydown', e => { if (e.key === 'Escape') closeMenu(); });
+})();
+</script>
+
+<script src="script.js"></script>
+
+<script>
+function setTab(el) {
+  document.querySelectorAll('.ct-tab').forEach(t => t.classList.remove('active'));
+  el.classList.add('active');
+  const subject = document.getElementById('ct-subject');
+  if (el.textContent.includes('Order') || el.textContent.includes('commande') || el.textContent.includes('طلب'))
+    subject.placeholder = 'Order inquiry — product, quantity...';
+  else if (el.textContent.includes('Support') || el.textContent.includes('فني'))
+    subject.placeholder = 'Support request — describe your issue...';
+  else subject.placeholder = 'What\'s this about?';
+}
+
+function sendContact() {
+  const name    = document.getElementById('ct-name').value.trim();
+  const phone   = document.getElementById('ct-phone').value.trim();
+  const email   = document.getElementById('ct-email').value.trim();
+  const subject = document.getElementById('ct-subject').value.trim();
+  const message = document.getElementById('ct-message').value.trim();
+  if (!name || !message) { alert('Please fill in your name and message.'); return; }
+  const activeTab = document.querySelector('.ct-tab.active')?.textContent || 'Inquiry';
+  const waMsg = encodeURIComponent(
+    `📩 *NEW MESSAGE — ELECTRO BADR WEBSITE*\n\n` +
+    `📋 *Type:* ${activeTab}\n` +
+    `👤 *Name:* ${name}\n` +
+    `📞 *Phone:* ${phone || 'Not provided'}\n` +
+    `✉️ *Email:* ${email || 'Not provided'}\n` +
+    `📝 *Subject:* ${subject || 'No subject'}\n\n` +
+    `💬 *Message:*\n${message}`
+  );
+  window.open(`https://wa.me/212664700752?text=${waMsg}`, '_blank');
+}
+
+(function() {
+  const canvas = document.getElementById('footerCanvas');
+  if (!canvas) return;
+  const ctx = canvas.getContext('2d');
+  function resize() { canvas.width = canvas.offsetWidth; canvas.height = canvas.offsetHeight; }
+  resize();
+  window.addEventListener('resize', resize);
+  const particles = [];
+  for (let i = 0; i < 30; i++) {
+    particles.push({ x:Math.random()*canvas.width, y:Math.random()*canvas.height, vx:(Math.random()-0.5)*0.4, vy:(Math.random()-0.5)*0.4, r:Math.random()*2+0.5, alpha:Math.random()*0.4+0.1 });
+  }
+  function animate() {
+    ctx.clearRect(0,0,canvas.width,canvas.height);
+    for (let i=0;i<particles.length;i++) for (let j=i+1;j<particles.length;j++) {
+      const dx=particles[i].x-particles[j].x, dy=particles[i].y-particles[j].y;
+      const dist=Math.sqrt(dx*dx+dy*dy);
+      if (dist<100) { ctx.beginPath(); ctx.moveTo(particles[i].x,particles[i].y); ctx.lineTo(particles[j].x,particles[j].y); ctx.strokeStyle=`rgba(255,123,34,${(1-dist/100)*0.20})`; ctx.lineWidth=1; ctx.stroke(); }
+    }
+    particles.forEach(p => {
+      p.x+=p.vx; p.y+=p.vy;
+      if(p.x<0||p.x>canvas.width) p.vx*=-1;
+      if(p.y<0||p.y>canvas.height) p.vy*=-1;
+      ctx.beginPath(); ctx.arc(p.x,p.y,p.r,0,Math.PI*2);
+      ctx.fillStyle=`rgba(255,123,34,${p.alpha})`; ctx.fill();
+    });
+    requestAnimationFrame(animate);
+  }
+  animate();
+})();
+</script>
+
+<!-- CURSOR — MUST BE ABSOLUTE LAST -->
+<div class="hero-cursor-dot" id="heroCursorDot"></div>
+
+</body>
+</html>

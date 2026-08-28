@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Electro Badr | Premium Electronics</title>
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+
+<body>
+<div class="page-transition" id="pageTransition"></div>
+<button class="hamburger-btn" id="hamburgerBtn" aria-label="Menu">
+  <span class="hb-line"></span><span class="hb-line"></span><span class="hb-line"></span>
+</button>
+<div class="hb-overlay" id="hbOverlay"></div>
+<div class="hb-menu" id="hbMenu">
+  <div class="hb-menu-logo"><img src="IMAGES/logoblack-removebg.png" alt="Electro Badr"></div>
+  <div class="hb-menu-links">
+    <a href="index.html" class="hb-link" data-page="index"><div class="hb-link-icon"><i class="fas fa-home"></i></div><span data-i18n="home">Home</span></a>
+    <a href="shop.html" class="hb-link" data-page="shop"><div class="hb-link-icon"><i class="fas fa-shopping-bag"></i></div><span data-i18n="shop">Shop</span></a>
+    <a href="aboutus.html" class="hb-link" data-page="about"><div class="hb-link-icon"><i class="fas fa-info-circle"></i></div><span data-i18n="about">About Us</span></a>
+    <a href="contact.html" class="hb-link" data-page="contact"><div class="hb-link-icon"><i class="fas fa-envelope"></i></div><span data-i18n="contact">Contact</span></a>
+  </div>
+  <div class="hb-menu-footer">
+    <p data-i18n="follow_us">FOLLOW US</p>
+    <div class="hb-footer-socials">
+      <a href="https://wa.me/212664700752" target="_blank" class="hb-soc"><i class="fab fa-whatsapp"></i></a>
+      <a href="#" class="hb-soc"><i class="fab fa-instagram"></i></a>
+      <a href="#" class="hb-soc"><i class="fab fa-facebook"></i></a>
+      <a href="#" class="hb-soc"><i class="fab fa-tiktok"></i></a>
+    </div>
+  </div>
+</div>
+
+<header class="navbar">
+  <div class="logo"><a href="index.html"><img src="IMAGES/logoblack-removebg.png" alt="Electro Badr"></a></div>
+  <nav>
+    <a href="index.html" id="nav-home">HOME</a>
+    <a href="shop.html" id="nav-shop">SHOP</a>
+    <a href="aboutus.html" id="nav-about">ABOUT US</a>
+    <a href="contact.html" id="nav-contact">CONTACT</a>
+  </nav>
+  <div class="nav-actions">
+    <div class="search-wrapper">
+      <input type="text" id="searchInput" placeholder="Search Products..." class="search-bar" autocomplete="off">
+      <div class="search-dropdown" id="searchDropdown"></div>
+    </div>
+    <select id="languageSwitcher"><option value="en">EN</option><option value="fr">FR</option><option value="ar">AR</option></select>
+    <button id="theme-toggle">🌙</button>
+    <div class="cart-icon"><i class="fas fa-shopping-cart"></i><span id="cart-count">0</span></div>
+  </div>
+</header>
+
+<!-- HERO SECTION -->
+<section class="hero" id="heroSection">
+  <video class="hero-video-bg" autoplay muted loop playsinline preload="auto">
+    <source src="images/herosection1.mp4" type="video/mp4">
+  </video>
+  <div class="hero-video-overlay"></div>
+  <div class="scan-line"></div>
+  <div class="corner-bracket cb-tl"></div>
+  <div class="corner-bracket cb-tr"></div>
+  <div class="corner-bracket cb-bl"></div>
+  <div class="corner-bracket cb-br"></div>
+  <div class="hero-content fade-up">
+    <div class="hero-badge">
+      <span class="bdot"></span>
+      <span data-i18n="hero_badge">SINCE 1983 · MOROCCO'S TRUSTED ELECTRONICS</span>
+    </div>
+    <h1 class="hero-title">
+      <span class="hero-line1">Premium</span>
+      <span class="hero-line2">Electronics,</span>
+      <span class="hero-line3">Delivered to You</span>
+    </h1>
+    <p class="hero-desc">Discover our curated selection of top-tier gadgets — from powerbanks to digital watches. Quality you can trust, cash on delivery.</p>
+    <div class="stats-row">
+      <div class="stat-glass"><div class="stat-value">40+</div><div class="stat-label" data-i18n="stat_years">Years of Trust</div></div>
+      <div class="stat-glass"><div class="stat-value">200+</div><div class="stat-label" data-i18n="stat_products">Products</div></div>
+      <div class="stat-glass"><div class="stat-value">50K+</div><div class="stat-label" data-i18n="stat_customers">Customers</div></div>
+    </div>
+  </div>
+  <div class="hero-hover-overlay" id="heroHoverOverlay">
+    <div class="hero-hover-buttons">
+      <a href="shop.html" class="hero-hover-btn hero-hover-btn--primary">🛍 Take a Look</a>
+      <a href="contact.html" class="hero-hover-btn hero-hover-btn--secondary">💬 Contact Us</a>
+    </div>
+  </div>
+</section>
+
+<!-- BRANDS BAR -->
+<div class="brands-bar">
+  <div class="brands-track">
+    <div class="brand-item"><img src="IMAGES/Hikvision-logo.png" alt="Hikvision" loading="lazy"></div>
+    <div class="brand-item"><img src="IMAGES/imou-logo.png" alt="Imou" loading="lazy"></div>
+    <div class="brand-item"><img src="IMAGES/TP-Link-removebg-preview.png" style="transform:scale(2);" alt="TP link" loading="lazy"></div>
+    <div class="brand-item"><img src="IMAGES/dahua-removebg-preview.png" alt="dahua" loading="lazy"></div>
+    <div class="brand-gap"></div>
+    <div class="brand-item"><img src="IMAGES/oraimo.png" alt="Oraimo" loading="lazy"></div>
+    <div class="brand-item"><img src="IMAGES/revoox-removebg-preview.png" style="transform:scale(1.8);" alt="Revoox" loading="lazy"></div>
+    <div class="brand-item"><img src="IMAGES/dinex-removebg-preview.png" style="transform:scale(2.5);" alt="Dinex" loading="lazy"></div>
+    <div class="brand-item"><img src="IMAGES/riverrr-removebg-preview.png" style="transform:scale(2.8);" alt="Riversong" loading="lazy"></div>
+    <div class="brand-gap"></div>
+    <div class="brand-item"><img src="IMAGES/sony-logo.png" style="transform:scale(2);" alt="Sony" loading="lazy"></div>
+    <div class="brand-item"><img src="IMAGES/samsung_logo_PNG8.png" style="transform:scale(2);" alt="Samsung" loading="lazy"></div>
+    <div class="brand-item"><img src="IMAGES/jbl-2-logo.png" alt="JBL" loading="lazy"></div>
+    <div class="brand-item"><img src="IMAGES/Xiaomi-removebg-preview.png" alt="Xiaomi" loading="lazy"></div>
+    <div class="brand-gap"></div>
+    <div class="brand-item"><img src="IMAGES/Phillips-Logo-2008.png" alt="Phillips" loading="lazy"></div>
+    <div class="brand-item"><img src="IMAGES/kemei.png" alt="Kemei" loading="lazy"></div>
+    <div class="brand-item"><img src="IMAGES/wahl-removebg-preview.png" alt="Wahl" loading="lazy"></div>
+    <div class="brand-item"><img src="IMAGES/braunchat-removebg-preview.png" style="transform:scale(2);" alt="Braun" loading="lazy"></div>
+    <div class="brand-gap"></div>
+    <div class="brand-item"><img src="IMAGES/sokanyy-removebg-preview.png" style="transform:scale(3);" alt="Sokany" loading="lazy"></div>
+    <div class="brand-item"><img src="IMAGES/dsp-removebg-preview.png"style="transform:scale(2);" alt="DSP" loading="lazy"></div>
+    <div class="brand-item"><img src="IMAGES/babyliss-removebg-preview.png" ; alt="BaByliss" loading="lazy"></div>
+    <div class="brand-item"><img src="IMAGES/enzo-removebg-preview.png" style="transform:scale(1.8);" alt="Enzo Professional" loading="lazy"></div>
+    <div class="brand-gap"></div>
+    <!-- duplicate set -->
+    <div class="brand-item"><img src="IMAGES/Hikvision-logo.png" style="transform:scale(2);" alt="Hikvision" loading="lazy"></div>
+    <div class="brand-item"><img src="IMAGES/imou-logo.png" alt="Imou" loading="lazy"></div>
+    <div class="brand-item"><img src="IMAGES/TP-Link-removebg-preview.png" style="transform:scale(2);" alt="TP link" loading="lazy"></div>
+    <div class="brand-item"><img src="IMAGES/dahua-removebg-preview.png" alt="dahua" loading="lazy"></div>
+    <div class="brand-gap"></div>
+    <div class="brand-item"><img src="IMAGES/oraimo.png" alt="Oraimo" loading="lazy"></div>
+    <div class="brand-item"><img src="IMAGES/revoox-removebg-preview.png" style="transform:scale(1.8);" alt="Revoox" loading="lazy"></div>
+    <div class="brand-item"><img src="IMAGES/dinex-removebg-preview.png" style="transform:scale(2.5);" alt="Dinex" loading="lazy"></div>
+    <div class="brand-item"><img src="IMAGES/riverrr-removebg-preview.png" style="transform:scale(2.8);" alt="Riversong" loading="lazy"></div>
+    <div class="brand-gap"></div>
+    <div class="brand-item"><img src="IMAGES/sony-logo.png" alt="Sony" style="transform:scale(2);" loading="lazy"></div>
+    <div class="brand-item"><img src="IMAGES/samsung_logo_PNG8.png" style="transform:scale(2);" alt="Samsung" loading="lazy"></div>
+    <div class="brand-item"><img src="IMAGES/jbl-2-logo.png" alt="JBL" loading="lazy"></div>
+    <div class="brand-item"><img src="IMAGES/Xiaomi-removebg-preview.png" alt="Xiaomi" loading="lazy"></div>
+    <div class="brand-gap"></div>
+    <div class="brand-item"><img src="IMAGES/Phillips-Logo-2008.png" alt="Phillips" loading="lazy"></div>
+    <div class="brand-item"><img src="IMAGES/kemei.png" alt="Kemei" loading="lazy"></div>
+    <div class="brand-item"><img src="IMAGES/wahl-removebg-preview.png" alt="Wahl" loading="lazy"></div>
+    <div class="brand-item"><img src="IMAGES/braunchat-removebg-preview.png" style="transform:scale(2);" alt="Braun" loading="lazy"></div>
+    <div class="brand-gap"></div>
+    <div class="brand-item"><img src="IMAGES/sokanyy-removebg-preview.png" style="transform:scale(3);" alt="Sokany" loading="lazy"></div>
+    <div class="brand-item"><img src="IMAGES/dsp-removebg-preview.png" style="transform:scale(2);" alt="DSP" loading="lazy"></div>
+    <div class="brand-item"><img src="IMAGES/babyliss-removebg-preview.png" alt="BaByliss" loading="lazy"></div>
+    <div class="brand-item"><img src="IMAGES/enzo-removebg-preview.png" style="transform:scale(1.8);" alt="Enzo Professional" loading="lazy"></div>
+    <div class="brand-gap"></div>
+  </div>
+</div>
+
+<!-- FEATURES -->
+<section class="features">
+  <canvas class="features-canvas" id="featuresCanvas"></canvas>
+  <div class="feature-card"><i class="fas fa-truck"></i><h3>Fast Delivery</h3><p>Delivery available across Morocco.</p></div>
+  <div class="feature-card"><i class="fas fa-money-bill-wave"></i><h3>Cash On Delivery</h3><p>Pay only when your order arrives.</p></div>
+  <div class="feature-card"><i class="fas fa-shield-alt"></i><h3>Quality Guaranteed</h3><p>Carefully selected electronics.</p></div>
+  <div class="feature-card"><i class="fab fa-whatsapp"></i><h3>24/7 Support</h3><p>Instant assistance via WhatsApp.</p></div>
+</section>
+
+<!-- CATEGORIES -->
+<section class="products-preview">
+  <canvas class="bg-particles-canvas" id="categoriesCanvas"></canvas>
+  <h2 data-i18n="popular_cats">Popular Categories</h2>
+  <div class="products-grid">
+    <a href="shop.html?cat=powerbanks" class="product-card cat-link">
+      <img src="IMAGES/Powerbanks category.png" loading="lazy">
+      <h3 class="product-title" data-i18n="cat_powerbanks">Power Banks</h3>
+      <p class="cat-arrow" data-i18n="shop_now">Shop Now →</p>
+    </a>
+    <a href="shop.html?cat=speakers" class="product-card cat-link">
+      <img src="IMAGES/speakersradioscat.png" loading="lazy">
+      <h3 class="product-title" data-i18n="cat_speakers">Speakers</h3>
+      <p class="cat-arrow" data-i18n="shop_now">Shop Now →</p>
+    </a>
+    <a href="shop.html?cat=cameras" class="product-card cat-link">
+      <img src="IMAGES/securitycamscatpng.png" loading="lazy">
+      <h3 class="product-title" data-i18n="cat_cameras">Security Cameras</h3>
+      <p class="cat-arrow" data-i18n="shop_now">Shop Now →</p>
+    </a>
+    <a href="shop.html?cat=watches" class="product-card cat-link">
+      <img src="IMAGES/Smartwatchescategory.png" loading="lazy">
+      <h3 class="product-title" data-i18n="cat_watches">Smart Watches</h3>
+      <p class="cat-arrow" data-i18n="shop_now">Shop Now →</p>
+    </a>
+  </div>
+</section>
+
+<!-- BEST SELLERS -->
+<section class="products-preview">
+  <canvas class="bg-particles-canvas" id="bestsellersCanvas"></canvas>
+  <h2 data-i18n="best_sellers">Best Sellers</h2>
+  <div class="products-grid">
+    <div class="product-card">
+      <img src="IMAGES/AOV cam.png" loading="lazy">
+      <h3 class="product-title" data-i18n="bs_headphones">TVT Solar 4G Cam AOV System</h3>
+      <p>1499 DH</p>
+      <button class="btn add-cart" data-i18n="shop_add_cart">Add To Cart</button>
+      <div class="quick-view">
+        <h4 data-i18n="bs_headphones">TVT Solar 4G Cam AOV System</h4>
+        <p class="qv-price">1499 DH</p>
+        <p class="qv-desc" data-i18n="bs_headphones_desc">360° panoramic view, solar-powered, night vision, 4-camera system.</p>
+        <button class="qv-btn add-cart" data-i18n="shop_add_cart">Add To Cart</button>
+      </div>
+    </div>
+    <div class="product-card">
+      <img src="IMAGES/SH 22.5W.png" loading="lazy">
+      <h3 class="product-title" data-i18n="bs_watch">SHtel Power Bank 20000mAh SP-24</h3>
+      <p>229 DH</p>
+      <button class="btn add-cart" data-i18n="shop_add_cart">Add To Cart</button>
+      <div class="quick-view">
+        <h4 data-i18n="bs_watch">SHtel Power Bank 20000mAh SP-24</h4>
+        <p class="qv-price">229 DH</p>
+        <p class="qv-desc" data-i18n="bs_watch_desc">22.5W quick charge, Type-C/Lightning cables, digital display.</p>
+        <button class="qv-btn add-cart" data-i18n="shop_add_cart">Add To Cart</button>
+      </div>
+    </div>
+    <div class="product-card">
+      <img src="IMAGES/philis one blade 360 one of 1.png" loading="lazy">
+      <h3 class="product-title" data-i18n="bs_powerbank">Philips One Blade 360</h3>
+      <p>649 DH</p>
+      <button class="btn add-cart" data-i18n="shop_add_cart">Add To Cart</button>
+      <div class="quick-view">
+        <h4 data-i18n="bs_powerbank">Philips One Blade 360</h4>
+        <p class="qv-price">649 DH</p>
+        <p class="qv-desc" data-i18n="bs_powerbank_desc">3D floating heads, wet/dry use, pop-up trimmer, 60min charge.</p>
+        <button class="qv-btn add-cart" data-i18n="shop_add_cart">Add To Cart</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- REVIEWS -->
+<section class="reviews">
+  <canvas class="bg-particles-canvas" id="reviewsCanvas"></canvas>
+  <h2 data-i18n="reviews_title">Customer Reviews</h2>
+  <div class="reviews-track-wrapper">
+    <div class="reviews-track">
+      <div class="review-card"><h3>★★★★★</h3><p data-i18n="review1">Excellent quality and fast delivery.</p><span class="review-name">— Yassine El Amrani</span></div>
+      <div class="review-card"><h3>★★★★★</h3><p data-i18n="review2">Very professional service.</p><span class="review-name">— Sara Bennani</span></div>
+      <div class="review-card"><h3>★★★★★</h3><p data-i18n="review3">Will definitely buy again.</p><span class="review-name">— Omar Lahlou</span></div>
+      <div class="review-card"><h3>★★★★★</h3><p data-i18n="review1">Excellent quality and fast delivery.</p><span class="review-name">— Yassine El Amrani</span></div>
+      <div class="review-card"><h3>★★★★★</h3><p data-i18n="review2">Very professional service.</p><span class="review-name">— Sara Bennani</span></div>
+      <div class="review-card"><h3>★★★★★</h3><p data-i18n="review3">Will definitely buy again.</p><span class="review-name">— Omar Lahlou</span></div>
+    </div>
+  </div>
+</section>
+
+<a href="https://wa.me/212664700752" class="whatsapp-btn" target="_blank"><i class="fab fa-whatsapp"></i></a>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <canvas class="footer-canvas" id="footerCanvas"></canvas>
+  <div class="footer-glow-line"></div>
+  <div class="footer-inner">
+    <div class="footer-col footer-brand">
+      <img src="IMAGES/logoblack-removebg.png" class="footer-logo" alt="Electro Badr">
+      <p class="footer-tagline" data-i18n="footer_tagline">Premium Electronics Since 1983</p>
+      <p class="footer-desc" data-i18n="footer_desc">Morocco's trusted destination for quality gadgets. Cash on delivery, nationwide.</p>
+      <div class="footer-socials">
+        <a href="https://wa.me/212664700752" target="_blank" class="fsocial"><i class="fab fa-whatsapp"></i></a>
+        <a href="#" class="fsocial"><i class="fab fa-instagram"></i></a>
+        <a href="#" class="fsocial"><i class="fab fa-facebook"></i></a>
+        <a href="#" class="fsocial"><i class="fab fa-tiktok"></i></a>
+      </div>
+    </div>
+    <div class="footer-col">
+      <h4 class="footer-col-title" data-i18n="footer_quick_links">Quick Links</h4>
+      <ul class="footer-links">
+        <li><a href="index.html" data-i18n="home">Home</a></li>
+        <li><a href="shop.html" data-i18n="shop">Shop</a></li>
+        <li><a href="aboutus.html" data-i18n="about">About Us</a></li>
+        <li><a href="contact.html" data-i18n="contact">Contact</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4 class="footer-col-title" data-i18n="footer_categories">Categories</h4>
+      <ul class="footer-links">
+        <li><a href="shop.html?cat=powerbanks" data-i18n="cat_powerbanks">Power Banks</a></li>
+        <li><a href="shop.html?cat=cameras" data-i18n="cat_cameras">Security Cameras</a></li>
+        <li><a href="shop.html?cat=speakers" data-i18n="cat_speakers">Speakers</a></li>
+        <li><a href="shop.html?cat=watches" data-i18n="cat_watches">Smart Watches</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4 class="footer-col-title" data-i18n="footer_contact_col">Contact Us</h4>
+      <ul class="footer-contact-list">
+        <li><i class="fas fa-phone"></i><span>+212 664 700 752</span></li>
+        <li><i class="fas fa-envelope"></i><span>badrelectro173@gmail.com</span></li>
+        <li><i class="fas fa-map-marker-alt"></i><span data-i18n="footer_location">Morocco</span></li>
+        <li><i class="fas fa-clock"></i><span data-i18n="footer_hours">24/7 Support via WhatsApp</span></li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- LOCATION MAP SECTION -->
+  <div class="footer-map-section">
+    <div class="footer-map-info">
+      <div class="footer-map-pin">
+        <div class="pin-icon">
+          <svg width="48" height="58" viewBox="0 0 48 58" fill="none">
+            <path d="M24 0C10.7 0 0 10.7 0 24C0 42 24 58 24 58C24 58 48 42 48 24C48 10.7 37.3 0 24 0Z" fill="#ff7b22"/>
+            <circle cx="24" cy="24" r="10" fill="white"/>
+            <circle cx="24" cy="24" r="5" fill="#ff7b22"/>
+          </svg>
+          <div class="pin-pulse"></div>
+        </div>
+      </div>
+      <div class="footer-map-details">
+        <h4 data-i18n="map_find_us">Find Us</h4>
+        <p data-i18n="map_name">Electro Badr</p>
+        <p data-i18n="map_location">Casablanca, Morocco</p>
+        <a href="https://maps.app.goo.gl/WChzUCFQ3cTbmTMi9" target="_blank" class="map-open-btn">
+          <i class="fas fa-directions"></i> <span data-i18n="map_directions">Get Directions</span>
+        </a>
+      </div>
+    </div>
+    <div class="footer-map-canvas">
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5133.720131987178!2d-7.631758725592345!3d33.56986744304937!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xda7d3006e4c9e59%3A0xf3acdc9cf39b2a98!2sElectro%20Badr!5e1!3m2!1sen!2sma!4v1784474860037!5m2!1sen!2sma"
+        width="100%" height="100%"
+        style="border:0; border-radius:16px; display:block;"
+        allowfullscreen="" loading="lazy"
+        referrerpolicy="strict-origin-when-cross-origin">
+      </iframe>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <p data-i18n="footer_copy">© 2026 Electro Badr</p>
+    <p class="footer-bottom-right" data-i18n="footer_made">Made with ❤️ in Morocco</p>
+  </div>
+</footer>
+
+<!-- CART SIDEBAR -->
+<div class="cart-sidebar-overlay" id="cartOverlay" onclick="closeCart()"></div>
+<div class="cart-sidebar-panel" id="cartPanel">
+  <div class="cart-sidebar-header">
+    <h3 data-i18n="cart_title">🛒 Your Cart</h3>
+    <button class="cart-sidebar-close" onclick="closeCart()">✕</button>
+  </div>
+  <div class="cart-sidebar-items" id="cartSidebarItems">
+    <p class="cart-empty" data-i18n="cart_empty">Your cart is empty.</p>
+  </div>
+  <div class="cart-sidebar-footer">
+    <div class="cart-total-row">
+      <span data-i18n="cart_total">Total</span>
+      <span id="cartTotalPrice">0 DH</span>
+    </div>
+    <a href="shop.html" class="cart-checkout-btn" data-i18n="go_shop">Go to Shop →</a>
+  </div>
+</div>
+
+<button class="back-to-top" id="backToTop"><i class="fas fa-chevron-up"></i></button>
+
+<script src="script.js"></script>
+<script>
+(function() {
+  const btn = document.getElementById('hamburgerBtn');
+  const menu = document.getElementById('hbMenu');
+  const overlay = document.getElementById('hbOverlay');
+  function openMenu() { btn.classList.add('open'); menu.classList.add('open'); overlay.classList.add('open'); document.body.style.overflow = 'hidden'; }
+  function closeMenu() { btn.classList.remove('open'); menu.classList.remove('open'); overlay.classList.remove('open'); document.body.style.overflow = ''; }
+  btn.addEventListener('click', () => { btn.classList.contains('open') ? closeMenu() : openMenu(); });
+  overlay.addEventListener('click', closeMenu);
+  const page = window.location.pathname.split('/').pop().replace('.html','') || 'index';
+  document.querySelectorAll('.hb-link').forEach(link => {
+    if (link.dataset.page === page || (page === '' && link.dataset.page === 'index')) link.classList.add('active-page');
+  });
+  document.addEventListener('keydown', e => { if (e.key === 'Escape') closeMenu(); });
+})();
+</script>
+<script>
+function initParticleBg(canvasId) {
+  const canvas = document.getElementById(canvasId);
+  if (!canvas) return;
+  const ctx = canvas.getContext('2d');
+  function resize() { canvas.width = canvas.offsetWidth; canvas.height = canvas.offsetHeight; }
+  resize();
+  window.addEventListener('resize', resize);
+  const particles = [];
+  class Particle {
+    constructor() { this.reset(); }
+    reset() { this.x = Math.random() * canvas.width; this.y = Math.random() * canvas.height; this.vx = (Math.random() - 0.5) * 0.6; this.vy = (Math.random() - 0.5) * 0.6; this.r = Math.random() * 2.5 + 1; this.alpha = Math.random() * 0.5 + 0.3; }
+    update() { this.x += this.vx; this.y += this.vy; if (this.x < 0 || this.x > canvas.width) this.vx *= -1; if (this.y < 0 || this.y > canvas.height) this.vy *= -1; }
+    draw() { ctx.beginPath(); ctx.arc(this.x, this.y, this.r, 0, Math.PI * 2); ctx.fillStyle = `rgba(255,123,34,${this.alpha})`; ctx.fill(); }
+  }
+  for (let i = 0; i < 45; i++) particles.push(new Particle());
+  function drawLines() {
+    for (let i = 0; i < particles.length; i++) for (let j = i + 1; j < particles.length; j++) {
+      const dx = particles[i].x - particles[j].x; const dy = particles[i].y - particles[j].y;
+      const dist = Math.sqrt(dx*dx + dy*dy);
+      if (dist < 120) { ctx.beginPath(); ctx.moveTo(particles[i].x, particles[i].y); ctx.lineTo(particles[j].x, particles[j].y); ctx.strokeStyle = `rgba(255,123,34,${(1 - dist/120) * 0.30})`; ctx.lineWidth = 1; ctx.stroke(); }
+    }
+  }
+  const sparks = [];
+  class Spark {
+    constructor() { this.reset(); }
+    reset() { this.x = Math.random() * canvas.width; this.y = Math.random() * canvas.height; this.len = Math.random() * 50 + 15; this.angle = Math.random() * Math.PI * 2; this.speed = Math.random() * 2.5 + 1.5; this.life = 1; this.decay = Math.random() * 0.02 + 0.01; this.width = Math.random() * 1.5 + 0.5; }
+    update() { this.x += Math.cos(this.angle) * this.speed; this.y += Math.sin(this.angle) * this.speed; this.life -= this.decay; if (this.life <= 0) this.reset(); }
+    draw() { const tx = this.x - Math.cos(this.angle) * this.len * this.life; const ty = this.y - Math.sin(this.angle) * this.len * this.life; const g = ctx.createLinearGradient(tx, ty, this.x, this.y); g.addColorStop(0, `rgba(255,123,34,0)`); g.addColorStop(0.5, `rgba(255,148,77,${this.life*0.35})`); g.addColorStop(1, `rgba(255,200,100,${this.life*0.8})`); ctx.beginPath(); ctx.moveTo(tx, ty); ctx.lineTo(this.x, this.y); ctx.strokeStyle = g; ctx.lineWidth = this.width; ctx.lineCap = 'round'; ctx.stroke(); }
+  }
+  for (let i = 0; i < 12; i++) sparks.push(new Spark());
+  function animate() { ctx.clearRect(0, 0, canvas.width, canvas.height); drawLines(); particles.forEach(p => { p.update(); p.draw(); }); sparks.forEach(s => { s.update(); s.draw(); }); requestAnimationFrame(animate); }
+  animate();
+}
+initParticleBg('featuresCanvas');
+initParticleBg('categoriesCanvas');
+initParticleBg('bestsellersCanvas');
+initParticleBg('reviewsCanvas');
+
+(function() {
+  const canvas = document.getElementById('footerCanvas');
+  if (!canvas) return;
+  const ctx = canvas.getContext('2d');
+  function resize() { canvas.width = canvas.offsetWidth; canvas.height = canvas.offsetHeight; }
+  resize();
+  window.addEventListener('resize', resize);
+  const particles = [];
+  for (let i = 0; i < 30; i++) { particles.push({ x: Math.random() * canvas.width, y: Math.random() * canvas.height, vx: (Math.random() - 0.5) * 0.4, vy: (Math.random() - 0.5) * 0.4, r: Math.random() * 2 + 0.5, alpha: Math.random() * 0.4 + 0.1 }); }
+  function animate() {
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    for (let i = 0; i < particles.length; i++) for (let j = i + 1; j < particles.length; j++) { const dx = particles[i].x - particles[j].x; const dy = particles[i].y - particles[j].y; const dist = Math.sqrt(dx*dx + dy*dy); if (dist < 100) { ctx.beginPath(); ctx.moveTo(particles[i].x, particles[i].y); ctx.lineTo(particles[j].x, particles[j].y); ctx.strokeStyle = `rgba(255,123,34,${(1 - dist/100) * 0.20})`; ctx.lineWidth = 1; ctx.stroke(); } }
+    particles.forEach(p => { p.x += p.vx; p.y += p.vy; if (p.x < 0 || p.x > canvas.width) p.vx *= -1; if (p.y < 0 || p.y > canvas.height) p.vy *= -1; ctx.beginPath(); ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2); ctx.fillStyle = `rgba(255,123,34,${p.alpha})`; ctx.fill(); });
+    requestAnimationFrame(animate);
+  }
+  animate();
+})();
+</script>
+<script>
+(function () {
+  const bar = document.querySelector('.brands-bar');
+  const track = document.querySelector('.brands-track');
+  if (!bar || !track) return;
+
+  const SPEED = 1;          // px per frame — raise for faster auto-scroll
+  const RESUME_DELAY = 1500;  // ms of inactivity before auto-scroll resumes
+
+  let isDown = false, startX = 0, startScroll = 0, resumeTimer = null, paused = false, halfWidth = 0;
+
+  function measure() { halfWidth = track.scrollWidth / 2; } // content is duplicated once = one full loop
+  measure();
+  window.addEventListener('load', measure);   // re-measure once lazy images finish loading
+  window.addEventListener('resize', measure);
+
+  function wrap() {
+    if (halfWidth <= 0) return;
+    if (bar.scrollLeft >= halfWidth) bar.scrollLeft -= halfWidth;
+    else if (bar.scrollLeft <= 0) bar.scrollLeft += halfWidth;
+  }
+
+  function pause() {
+    paused = true;
+    clearTimeout(resumeTimer);
+    resumeTimer = setTimeout(() => { paused = false; }, RESUME_DELAY);
+  }
+
+  function tick() {
+    if (!paused && !isDown) { bar.scrollLeft += SPEED; wrap(); }
+    requestAnimationFrame(tick);
+  }
+  requestAnimationFrame(tick);
+
+  // Drag to scroll (mouse)
+  bar.addEventListener('mousedown', e => {
+    isDown = true;
+    bar.classList.add('dragging');
+    startX = e.pageX;
+    startScroll = bar.scrollLeft;
+    pause();
+    e.preventDefault(); // stops native image-drag ghost
+  });
+  window.addEventListener('mousemove', e => {
+    if (!isDown) return;
+    bar.scrollLeft = startScroll - (e.pageX - startX);
+    wrap();
+  });
+  window.addEventListener('mouseup', () => {
+    if (!isDown) return;
+    isDown = false;
+    bar.classList.remove('dragging');
+    pause();
+  });
+
+  // Touch drag — native scroll already handles the motion, this just pauses/resumes around it
+  bar.addEventListener('touchstart', pause, { passive: true });
+  bar.addEventListener('touchmove', () => { wrap(); pause(); }, { passive: true });
+  bar.addEventListener('touchend', pause);
+
+  // Vertical mouse-wheel also scrolls the bar horizontally
+  bar.addEventListener('wheel', e => {
+    if (e.deltaY === 0) return; // trackpad horizontal swipe passes through natively
+    e.preventDefault();
+    bar.scrollLeft += e.deltaY;
+    wrap();
+    pause();
+  }, { passive: false });
+
+  bar.addEventListener('scroll', wrap);
+})();
+</script>
+<!-- CURSOR — MUST BE ABSOLUTE LAST -->
+<div class="hero-cursor-dot" id="heroCursorDot"></div>
+</body>
+</html>
