@@ -135,6 +135,21 @@
     .back-to-top.visible { opacity:1; transform:translateY(0) scale(1); pointer-events:auto; }
     .back-to-top:hover { background:#ff944d; transform:translateY(-4px) scale(1.1); box-shadow:0 12px 30px rgba(255,123,34,0.60); }
 
+    @media (max-width: 480px) {
+  .category-tabs { grid-template-columns: 1fr 1fr 1fr !important; gap: 10px; padding: 0 5% 50px; }
+  .cat-tab { padding: 16px 10px; gap: 8px; }
+  .cat-tab i { font-size: 28px; }
+  .cat-tab span { font-size: 12px; }
+
+  .shop-grid { grid-template-columns: 1fr 1fr; gap: 12px; }
+  .shop-card-img { height: 130px; }
+  .shop-card-body { padding: 12px; }
+  .shop-card-body h3 { font-size: 14px; letter-spacing: 1px; }
+  .shop-card-body .price { font-size: 15px; }
+  .shop-card-body .desc { font-size: 11px; line-height: 1.4; margin-bottom: 12px; }
+  .shop-card-actions { flex-direction: column; gap: 6px; }
+  .btn-cart, .btn-order { padding: 9px; font-size: 11px; }
+}
   </style>
 </head>
 <body>
