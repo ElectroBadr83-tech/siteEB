@@ -54,11 +54,20 @@ tl_2026: 'Launched full online ordering with cash on delivery, nationwide across
 tl_tag_founded: 'Founded', tl_tag_expansion: 'Expansion', tl_tag_milestone: 'Milestone',
 tl_tag_innovation: 'Innovation', tl_tag_today: 'Today',
 ab_more: '+ More',
+privacy_text: 'To process and deliver your order, we collect your name, phone number, delivery address, and city. This information is shared exclusively with our delivery partners for the purpose of completing your delivery and is never sold or disclosed to third parties for any other purpose. We do not collect or store any payment information, as all orders are settled in cash upon delivery.',
+privacy_warning_text: 'Accepting our Privacy Terms is required to place an order, since completing your delivery depends on the information described above. You are welcome to continue browsing our website without accepting, but the ordering feature will not be available to you.',
+privacy_gate_text: 'To complete your order, please accept our Privacy Terms. We collect your name, phone number, delivery address, and city solely to process and deliver your order — this information is never sold.',
+privacy_accept: 'Accept',
+privacy_no: 'No',
+privacy_accept_terms: 'Accept Terms',
+privacy_continue_without: 'Continue Without Accepting',
+privacy_accept_anyway: 'Accept Anyway',
     /* ── MODAL KEYS ── */
     modal_order_title: 'Your Order', modal_order_sub: 'Review your product and set quantity',
     modal_qty: 'Quantity', modal_purchase: 'Purchase →',
     modal_details_title: 'Your Details', modal_details_sub: 'Fill in your delivery information',
     modal_name: 'Full Name', modal_city: 'City', modal_phone: 'Phone Number',
+    modal_city_other: 'Please specify your city',
     modal_email: 'Email (optional)', modal_address: 'Full Address', modal_payment_btn: 'Payment →',
     modal_back: '← Back', modal_payment_title: 'Payment Method',
     modal_payment_sub: 'Your payment method has been selected',
@@ -225,7 +234,7 @@ ab_more: '+ More',
     p_gadgets_9_name: 'SUITU Handheld Vacuum Cleaner', p_gadgets_9_desc: 'Compact cordless handheld vacuum with 6000Pa suction. Type-C fast charging for car or home.',
     p_gadgets_10_name: 'Intelli System Wrist Blood Pressure Monitor', p_gadgets_10_desc: 'Wrist blood pressure monitor with intelligent measurement. Memory record, two-user mode, voice broadcast.',
   },
-      fr: {
+  fr: {
     home: 'ACCUEIL', shop: 'BOUTIQUE', about: 'À PROPOS', contact: 'CONTACT',
     follow_us: 'SUIVEZ-NOUS',
     hero_badge: 'DEPUIS 1983 · ÉLECTRONIQUE DE CONFIANCE AU MAROC',
@@ -272,11 +281,19 @@ tl_2026: 'Lancement des commandes en ligne avec paiement à la livraison partout
 tl_tag_founded: 'Fondé', tl_tag_expansion: 'Expansion', tl_tag_milestone: 'Étape Clé',
 tl_tag_innovation: 'Innovation', tl_tag_today: 'Aujourd\'hui',
 ab_more: '+ Plus',
+privacy_text: 'Afin de traiter et de livrer votre commande, nous collectons votre nom, votre numéro de téléphone, votre adresse de livraison et votre ville. Ces informations sont partagées exclusivement avec nos partenaires de livraison dans le but d\'assurer votre livraison, et ne sont jamais vendues ni divulguées à des tiers à d\'autres fins. Nous ne collectons ni ne conservons aucune information de paiement, l\'ensemble des commandes étant réglées en espèces à la livraison.',
+privacy_warning_text: 'L\'acceptation de nos Conditions de Confidentialité est nécessaire pour passer une commande, la réalisation de votre livraison dépendant des informations décrites ci-dessus. Vous êtes libre de continuer à parcourir notre site sans accepter, mais la fonction de commande ne vous sera pas accessible.',
+privacy_gate_text: 'Pour finaliser votre commande, veuillez accepter nos Conditions de Confidentialité. Nous collectons votre nom, votre numéro de téléphone, votre adresse de livraison et votre ville uniquement pour traiter et livrer votre commande — ces informations ne sont jamais vendues.',
+privacy_accept: 'Accepter',
+privacy_no: 'Non',
+privacy_accept_terms: 'Accepter les Conditions',
+privacy_continue_without: 'Continuer Sans Accepter',
+privacy_accept_anyway: 'Accepter Quand Même',
     /* ── MODAL KEYS ── */
     modal_order_title: 'Votre Commande', modal_order_sub: 'Vérifiez votre produit et définissez la quantité',
     modal_qty: 'Quantité', modal_purchase: 'Acheter →',
     modal_details_title: 'Vos Coordonnées', modal_details_sub: 'Remplissez vos informations de livraison',
-    modal_name: 'Nom Complet', modal_city: 'Ville', modal_phone: 'Numéro de Téléphone',
+    modal_name: 'Nom Complet', modal_city: 'Ville', modal_city_other: 'Précisez votre ville', modal_phone: 'Numéro de Téléphone',
     modal_email: 'Email (optionnel)', modal_address: 'Adresse Complète', modal_payment_btn: 'Paiement →',
     modal_back: '← Retour', modal_payment_title: 'Mode de Paiement',
     modal_payment_sub: 'Votre mode de paiement a été sélectionné',
@@ -337,42 +354,42 @@ ab_more: '+ Plus',
 
     /* ── SHOP PRODUCT NAMES & DESCRIPTIONS ── */
     /* ── SHOP PRODUCTS: POWER BANKS ── */
-    p_powerbanks_1_name: 'SHtel Power Bank 20000mAh 45W SP-32', p_powerbanks_1_desc: 'Batterie externe 20 000 mAh avec charge rapide 45 W, compatible charge d\'ordinateur portable. Format compact avec câble Type-C intégré et écran numérique.',
-    p_powerbanks_2_name: 'SHtel Power Bank 20000mAh 22.5W SP-24', p_powerbanks_2_desc: 'Batterie externe 20 000 mAh avec sortie de charge rapide 22,5 W. Câbles Type-C et Lightning intégrés, écran numérique avec affichage du pourcentage.',
-    p_powerbanks_3_name: 'SHtel Power Bank 10000mAh 22.5W SP-90', p_powerbanks_3_desc: 'Batterie externe 10 000 mAh avec sortie de charge rapide 22,5 W. Câble USB-C intégré, plus ports USB-C et USB-A.',
-    p_powerbanks_4_name: 'Konfulon Magnetic Wireless Power Bank 10000mAh M22W', p_powerbanks_4_desc: 'Batterie externe magnétique sans fil avec charge sans fil 15 W et charge PD 20 W. Alignement magnétique puissant, plus ports USB et USB-C.',
-    p_powerbanks_5_name: 'Xiaomi Wireless Power Bank 20000mAh', p_powerbanks_5_desc: 'Batterie externe 20 000 mAh avec charge sans fil 10 W. Sortie USB-A 18 W, plus double sortie USB-A et USB-C.',
-    p_powerbanks_6_name: 'Oryx CUBE-10 Wireless Power Bank 10000mAh', p_powerbanks_6_desc: 'Batterie externe compacte filaire et sans fil avec charge sans fil 10 W. Charge rapide Type-C 18 W dans un design carré robuste.',
-    p_powerbanks_7_name: 'Dinex Portable LED Power Bank 20000mAh X-200', p_powerbanks_7_desc: 'Batterie externe 20 000 mAh avec panneau LED intégré. Charge rapide 22,5 W, écran LCD et sangle de transport intégrée.',
-    p_powerbanks_8_name: 'Dinex Mini Power Bank 5000mAh A333', p_powerbanks_8_desc: 'Mini batterie externe portable avec sortie 22,5 W et entrée/sortie PD 20 W. Bascule entre Type-C et Lightning, avec support escamotable intégré.',
-    p_powerbanks_9_name: 'Konfulon Outdoor Power Bank 100000mAh A45Q', p_powerbanks_9_desc: 'Batterie externe outdoor à très grande capacité avec charge rapide PD 20 W et 22,5 W. 6 ports de sortie avec écran LED, adaptée aux tablettes et smartphones.',
-    p_powerbanks_10_name: 'Konfulon Power Bank 70000mAh A66Q', p_powerbanks_10_desc: 'Batterie externe outdoor haute capacité avec charge rapide PD 30 W et 22,5 W. 7 ports de sortie, plus un projecteur LED intégré.',
+    p_powerbanks_1_name: 'SHtel Batterie Externe 20000mAh 45W SP-32', p_powerbanks_1_desc: 'Batterie externe 20 000 mAh avec charge rapide 45 W, compatible charge d\'ordinateur portable. Format compact avec câble Type-C intégré et écran numérique.',
+    p_powerbanks_2_name: 'SHtel Batterie Externe 20000mAh 22.5W SP-24', p_powerbanks_2_desc: 'Batterie externe 20 000 mAh avec sortie de charge rapide 22,5 W. Câbles Type-C et Lightning intégrés, écran numérique avec affichage du pourcentage.',
+    p_powerbanks_3_name: 'SHtel Batterie Externe 10000mAh 22.5W SP-90', p_powerbanks_3_desc: 'Batterie externe 10 000 mAh avec sortie de charge rapide 22,5 W. Câble USB-C intégré, plus ports USB-C et USB-A.',
+    p_powerbanks_4_name: 'Konfulon Batterie Externe Magnétique Sans Fil 10000mAh M22W', p_powerbanks_4_desc: 'Batterie externe magnétique sans fil avec charge sans fil 15 W et charge PD 20 W. Alignement magnétique puissant, plus ports USB et USB-C.',
+    p_powerbanks_5_name: 'Xiaomi Batterie Externe Sans Fil 20000mAh', p_powerbanks_5_desc: 'Batterie externe 20 000 mAh avec charge sans fil 10 W. Sortie USB-A 18 W, plus double sortie USB-A et USB-C.',
+    p_powerbanks_6_name: 'Oryx CUBE-10 Batterie Externe Sans Fil 10000mAh', p_powerbanks_6_desc: 'Batterie externe compacte filaire et sans fil avec charge sans fil 10 W. Charge rapide Type-C 18 W dans un design carré robuste.',
+    p_powerbanks_7_name: 'Dinex Batterie Externe LED Portable 20000mAh X-200', p_powerbanks_7_desc: 'Batterie externe 20 000 mAh avec panneau LED intégré. Charge rapide 22,5 W, écran LCD et sangle de transport intégrée.',
+    p_powerbanks_8_name: 'Dinex Mini Batterie Externe 5000mAh A333', p_powerbanks_8_desc: 'Mini batterie externe portable avec sortie 22,5 W et entrée/sortie PD 20 W. Bascule entre Type-C et Lightning, avec support escamotable intégré.',
+    p_powerbanks_9_name: 'Konfulon Batterie Externe Outdoor 100000mAh A45Q', p_powerbanks_9_desc: 'Batterie externe outdoor à très grande capacité avec charge rapide PD 20 W et 22,5 W. 6 ports de sortie avec écran LED, adaptée aux tablettes et smartphones.',
+    p_powerbanks_10_name: 'Konfulon Batterie Externe 70000mAh A66Q', p_powerbanks_10_desc: 'Batterie externe outdoor haute capacité avec charge rapide PD 30 W et 22,5 W. 7 ports de sortie, plus un projecteur LED intégré.',
     /* ── SHOP PRODUCTS: SECURITY CAMERAS ── */
-    p_cameras_1_name: 'AI Solar Camera 3-in-1 (SPM-T Series)', p_cameras_1_desc: 'Caméra de sécurité 4K solaire avec trois objectifs en une seule unité. Connectivité 4G/Wi-Fi, couverture à 360° et vision nocturne couleur.',
-    p_cameras_2_name: 'AOV Smart Solar Camera (4-Lens)', p_cameras_2_desc: 'Caméra intelligente solaire avec quatre véritables objectifs et résolution Ultra HD 20 MP. Stockage cloud, interphone vocal et enregistrement couleur jour et nuit.',
-    p_cameras_3_name: 'HD Outdoor & Solar Security Camera', p_cameras_3_desc: 'Caméra de sécurité extérieure solaire avec Ultra HD 4K et vue à 360°. Batterie intégrée, détection PIR et surveillance 4G pour les zones isolées.',
-    p_cameras_4_name: 'Hikvision 3K Color Turret Camera', p_cameras_4_desc: 'Caméra tourelle d\'intérieur avec résolution 3K et technologie Smart Hybrid Light. Vidéo couleur nette jour et nuit avec large champ de vision.',
-    p_cameras_5_name: 'Imou Bullet 2E Outdoor Camera', p_cameras_5_desc: 'Caméra extérieure de type bullet avec résolution 2K et détection humaine. Projecteur activé par mouvement et vision nocturne couleur intelligente.',
-    p_cameras_6_name: 'TP-Link Tapo C212 Pan/Tilt Camera', p_cameras_6_desc: 'Caméra de sécurité domestique motorisée (pan/tilt) avec résolution 2K et suivi de mouvement. Détection de personnes, audio bidirectionnel, stockage local ou cloud.',
-    p_cameras_7_name: 'Ezviz H8c Smart Home Camera', p_cameras_7_desc: 'Caméra domestique intelligente avec résolution 1080p et vue panoramique à 360°. Suivi intelligent et alerte de défense active dès qu\'un mouvement est détecté.',
-    p_cameras_8_name: 'Hikvision ColorVu Bullet Camera', p_cameras_8_desc: 'Caméra extérieure de type bullet avec technologie ColorVu à lumière hybride intelligente. Enregistrement couleur jour et nuit, design étanche IP67.',
-    p_cameras_9_name: 'Hikvision Turbo HD Bullet Camera', p_cameras_9_desc: 'Caméra bullet HD avec technologie HDTVI pour une image nette. Étanchéité IP67 et vision nocturne EXIR pour un usage extérieur.',
-    p_cameras_10_name: 'Imou Cruiser Dual 2 (10MP)', p_cameras_10_desc: 'Caméra de sécurité extérieure à double objectif avec résolution combinée de 10 MP. Détection des personnes et véhicules avec gyrophare rouge et bleu.',
+    p_cameras_1_name: 'Caméra Solaire IA 3-en-1 (Série SPM-T)', p_cameras_1_desc: 'Caméra de sécurité 4K solaire avec trois objectifs en une seule unité. Connectivité 4G/Wi-Fi, couverture à 360° et vision nocturne couleur.',
+    p_cameras_2_name: 'AOV Caméra Solaire Intelligente (4 Objectifs)', p_cameras_2_desc: 'Caméra intelligente solaire avec quatre véritables objectifs et résolution Ultra HD 20 MP. Stockage cloud, interphone vocal et enregistrement couleur jour et nuit.',
+    p_cameras_3_name: 'Caméra de Sécurité Extérieure Solaire HD', p_cameras_3_desc: 'Caméra de sécurité extérieure solaire avec Ultra HD 4K et vue à 360°. Batterie intégrée, détection PIR et surveillance 4G pour les zones isolées.',
+    p_cameras_4_name: 'Hikvision Caméra Tourelle Couleur 3K', p_cameras_4_desc: 'Caméra tourelle d\'intérieur avec résolution 3K et technologie Smart Hybrid Light. Vidéo couleur nette jour et nuit avec large champ de vision.',
+    p_cameras_5_name: 'Imou Caméra Extérieure Bullet 2E', p_cameras_5_desc: 'Caméra extérieure de type bullet avec résolution 2K et détection humaine. Projecteur activé par mouvement et vision nocturne couleur intelligente.',
+    p_cameras_6_name: 'TP-Link Tapo C212 Caméra Motorisée (Pan/Tilt)', p_cameras_6_desc: 'Caméra de sécurité domestique motorisée (pan/tilt) avec résolution 2K et suivi de mouvement. Détection de personnes, audio bidirectionnel, stockage local ou cloud.',
+    p_cameras_7_name: 'Ezviz H8c Caméra Domestique Intelligente', p_cameras_7_desc: 'Caméra domestique intelligente avec résolution 1080p et vue panoramique à 360°. Suivi intelligent et alerte de défense active dès qu\'un mouvement est détecté.',
+    p_cameras_8_name: 'Hikvision Caméra Bullet ColorVu', p_cameras_8_desc: 'Caméra extérieure de type bullet avec technologie ColorVu à lumière hybride intelligente. Enregistrement couleur jour et nuit, design étanche IP67.',
+    p_cameras_9_name: 'Hikvision Caméra Bullet Turbo HD', p_cameras_9_desc: 'Caméra bullet HD avec technologie HDTVI pour une image nette. Étanchéité IP67 et vision nocturne EXIR pour un usage extérieur.',
+    p_cameras_10_name: 'Imou Caméra Cruiser Dual 2 (10MP)', p_cameras_10_desc: 'Caméra de sécurité extérieure à double objectif avec résolution combinée de 10 MP. Détection des personnes et véhicules avec gyrophare rouge et bleu.',
     /* ── SHOP PRODUCTS: SPEAKERS & RADIOS ── */
-    p_speakers_1_name: 'Sing-e Dual 8-Inch Party Speaker', p_speakers_1_desc: 'Enceinte tour double 8 pouces avec grille de style octogonal. Anneaux lumineux RGB multicolores autour de chaque haut-parleur. Affichage LED de l\'heure sur le dessus ; micro et télécommande inclus.',
-    p_speakers_2_name: 'Sing-e 50W HiFi Speaker ZQS8239', p_speakers_2_desc: 'Enceinte HiFi double 8 pouces avec sortie 50 W. DSP intégré et éclairage LED coloré en anneau. Batterie 7,4 V 5000 mAh ; micro et télécommande inclus.',
-    p_speakers_3_name: 'Sing-e Dual 10-Inch Tower Speaker', p_speakers_3_desc: 'Enceinte tour double 10 pouces avec des basses profondes. Deux entrées micro plus une entrée guitare/AUX pour les artistes. USB, carte TF, écran LED ; fonctionne sur secteur.',
-    p_speakers_4_name: 'Avcrowns 15-Inch Trolley Speaker CH-8615', p_speakers_4_desc: 'Enceinte professionnelle sur roulettes 15 pouces avec puissance P.M.P.O. de 5500 W. Deux micros sans fil et télécommande inclus. Jumelage TWS, USB, carte TF, radio FM et éclairage LED.',
-    p_speakers_5_name: 'NNS RGB Retro Radio NS-7069BT', p_speakers_5_desc: 'Radio AM/FM/OC avec bande lumineuse RGB colorée. Bluetooth avec jumelage TWS, lecture USB et carte TF. Antenne rétractable et poignée de transport pour plus de mobilité.',
-    p_speakers_6_name: 'NNS Ribbed Copper Radio & Clock NS-7211BT', p_speakers_6_desc: 'Radio AM/FM/OC avec horloge analogique intégrée. Lecture Bluetooth, USB et carte TF avec boutons de commande dédiés. Fonctionne sur batterie 18650, câble de charge inclus.',
-    p_speakers_7_name: 'NNS Compact Copper Radio NS-6655BT', p_speakers_7_desc: 'Radio AM/FM/OC dans un boîtier compact aux finitions cuivrées. Bluetooth avec jumelage TWS, lecture USB et carte TF. Fonctionne sur batterie 18650, câble de charge inclus.',
-    p_speakers_8_name: 'NNS Wood Radio & Clock NS-7116BT', p_speakers_8_desc: 'Radio AM/FM/OC dans un boîtier aux tons bois chaleureux. Horloge intégrée, Bluetooth, lecture USB et carte TF. Fonctionne sur batterie 18650, câble de charge inclus.',
-    p_speakers_9_name: 'Avcrowns 12-Inch Karaoke Speaker CH-126', p_speakers_9_desc: 'Enceinte karaoké rechargeable 12 pouces avec puissance P.M.P.O. de 10 000 W. Deux micros sans fil et télécommande inclus. USB, carte TF, radio FM, AUX et éclairage LED RGB.',
-    p_speakers_10_name: 'Meier Retro Gramophone Speaker', p_speakers_10_desc: 'Enceinte au style gramophone rétro avec connectivité Bluetooth 5.4. Lecture radio FM, USB, carte TF ou entrée AUX. Batterie rechargeable ; câbles USB et AUX inclus.',
+    p_speakers_1_name: 'Sing-e Enceinte de Fête Double 8 Pouces', p_speakers_1_desc: 'Enceinte tour double 8 pouces avec grille de style octogonal. Anneaux lumineux RGB multicolores autour de chaque haut-parleur. Affichage LED de l\'heure sur le dessus ; micro et télécommande inclus.',
+    p_speakers_2_name: 'Sing-e Enceinte HiFi 50W ZQS8239', p_speakers_2_desc: 'Enceinte HiFi double 8 pouces avec sortie 50 W. DSP intégré et éclairage LED coloré en anneau. Batterie 7,4 V 5000 mAh ; micro et télécommande inclus.',
+    p_speakers_3_name: 'Sing-e Enceinte Tour Double 10 Pouces', p_speakers_3_desc: 'Enceinte tour double 10 pouces avec des basses profondes. Deux entrées micro plus une entrée guitare/AUX pour les artistes. USB, carte TF, écran LED ; fonctionne sur secteur.',
+    p_speakers_4_name: 'Avcrowns Enceinte sur Chariot 15 Pouces CH-8615', p_speakers_4_desc: 'Enceinte professionnelle sur roulettes 15 pouces avec puissance P.M.P.O. de 5500 W. Deux micros sans fil et télécommande inclus. Jumelage TWS, USB, carte TF, radio FM et éclairage LED.',
+    p_speakers_5_name: 'NNS Radio Rétro RGB NS-7069BT', p_speakers_5_desc: 'Radio AM/FM/OC avec bande lumineuse RGB colorée. Bluetooth avec jumelage TWS, lecture USB et carte TF. Antenne rétractable et poignée de transport pour plus de mobilité.',
+    p_speakers_6_name: 'NNS Radio & Horloge Cuivrée Striée NS-7211BT', p_speakers_6_desc: 'Radio AM/FM/OC avec horloge analogique intégrée. Lecture Bluetooth, USB et carte TF avec boutons de commande dédiés. Fonctionne sur batterie 18650, câble de charge inclus.',
+    p_speakers_7_name: 'NNS Radio Cuivrée Compacte NS-6655BT', p_speakers_7_desc: 'Radio AM/FM/OC dans un boîtier compact aux finitions cuivrées. Bluetooth avec jumelage TWS, lecture USB et carte TF. Fonctionne sur batterie 18650, câble de charge inclus.',
+    p_speakers_8_name: 'NNS Radio & Horloge en Bois NS-7116BT', p_speakers_8_desc: 'Radio AM/FM/OC dans un boîtier aux tons bois chaleureux. Horloge intégrée, Bluetooth, lecture USB et carte TF. Fonctionne sur batterie 18650, câble de charge inclus.',
+    p_speakers_9_name: 'Avcrowns Enceinte Karaoké 12 Pouces CH-126', p_speakers_9_desc: 'Enceinte karaoké rechargeable 12 pouces avec puissance P.M.P.O. de 10 000 W. Deux micros sans fil et télécommande inclus. USB, carte TF, radio FM, AUX et éclairage LED RGB.',
+    p_speakers_10_name: 'Meier Enceinte Style Gramophone Rétro', p_speakers_10_desc: 'Enceinte au style gramophone rétro avec connectivité Bluetooth 5.4. Lecture radio FM, USB, carte TF ou entrée AUX. Batterie rechargeable ; câbles USB et AUX inclus.',
     /* ── SHOP PRODUCTS: SMART WATCHES ── */
-    p_watches_1_name: 'Smartbarry C90 MAX (4G Ultra Watch)', p_watches_1_desc: 'Montre connectée 4G avec grand écran de 2,2 pouces et double caméra Full HD. Charge magnétique, compatible avec 3 opérateurs réseau.',
+    p_watches_1_name: 'Smartbarry C90 MAX (Montre Ultra 4G)', p_watches_1_desc: 'Montre connectée 4G avec grand écran de 2,2 pouces et double caméra Full HD. Charge magnétique, compatible avec 3 opérateurs réseau.',
     p_watches_2_name: 'Riversong Motive 10 GT', p_watches_2_desc: 'Montre connectée GPS avec écran AMOLED de 1,43 pouce et positionnement multi-satellite. Étanchéité 3 ATM, avec bracelet magnétique supplémentaire inclus.',
-    p_watches_3_name: 'Smartbarry C006pro Kids Watch', p_watches_3_desc: 'Montre connectée enfant 5G avec écran amovible de 2,01 pouces et caméra HD. Étanchéité IP67, localisation LBS, appel vidéo et messagerie vocale.',
+    p_watches_3_name: 'Smartbarry C006pro Montre Enfant', p_watches_3_desc: 'Montre connectée enfant 5G avec écran amovible de 2,01 pouces et caméra HD. Étanchéité IP67, localisation LBS, appel vidéo et messagerie vocale.',
     p_watches_4_name: 'Black Shark A3', p_watches_4_desc: 'Montre connectée avec écran HD de 1,53 pouce et une autonomie allant jusqu\'à 14 jours. Suit vos données fitness avec un design robuste, adapté au quotidien.',
     p_watches_5_name: 'Kieslect Kr3', p_watches_5_desc: 'Montre connectée avec lunette en acier inoxydable et GPS bi-bande à six satellites. Génération de cadrans personnalisés grâce à l\'intelligence artificielle.',
     p_watches_6_name: 'Kieslect Elite2', p_watches_6_desc: 'Montre connectée avec lunette en céramique biseautée et GPS bi-bande avec navigation d\'itinéraire. Assistant vocal IA en ligne intégré pour un contrôle mains libres.',
@@ -381,69 +398,69 @@ ab_more: '+ Plus',
     p_watches_9_name: 'Kieslect Elfin', p_watches_9_desc: 'Montre connectée ultra-fine de 6 mm avec écran AMOLED HD de 1,32 pouce. Cadrans personnalisables grâce à l\'intelligence artificielle pour un look unique.',
     p_watches_10_name: 'Kieslect Lora 3', p_watches_10_desc: 'Montre connectée métallique ultra-fine au design tendance pour un usage quotidien. Suivi de santé 24h/24 avec appels Bluetooth en une touche.',
     /* ── SHOP PRODUCTS: BEAUTY & CARE ── */
-    p_beauty_1_name: 'Braun Silk-épil 5 SensoSmart Epilator', p_beauty_1_desc: 'Épilateur usage sec et humide avec technologie SensoSmart pour une épilation en douceur. Une épilation extra-douce qui garde la peau lisse jusqu\'à 4 semaines, avec 2 accessoires supplémentaires inclus.',
-    p_beauty_2_name: 'Sokany Ceramic Hair Straightener SK-993', p_beauty_2_desc: 'Lisseur usage sec et humide avec plaques en céramique et nano-argent. Chauffe jusqu\'à 400°C pour un résultat digne d\'un salon professionnel.',
-    p_beauty_3_name: 'DSP Steam Lustre Styler 10242', p_beauty_3_desc: 'Lisseur vapeur avec plaques en aluminium pour un résultat lisse et brillant. Écran LED numérique avec infusion de protéines et kératine en un seul passage.',
-    p_beauty_4_name: 'Enzo Professional One-Step Volumiser PLUS', p_beauty_4_desc: 'Brosse soufflante qui sèche et donne du volume aux cheveux en une seule étape. Plusieurs niveaux de chaleur avec fonction air froid pour fixer la coiffure.',
-    p_beauty_5_name: 'Enzo Professional 2-in-1 Magic Brush', p_beauty_5_desc: 'Sèche et lisse les cheveux en même temps grâce à une brosse rotative. Livrée avec une pochette de voyage pour un rangement facile.',
-    p_beauty_6_name: 'BaByliss 19mm Curling Tong', p_beauty_6_desc: 'Fer à boucler de 19 mm pour des boucles et ondulations définies et longue tenue. Chaleur contrôlée jusqu\'à 210°C pour une coiffure optimale.',
+    p_beauty_1_name: 'Braun Silk-épil 5 SensoSmart Épilateur', p_beauty_1_desc: 'Épilateur usage sec et humide avec technologie SensoSmart pour une épilation en douceur. Une épilation extra-douce qui garde la peau lisse jusqu\'à 4 semaines, avec 2 accessoires supplémentaires inclus.',
+    p_beauty_2_name: 'Sokany Lisseur Céramique SK-993', p_beauty_2_desc: 'Lisseur usage sec et humide avec plaques en céramique et nano-argent. Chauffe jusqu\'à 400°C pour un résultat digne d\'un salon professionnel.',
+    p_beauty_3_name: 'DSP Lisseur Vapeur Lustre 10242', p_beauty_3_desc: 'Lisseur vapeur avec plaques en aluminium pour un résultat lisse et brillant. Écran LED numérique avec infusion de protéines et kératine en un seul passage.',
+    p_beauty_4_name: 'Enzo Professional Brosse Volumisante Une Étape PLUS', p_beauty_4_desc: 'Brosse soufflante qui sèche et donne du volume aux cheveux en une seule étape. Plusieurs niveaux de chaleur avec fonction air froid pour fixer la coiffure.',
+    p_beauty_5_name: 'Enzo Professional Brosse Magique 2-en-1', p_beauty_5_desc: 'Sèche et lisse les cheveux en même temps grâce à une brosse rotative. Livrée avec une pochette de voyage pour un rangement facile.',
+    p_beauty_6_name: 'BaByliss Fer à Boucler 19mm', p_beauty_6_desc: 'Fer à boucler de 19 mm pour des boucles et ondulations définies et longue tenue. Chaleur contrôlée jusqu\'à 210°C pour une coiffure optimale.',
     /* ── SHOP PRODUCTS: MEN'S GROOMING ── */
     p_grooming_1_name: 'Tondeuse Barbe Kemei 1677', p_grooming_1_desc: 'Tondeuse à barbe de précision avec réglages de longueur de 0 à 7 mm. Lames auto-affûtantes qui restent tranchantes avec un usage régulier. Charge USB-C offrant jusqu\'à 4 heures d\'autonomie.',
     p_grooming_2_name: 'Philips One Blade 360', p_grooming_2_desc: 'Rasoir rotatif à têtes flottantes 3D pour un rasage de près. Utilisation à sec ou humide, avec tondeuse escamotable pour les finitions. Une charge complète offre jusqu\'à 60 minutes d\'utilisation.',
-    p_grooming_3_name: 'Oraimo Electric Shaver', p_grooming_3_desc: 'Têtes de rasage rotatives qui glissent en douceur pour un rasage de près. Utilisation à sec ou humide, avec tondeuse escamotable pour les pattes et la moustache. Se recharge via USB-C, pratique et sans fil.',
-    p_grooming_4_name: 'Braun Hair Clipper Set', p_grooming_4_desc: 'Ensemble tondeuse cheveux avec lame en acier inoxydable durable. Inclut 4 sabots de guidage pour différentes longueurs de coupe. Charge USB-C et moteur silencieux pour un usage quotidien.',
-    p_grooming_5_name: 'Kemei Hair Straightener', p_grooming_5_desc: 'Lisseur ionique atteignant 200°C pour un résultat lisse. Chauffe en seulement 30 secondes, prêt presque instantanément. Réglages de température adaptés à différents types de cheveux.',
-    p_grooming_6_name: 'Kemei Epilator 8536', p_grooming_6_desc: 'Épilateur à 72 pinces pour une épilation en profondeur. Design sans fil, utilisable à sec ou humide, avec lumière LED intégrée. Une charge complète offre jusqu\'à 40 minutes d\'autonomie.',
-    p_grooming_7_name: 'Kemei Ionic Hair Dryer 2200W', p_grooming_7_desc: 'Sèche-cheveux ionique 2200 W pour un séchage rapide qui réduit les frisottis. Bouton air froid pour fixer la coiffure une fois terminée. 3 vitesses et 2 niveaux de chaleur pour s\'adapter à vos besoins.',
-    p_grooming_8_name: 'Anti-Aging EMS Face Massager', p_grooming_8_desc: 'Masseur facial combinant vibration et chaleur douce pour le soin de la peau. Technologie de lifting EMS ciblant les ridules et le relâchement cutané. 5 modes et charge USB-C pour une utilisation flexible.',
-    p_grooming_9_name: 'Kemei Electric Nail Grinder', p_grooming_9_desc: 'Ponceuse à ongles électrique avec 6 têtes interchangeables pour la mise en forme. Assez douce pour les bébés, sûre pour toute la famille. Moteur silencieux et charge USB-C pour un usage quotidien pratique.',
+    p_grooming_3_name: 'Oraimo Rasoir Électrique', p_grooming_3_desc: 'Têtes de rasage rotatives qui glissent en douceur pour un rasage de près. Utilisation à sec ou humide, avec tondeuse escamotable pour les pattes et la moustache. Se recharge via USB-C, pratique et sans fil.',
+    p_grooming_4_name: 'Braun Kit Tondeuse Cheveux', p_grooming_4_desc: 'Ensemble tondeuse cheveux avec lame en acier inoxydable durable. Inclut 4 sabots de guidage pour différentes longueurs de coupe. Charge USB-C et moteur silencieux pour un usage quotidien.',
+    p_grooming_5_name: 'Kemei Lisseur Cheveux', p_grooming_5_desc: 'Lisseur ionique atteignant 200°C pour un résultat lisse. Chauffe en seulement 30 secondes, prêt presque instantanément. Réglages de température adaptés à différents types de cheveux.',
+    p_grooming_6_name: 'Kemei Épilateur 8536', p_grooming_6_desc: 'Épilateur à 72 pinces pour une épilation en profondeur. Design sans fil, utilisable à sec ou humide, avec lumière LED intégrée. Une charge complète offre jusqu\'à 40 minutes d\'autonomie.',
+    p_grooming_7_name: 'Kemei Sèche-Cheveux Ionique 2200W', p_grooming_7_desc: 'Sèche-cheveux ionique 2200 W pour un séchage rapide qui réduit les frisottis. Bouton air froid pour fixer la coiffure une fois terminée. 3 vitesses et 2 niveaux de chaleur pour s\'adapter à vos besoins.',
+    p_grooming_8_name: 'Masseur Facial EMS Anti-Âge', p_grooming_8_desc: 'Masseur facial combinant vibration et chaleur douce pour le soin de la peau. Technologie de lifting EMS ciblant les ridules et le relâchement cutané. 5 modes et charge USB-C pour une utilisation flexible.',
+    p_grooming_9_name: 'Kemei Ponceuse à Ongles Électrique', p_grooming_9_desc: 'Ponceuse à ongles électrique avec 6 têtes interchangeables pour la mise en forme. Assez douce pour les bébés, sûre pour toute la famille. Moteur silencieux et charge USB-C pour un usage quotidien pratique.',
     /* ── SHOP PRODUCTS: CLOCKS & ALARMS ── */
-    p_wallwatch_1_name: 'Rhythm Quartz Alarm Clock (Gold)', p_wallwatch_1_desc: 'Réveil à quartz avec chiffres et aiguilles phosphorescents. Design compact pour la table de chevet avec interrupteur d\'alarme simple marche/arrêt.',
-    p_wallwatch_2_name: 'Rhythm Quartz Alarm Clock (Black)', p_wallwatch_2_desc: 'Réveil à quartz avec chiffres et aiguilles phosphorescents. Design compact pour la table de chevet avec interrupteur d\'alarme simple marche/arrêt.',
-    p_wallwatch_3_name: 'Rhythm Alarm Clock (Blue)', p_wallwatch_3_desc: 'Réveil analogique compact avec cadran blanc bien lisible. Mouvement à quartz simple et fiable pour un usage quotidien sur la table de chevet.',
-    p_wallwatch_4_name: 'Silent Scanning Alarm Clock 3567', p_wallwatch_4_desc: 'Réveil analogique à mouvement silencieux, sans bruit de tic-tac. Sonnerie d\'alarme à deux tons et veilleuse intégrée.',
-    p_wallwatch_5_name: 'LED Digital Clock GS-5308', p_wallwatch_5_desc: 'Horloge numérique LED avec grands chiffres faciles à lire. Alarme intégrée avec indicateur AM/PM.',
+    p_wallwatch_1_name: 'Rhythm Réveil à Quartz (Doré)', p_wallwatch_1_desc: 'Réveil à quartz avec chiffres et aiguilles phosphorescents. Design compact pour la table de chevet avec interrupteur d\'alarme simple marche/arrêt.',
+    p_wallwatch_2_name: 'Rhythm Réveil à Quartz (Noir)', p_wallwatch_2_desc: 'Réveil à quartz avec chiffres et aiguilles phosphorescents. Design compact pour la table de chevet avec interrupteur d\'alarme simple marche/arrêt.',
+    p_wallwatch_3_name: 'Rhythm Réveil (Bleu)', p_wallwatch_3_desc: 'Réveil analogique compact avec cadran blanc bien lisible. Mouvement à quartz simple et fiable pour un usage quotidien sur la table de chevet.',
+    p_wallwatch_4_name: 'Réveil à Balayage Silencieux 3567', p_wallwatch_4_desc: 'Réveil analogique à mouvement silencieux, sans bruit de tic-tac. Sonnerie d\'alarme à deux tons et veilleuse intégrée.',
+    p_wallwatch_5_name: 'Horloge Numérique LED GS-5308', p_wallwatch_5_desc: 'Horloge numérique LED avec grands chiffres faciles à lire. Alarme intégrée avec indicateur AM/PM.',
     /* ── SHOP PRODUCTS: PHONE ACCESSORIES ── */
-    p_phones_1_name: 'DINEX 50W type C Fast Charger', p_phones_1_desc: 'Chargeur rapide 50 W avec plusieurs options de charge. Une technologie intelligente garantit une charge sécurisée. Parfait pour alimenter plusieurs appareils.',
-    p_phones_2_name: 'Dinex Data Cable 100W 3m', p_phones_2_desc: 'Câble de charge USB-C 100 W haute vitesse. Conception durable pour un usage longue durée. Idéal pour smartphones, tablettes et ordinateurs portables.',
-    p_phones_3_name: 'Dinex 20w Fast Charger lightning', p_phones_3_desc: 'Chargeur rapide 20 W avec câble Lightning inclus. Design compact pour la maison ou les déplacements. Charge quotidienne sûre et fiable.',
-    p_phones_4_name: 'Dinex Car Phone Holder', p_phones_4_desc: 'Support téléphone réglable avec rotation à 360°. Offre une prise sûre et stable. Idéal pour la conduite et une utilisation mains libres.',
-    p_phones_5_name: 'SHtel type C CABLE 3.4A', p_phones_5_desc: 'Charge rapide 3,4 A avec transfert de données fiable. Conception durable conçue pour un usage quotidien. Compatible avec la plupart des appareils USB-C.',
-    p_phones_6_name: 'Dinex Fast Charging Cable 3.0A', p_phones_6_desc: 'Câble Lightning durable pour la charge et la synchronisation. Offre des performances rapides et stables. Conçu pour les appareils Apple.',
-    p_phones_7_name: 'Xiaomi Fast charger 120W', p_phones_7_desc: 'Chargeur GaN ultra-rapide 120 W au design compact. Offre une charge puissante et efficace. Parfait pour les appareils USB-C compatibles.',
-    p_phones_8_name: 'Oraimo lightning charger 20w', p_phones_8_desc: 'Chargeur fiable 24 W avec câble de charge inclus. Alimentation rapide, sûre et efficace. Idéal pour les besoins de charge quotidiens.',
-    p_phones_9_name: 'Dinex 4OW type C adapter', p_phones_9_desc: 'Chargeur rapide compact 40 W pour un usage quotidien. Offre une charge sûre et stable. Compatible avec les appareils USB-C.',
-    p_phones_10_name: 'Plokama tripod and selfie stick', p_phones_10_desc: 'Trépied stable et léger pour photos et vidéos. Hauteur réglable avec tête rotative à 360°. Parfait pour appareils photo et smartphones.',
+    p_phones_1_name: 'DINEX Chargeur Rapide Type C 50W', p_phones_1_desc: 'Chargeur rapide 50 W avec plusieurs options de charge. Une technologie intelligente garantit une charge sécurisée. Parfait pour alimenter plusieurs appareils.',
+    p_phones_2_name: 'Dinex Câble de Charge 100W 3m', p_phones_2_desc: 'Câble de charge USB-C 100 W haute vitesse. Conception durable pour un usage longue durée. Idéal pour smartphones, tablettes et ordinateurs portables.',
+    p_phones_3_name: 'Dinex Chargeur Rapide Lightning 20W', p_phones_3_desc: 'Chargeur rapide 20 W avec câble Lightning inclus. Design compact pour la maison ou les déplacements. Charge quotidienne sûre et fiable.',
+    p_phones_4_name: 'Dinex Support Téléphone Voiture', p_phones_4_desc: 'Support téléphone réglable avec rotation à 360°. Offre une prise sûre et stable. Idéal pour la conduite et une utilisation mains libres.',
+    p_phones_5_name: 'SHtel Câble Type C 3.4A', p_phones_5_desc: 'Charge rapide 3,4 A avec transfert de données fiable. Conception durable conçue pour un usage quotidien. Compatible avec la plupart des appareils USB-C.',
+    p_phones_6_name: 'Dinex Câble de Charge Rapide 3.0A', p_phones_6_desc: 'Câble Lightning durable pour la charge et la synchronisation. Offre des performances rapides et stables. Conçu pour les appareils Apple.',
+    p_phones_7_name: 'Xiaomi Chargeur Rapide 120W', p_phones_7_desc: 'Chargeur GaN ultra-rapide 120 W au design compact. Offre une charge puissante et efficace. Parfait pour les appareils USB-C compatibles.',
+    p_phones_8_name: 'Oraimo Chargeur Lightning 20W', p_phones_8_desc: 'Chargeur fiable 24 W avec câble de charge inclus. Alimentation rapide, sûre et efficace. Idéal pour les besoins de charge quotidiens.',
+    p_phones_9_name: 'Dinex Adaptateur Type C 4OW', p_phones_9_desc: 'Chargeur rapide compact 40 W pour un usage quotidien. Offre une charge sûre et stable. Compatible avec les appareils USB-C.',
+    p_phones_10_name: 'Plokama Trépied et Perche à Selfie', p_phones_10_desc: 'Trépied stable et léger pour photos et vidéos. Hauteur réglable avec tête rotative à 360°. Parfait pour appareils photo et smartphones.',
     /* ── SHOP PRODUCTS: ANDROID BOXES ── */
-    p_android_1_name: 'D-Plus D96 AndroidTV Box', p_android_1_desc: 'Boîtier TV Android 14 avec sortie 8K Ultra HD et Wi-Fi 6. Google Assistant intégré, compatible Netflix, YouTube et Prime Video.',
-    p_android_2_name: 'Xiaomi Smart TV Stick 4K', p_android_2_desc: 'Clé TV Android 4K compacte avec Google Assistant intégré. Livrée avec Netflix, Prime Video et YouTube préinstallés.',
-    p_android_3_name: 'Xiaomi TV Box S (3rd Gen)', p_android_3_desc: 'Boîtier Google TV avec sortie 4K Ultra-HD et Chromecast intégré. Inclut l\'accès à Netflix, Prime Video et Google Play.',
-    p_android_4_name: 'Senic H96 Max Android Box', p_android_4_desc: 'Boîtier TV Android 11 avec sortie 4K HDR Ultra HD. Design compact avec télécommande simple incluse.',
+    p_android_1_name: 'D-Plus D96 Boîtier AndroidTV', p_android_1_desc: 'Boîtier TV Android 14 avec sortie 8K Ultra HD et Wi-Fi 6. Google Assistant intégré, compatible Netflix, YouTube et Prime Video.',
+    p_android_2_name: 'Xiaomi Clé TV Intelligente 4K', p_android_2_desc: 'Clé TV Android 4K compacte avec Google Assistant intégré. Livrée avec Netflix, Prime Video et YouTube préinstallés.',
+    p_android_3_name: 'Xiaomi Boîtier TV S (3ème Génération)', p_android_3_desc: 'Boîtier Google TV avec sortie 4K Ultra-HD et Chromecast intégré. Inclut l\'accès à Netflix, Prime Video et Google Play.',
+    p_android_4_name: 'Senic H96 Max Boîtier Android', p_android_4_desc: 'Boîtier TV Android 11 avec sortie 4K HDR Ultra HD. Design compact avec télécommande simple incluse.',
     p_android_5_name: 'Vectron VBox Alpha', p_android_5_desc: 'Boîtier TV Android 12 avec Wi-Fi 5G et puce quad-core Allwinner H313. Offre du 4K Ultra HD avec Netflix, YouTube et Prime Video.',
-    p_android_6_name: 'Senic X98Q Android Box', p_android_6_desc: 'Boîtier TV Android 12 avec sortie 8K Ultra HD. Deux ports USB 3.0 et un emplacement carte TF pour le stockage.',
-    p_android_7_name: 'Tanix A3 Android Box', p_android_7_desc: 'Boîtier TV Android 11 avec 4K Ultra HD et support HDR. Wi-Fi bi-bande 2,4G/5G avec processeur quad-core.',
-    p_android_8_name: 'Echolink S400B Android Box', p_android_8_desc: 'Boîtier TV Android 4K Ultra HD avec Google Assistant intégré. Compatible Netflix, Disney+, HBO Max et Plex.',
+    p_android_6_name: 'Senic X98Q Boîtier Android', p_android_6_desc: 'Boîtier TV Android 12 avec sortie 8K Ultra HD. Deux ports USB 3.0 et un emplacement carte TF pour le stockage.',
+    p_android_7_name: 'Tanix A3 Boîtier Android', p_android_7_desc: 'Boîtier TV Android 11 avec 4K Ultra HD et support HDR. Wi-Fi bi-bande 2,4G/5G avec processeur quad-core.',
+    p_android_8_name: 'Echolink S400B Boîtier Android', p_android_8_desc: 'Boîtier TV Android 4K Ultra HD avec Google Assistant intégré. Compatible Netflix, Disney+, HBO Max et Plex.',
     /* ── SHOP PRODUCTS: CALCULATORS ── */
     p_calculators_1_name: 'Texas Instruments TI-Nspire CX II-T CAS', p_calculators_1_desc: 'Calculatrice graphique avec système de calcul formel CAS et écran couleur. Fonctionne sous Python, autorisée pour le Baccalauréat et les examens universitaires.',
-    p_calculators_2_name: 'NumWorks Graphing Calculator', p_calculators_2_desc: 'Calculatrice graphique avec mode examen et application Python intégrée. Écran tactile couleur, conçue par une entreprise française.',
+    p_calculators_2_name: 'NumWorks Calculatrice Graphique', p_calculators_2_desc: 'Calculatrice graphique avec mode examen et application Python intégrée. Écran tactile couleur, conçue par une entreprise française.',
     p_calculators_3_name: 'Casio Graph Math+ CLASSW40', p_calculators_3_desc: 'Calculatrice graphique avec mode examen et support Python. Écran couleur pour le lycée et l\'université, garantie 3 ans.',
-    p_calculators_4_name: 'Casio fx-991ES PLUS (2nd Edition)', p_calculators_4_desc: 'Calculatrice scientifique avec 417 fonctions et affichage naturel façon manuel scolaire. Alimentation solaire et à pile, non programmable.',
-    p_calculators_5_name: 'Deli D991ES PLUS Scientific Calculator', p_calculators_5_desc: 'Calculatrice scientifique avec 417 fonctions et affichage façon manuel scolaire. Alimentation solaire et à pile, garantie 3 ans.',
-    p_calculators_6_name: 'Casio fx-82ES PLUS (2nd Edition)', p_calculators_6_desc: 'Calculatrice scientifique avec 252 fonctions et affichage naturel façon manuel scolaire. Fonctionne à pile (AAA), non programmable.',
+    p_calculators_4_name: 'Casio fx-991ES PLUS (2ème Édition)', p_calculators_4_desc: 'Calculatrice scientifique avec 417 fonctions et affichage naturel façon manuel scolaire. Alimentation solaire et à pile, non programmable.',
+    p_calculators_5_name: 'Deli D991ES PLUS Calculatrice Scientifique', p_calculators_5_desc: 'Calculatrice scientifique avec 417 fonctions et affichage façon manuel scolaire. Alimentation solaire et à pile, garantie 3 ans.',
+    p_calculators_6_name: 'Casio fx-82ES PLUS (2ème Édition)', p_calculators_6_desc: 'Calculatrice scientifique avec 252 fonctions et affichage naturel façon manuel scolaire. Fonctionne à pile (AAA), non programmable.',
     p_calculators_7_name: 'Casio fx-92 Collège ClassWiz', p_calculators_7_desc: 'Calculatrice scientifique avec 417 fonctions pour élèves de collège et lycée. Écran haute résolution, autorisée pour les examens français.',
     /* ── SHOP PRODUCTS: ELECTRONIC GADGETS ── */
-    p_gadgets_1_name: '360° Sports Armband', p_gadgets_1_desc: 'Brassard de sport ajustable à 360° pour téléphones de 4 à 7 pouces. Fermeture double sécurisée, sangle extensible et confortable.',
-    p_gadgets_2_name: 'Aerbes 400W Solar LED Flood Light', p_gadgets_2_desc: 'Projecteur LED solaire 400 W avec panneau solaire détachable. Étanche IP67 avec télécommande sans fil.',
-    p_gadgets_3_name: 'Electronic Arm Blood Pressure Monitor', p_gadgets_3_desc: 'Tensiomètre à bras avec mesure intelligente. Affiche la pression systolique, diastolique et le pouls, avec mémoire de 120 mesures.',
-    p_gadgets_4_name: 'LED Flashlight Set (2-Pack)', p_gadgets_4_desc: 'Lot de 2 lampes torches LED de 1200 lumens avec zoom. Rechargeables par USB via batteries 18650, résistantes à l\'eau IPX4.',
-    p_gadgets_5_name: 'AI Tracking Gimbal Stabilizer Q625', p_gadgets_5_desc: 'Stabilisateur gimbal à suivi IA avec suivi automatique du visage. Rotation à 360°, équilibrage automatique et support trépied.',
-    p_gadgets_6_name: 'TL16 Clip-On Phone Cooling Fan', p_gadgets_6_desc: 'Ventilateur de refroidissement à clipser pour smartphone, pour une dissipation rapide de la chaleur. Fonctionnement silencieux avec éclairage RGB coloré.',
-    p_gadgets_7_name: 'DuraM RGB Light-Up Bluetooth Speaker', p_gadgets_7_desc: 'Enceinte Bluetooth portable avec design lumineux RGB. Basses puissantes et longue autonomie de lecture.',
-    p_gadgets_8_name: 'Celet Smart Fitness Bracelet', p_gadgets_8_desc: 'Bracelet connecté suivant le rythme cardiaque, le sommeil et les pas. Bracelet en maille élégant, disponible en noir, doré ou argenté.',
-    p_gadgets_9_name: 'SUITU Handheld Vacuum Cleaner', p_gadgets_9_desc: 'Aspirateur à main compact et sans fil avec succion de 6000 Pa. Charge rapide Type-C, pour la voiture ou la maison.',
-    p_gadgets_10_name: 'Intelli System Wrist Blood Pressure Monitor', p_gadgets_10_desc: 'Tensiomètre de poignet avec mesure intelligente. Mémoire des mesures, mode deux utilisateurs, annonce vocale.',
+    p_gadgets_1_name: 'Brassard de Sport 360°', p_gadgets_1_desc: 'Brassard de sport ajustable à 360° pour téléphones de 4 à 7 pouces. Fermeture double sécurisée, sangle extensible et confortable.',
+    p_gadgets_2_name: 'Aerbes Projecteur LED Solaire 400W', p_gadgets_2_desc: 'Projecteur LED solaire 400 W avec panneau solaire détachable. Étanche IP67 avec télécommande sans fil.',
+    p_gadgets_3_name: 'Tensiomètre Électronique de Bras', p_gadgets_3_desc: 'Tensiomètre à bras avec mesure intelligente. Affiche la pression systolique, diastolique et le pouls, avec mémoire de 120 mesures.',
+    p_gadgets_4_name: 'Lot de Lampes Torches LED (2 Pièces)', p_gadgets_4_desc: 'Lot de 2 lampes torches LED de 1200 lumens avec zoom. Rechargeables par USB via batteries 18650, résistantes à l\'eau IPX4.',
+    p_gadgets_5_name: 'Stabilisateur Gimbal à Suivi IA Q625', p_gadgets_5_desc: 'Stabilisateur gimbal à suivi IA avec suivi automatique du visage. Rotation à 360°, équilibrage automatique et support trépied.',
+    p_gadgets_6_name: 'TL16 Ventilateur de Refroidissement à Clipser', p_gadgets_6_desc: 'Ventilateur de refroidissement à clipser pour smartphone, pour une dissipation rapide de la chaleur. Fonctionnement silencieux avec éclairage RGB coloré.',
+    p_gadgets_7_name: 'DuraM Enceinte Bluetooth Lumineuse RGB', p_gadgets_7_desc: 'Enceinte Bluetooth portable avec design lumineux RGB. Basses puissantes et longue autonomie de lecture.',
+    p_gadgets_8_name: 'Celet Bracelet Connecté Fitness', p_gadgets_8_desc: 'Bracelet connecté suivant le rythme cardiaque, le sommeil et les pas. Bracelet en maille élégant, disponible en noir, doré ou argenté.',
+    p_gadgets_9_name: 'SUITU Aspirateur à Main', p_gadgets_9_desc: 'Aspirateur à main compact et sans fil avec succion de 6000 Pa. Charge rapide Type-C, pour la voiture ou la maison.',
+    p_gadgets_10_name: 'Intelli System Tensiomètre de Poignet', p_gadgets_10_desc: 'Tensiomètre de poignet avec mesure intelligente. Mémoire des mesures, mode deux utilisateurs, annonce vocale.',
   },
-      ar: {
+    ar: {
     home: 'الرئيسية', shop: 'المتجر', about: 'من نحن', contact: 'اتصل بنا',
     follow_us: 'تابعونا',
     hero_badge: 'منذ 1983 · إلكترونيات موثوقة في المغرب',
@@ -462,12 +479,12 @@ ab_more: '+ Plus',
     cat_powerbanks: 'بطاريات محمولة', cat_cameras: 'كاميرات المراقبة',
     cat_speakers: 'مكبرات الصوت والراديو', cat_watches: 'ساعات ذكية',
     cat_beauty: 'الجمال والعناية', cat_wallwatch: 'ساعات حائط وتنبيهات',
-    cat_phones: 'ملحقات الهاتف', cat_android: 'صناديق أندرويد',
+    cat_phones: 'ملحقات الهاتف', cat_android: 'أجهزة أندرويد',
     shop_title: 'متجرنا', shop_subtitle: 'تصفح الإلكترونيات حسب الفئة',
     shop_now: 'تسوق الآن →',
     shop_add_cart: '🛒 أضف للسلة', shop_order_now: 'اطلب الآن',
     bs_headphones: 'TVT Solar 4G Cam AOV System', bs_headphones_desc: 'رؤية بانورامية 360°، طاقة شمسية، رؤية ليلية، نظام بـ4 كاميرات.',
-    bs_watch: 'SHtel Power Bank 20000mAh SP-24', bs_watch_desc: 'شحن سريع 22.5 واط، كابلات Type-C/Lightning، شاشة رقمية.',
+    bs_watch: 'SHtel Power Bank 20000mAh SP-24', bs_watch_desc: 'شحن سريع 22.5W، كابلات Type-C/Lightning، شاشة رقمية.',
     bs_powerbank: 'Philips One Blade 360', bs_powerbank_desc: 'رؤوس عائمة ثلاثية الأبعاد، للاستخدام الجاف والمبلل، مقص تشذيب قابل للطي، شحن خلال 60 دقيقة.',
     cart_title: '🛒 سلة التسوق',
     cart_empty: 'سلتك فارغة.', cart_total: 'المجموع', go_shop: 'اذهب إلى المتجر →',
@@ -490,11 +507,19 @@ tl_2026: 'إطلاق الطلب الإلكتروني الكامل مع الدف�
 tl_tag_founded: 'التأسيس', tl_tag_expansion: 'التوسع', tl_tag_milestone: 'إنجاز',
 tl_tag_innovation: 'ابتكار', tl_tag_today: 'اليوم',
 ab_more: '+ المزيد',
+privacy_text: 'من أجل معالجة وتوصيل طلبك، نقوم بجمع اسمك ورقم هاتفك وعنوان التوصيل ومدينتك. تُشارك هذه المعلومات حصرياً مع شركاء التوصيل لدينا بغرض إتمام عملية التوصيل، ولا تُباع أو تُفصح عنها لأطراف ثالثة لأي غرض آخر. لا نقوم بجمع أو تخزين أي معلومات متعلقة بالدفع، حيث تُسوّى جميع الطلبات نقداً عند الاستلام.',
+privacy_warning_text: 'تُعد الموافقة على شروط الخصوصية الخاصة بنا ضرورية لإتمام أي طلب، حيث تعتمد عملية التوصيل على المعلومات المذكورة أعلاه. يمكنك متابعة تصفح موقعنا دون الموافقة، إلا أن ميزة الطلب لن تكون متاحة لك.',
+privacy_gate_text: 'لإتمام طلبك، يرجى الموافقة على شروط الخصوصية الخاصة بنا. نقوم بجمع اسمك ورقم هاتفك وعنوان التوصيل ومدينتك فقط لمعالجة وتوصيل طلبك — ولا تُباع هذه المعلومات أبداً.',
+privacy_accept: 'موافق',
+privacy_no: 'لا',
+privacy_accept_terms: 'قبول الشروط',
+privacy_continue_without: 'المتابعة دون الموافقة',
+privacy_accept_anyway: 'الموافقة على أي حال',
     /* ── MODAL KEYS ── */
     modal_order_title: 'طلبك', modal_order_sub: 'راجع المنتج وحدد الكمية',
     modal_qty: 'الكمية', modal_purchase: 'شراء →',
     modal_details_title: 'بياناتك', modal_details_sub: 'أدخل معلومات التسليم',
-    modal_name: 'الاسم الكامل', modal_city: 'المدينة', modal_phone: 'رقم الهاتف',
+    modal_name: 'الاسم الكامل', modal_city: 'المدينة', modal_city_other: 'يرجى تحديد مدينتك', modal_phone: 'رقم الهاتف',
     modal_email: 'البريد الإلكتروني (اختياري)', modal_address: 'العنوان الكامل', modal_payment_btn: 'الدفع →',
     modal_back: '← رجوع', modal_payment_title: 'طريقة الدفع',
     modal_payment_sub: 'تم اختيار طريقة الدفع',
@@ -555,111 +580,111 @@ ab_more: '+ المزيد',
 
     /* ── SHOP PRODUCT NAMES & DESCRIPTIONS ── */
     /* ── SHOP PRODUCTS: POWER BANKS ── */
-    p_powerbanks_1_name: 'SHtel Power Bank 20000mAh 45W SP-32', p_powerbanks_1_desc: 'بطارية محمولة بسعة 20000 مللي أمبير مع شحن سريع 45 واط، تدعم شحن الحاسوب المحمول. حجم مضغوط مع كابل Type-C مدمج وشاشة رقمية.',
-    p_powerbanks_2_name: 'SHtel Power Bank 20000mAh 22.5W SP-24', p_powerbanks_2_desc: 'بطارية محمولة بسعة 20000 مللي أمبير مع شحن سريع بقوة 22.5 واط. كابلات Type-C و Lightning مدمجة، وشاشة رقمية تعرض النسبة المئوية.',
-    p_powerbanks_3_name: 'SHtel Power Bank 10000mAh 22.5W SP-90', p_powerbanks_3_desc: 'بطارية محمولة بسعة 10000 مللي أمبير مع شحن سريع بقوة 22.5 واط. كابل USB-C مدمج، بالإضافة إلى منفذي USB-C و USB-A.',
-    p_powerbanks_4_name: 'Konfulon Magnetic Wireless Power Bank 10000mAh M22W', p_powerbanks_4_desc: 'بطارية محمولة مغناطيسية لاسلكية بشحن لاسلكي 15 واط وشحن PD بقوة 20 واط. مغناطيس قوي للمحاذاة، بالإضافة إلى منفذي USB و USB-C.',
-    p_powerbanks_5_name: 'Xiaomi Wireless Power Bank 20000mAh', p_powerbanks_5_desc: 'بطارية محمولة بسعة 20000 مللي أمبير مع شحن لاسلكي 10 واط. منفذ USB-A بقوة 18 واط، بالإضافة إلى إخراج مزدوج USB-A و USB-C.',
-    p_powerbanks_6_name: 'Oryx CUBE-10 Wireless Power Bank 10000mAh', p_powerbanks_6_desc: 'بطارية محمولة مضغوطة تعمل بالسلك واللاسلكي مع شحن لاسلكي 10 واط. شحن سريع عبر Type-C بقوة 18 واط بتصميم مربع متين.',
-    p_powerbanks_7_name: 'Dinex Portable LED Power Bank 20000mAh X-200', p_powerbanks_7_desc: 'بطارية محمولة بسعة 20000 مللي أمبير مع لوحة إضاءة LED مدمجة. شحن سريع بقوة 22.5 واط، شاشة LCD، وحزام حمل مدمج.',
-    p_powerbanks_8_name: 'Dinex Mini Power Bank 5000mAh A333', p_powerbanks_8_desc: 'بطارية محمولة صغيرة بمخرج 22.5 واط وإدخال/إخراج PD بقوة 20 واط. تتبدل بين Type-C و Lightning، وتتضمن حاملاً مخفياً.',
-    p_powerbanks_9_name: 'Konfulon Outdoor Power Bank 100000mAh A45Q', p_powerbanks_9_desc: 'بطارية محمولة خارجية بسعة ضخمة مع شحن سريع PD بقوة 20 واط و22.5 واط. 6 منافذ إخراج مع شاشة LED، مناسبة للأجهزة اللوحية والهواتف.',
-    p_powerbanks_10_name: 'Konfulon Power Bank 70000mAh A66Q', p_powerbanks_10_desc: 'بطارية محمولة خارجية عالية السعة مع شحن سريع PD بقوة 30 واط و22.5 واط. 7 منافذ إخراج بالإضافة إلى كشاف LED مدمج.',
+    p_powerbanks_1_name: 'SHtel شاحن متنقل 20000mAh 45W SP-32', p_powerbanks_1_desc: 'شاحن متنقل بسعة 20000mAh مع شحن سريع 45W، تدعم شحن الحاسوب المحمول. حجم مضغوط مع كابل Type-C مدمج وشاشة رقمية.',
+    p_powerbanks_2_name: 'SHtel شاحن متنقل 20000mAh 22.5W SP-24', p_powerbanks_2_desc: 'شاحن متنقل بسعة 20000mAh مع شحن سريع بقوة 22.5W. كابلات Type-C و Lightning مدمجة، وشاشة رقمية تعرض النسبة المئوية.',
+    p_powerbanks_3_name: 'SHtel شاحن متنقل 10000mAh 22.5W SP-90', p_powerbanks_3_desc: 'شاحن متنقل بسعة 10000mAh مع شحن سريع بقوة 22.5W. كابل USB-C مدمج، بالإضافة إلى منفذي USB-C و USB-A.',
+    p_powerbanks_4_name: 'Konfulon شاحن متنقل مغناطيسي لاسلكي 10000mAh M22W', p_powerbanks_4_desc: 'شاحن متنقل مغناطيسي لاسلكي بشحن لاسلكي 15W وشحن PD بقوة 20W. مغناطيس قوي للمحاذاة، بالإضافة إلى منفذي USB و USB-C.',
+    p_powerbanks_5_name: 'Xiaomi شاحن متنقل لاسلكي 20000mAh', p_powerbanks_5_desc: 'شاحن متنقل بسعة 20000mAh مع شحن لاسلكي 10W. منفذ USB-A بقوة 18W، بالإضافة إلى إخراج مزدوج USB-A و USB-C.',
+    p_powerbanks_6_name: 'Oryx CUBE-10 شاحن متنقل لاسلكي 10000mAh', p_powerbanks_6_desc: 'شاحن متنقل مضغوط تعمل بالسلك واللاسلكي مع شحن لاسلكي 10W. شحن سريع عبر Type-C بقوة 18W بتصميم مربع متين.',
+    p_powerbanks_7_name: 'Dinex شاحن متنقل بإضاءة LED 20000mAh X-200', p_powerbanks_7_desc: 'شاحن متنقل بسعة 20000mAh مع لوحة إضاءة LED مدمجة. شحن سريع بقوة 22.5W، شاشة LCD، وحزام حمل مدمج.',
+    p_powerbanks_8_name: 'Dinex شاحن متنقل صغير 5000mAh A333', p_powerbanks_8_desc: 'شاحن متنقل صغير بمخرج 22.5W وإدخال/إخراج PD بقوة 20W. تتبدل بين Type-C و Lightning، وتتضمن حاملاً مخفياً.',
+    p_powerbanks_9_name: 'Konfulon شاحن متنقل خارجي 100000mAh A45Q', p_powerbanks_9_desc: 'شاحن متنقل خارجي بسعة ضخمة مع شحن سريع PD بقوة 20W و22.5W. 6 منافذ إخراج مع شاشة LED، مناسبة للأجهزة اللوحية والهواتف.',
+    p_powerbanks_10_name: 'Konfulon شاحن متنقل 70000mAh A66Q', p_powerbanks_10_desc: 'شاحن متنقل خارجي عالية السعة مع شحن سريع PD بقوة 30W و22.5W. 7 منافذ إخراج بالإضافة إلى كشاف LED مدمج.',
     /* ── SHOP PRODUCTS: SECURITY CAMERAS ── */
-    p_cameras_1_name: 'AI Solar Camera 3-in-1 (SPM-T Series)', p_cameras_1_desc: 'كاميرا مراقبة 4K تعمل بالطاقة الشمسية بثلاث عدسات في وحدة واحدة. اتصال 4G/واي فاي، تغطية 360°، ورؤية ليلية ملونة.',
-    p_cameras_2_name: 'AOV Smart Solar Camera (4-Lens)', p_cameras_2_desc: 'كاميرا ذكية تعمل بالطاقة الشمسية بأربع عدسات حقيقية ودقة Ultra HD بقوة 20 ميغابكسل. تخزين سحابي، اتصال صوتي، وتسجيل ملون نهاراً وليلاً.',
-    p_cameras_3_name: 'HD Outdoor & Solar Security Camera', p_cameras_3_desc: 'كاميرا مراقبة خارجية تعمل بالطاقة الشمسية بدقة Ultra HD 4K ورؤية 360°. بطارية مدمجة، كشف حركة PIR، ومراقبة عبر 4G للمناطق النائية.',
-    p_cameras_4_name: 'Hikvision 3K Color Turret Camera', p_cameras_4_desc: 'كاميرا داخلية بتصميم Turret بدقة 3K وتقنية الإضاءة الهجينة الذكية. فيديو ملون واضح نهاراً وليلاً بزاوية رؤية واسعة.',
-    p_cameras_5_name: 'Imou Bullet 2E Outdoor Camera', p_cameras_5_desc: 'كاميرا خارجية بتصميم Bullet بدقة 2K وكشف الأشخاص. كشاف يعمل بالحركة ورؤية ليلية ملونة ذكية.',
-    p_cameras_6_name: 'TP-Link Tapo C212 Pan/Tilt Camera', p_cameras_6_desc: 'كاميرا منزلية دوارة (أفقياً وعمودياً) بدقة 2K وتتبع للحركة. كشف الأشخاص، صوت ثنائي الاتجاه، وتخزين محلي أو سحابي.',
-    p_cameras_7_name: 'Ezviz H8c Smart Home Camera', p_cameras_7_desc: 'كاميرا منزلية ذكية بدقة 1080p ورؤية بانورامية 360°. تتبع ذكي وتنبيه دفاعي فوري عند رصد أي حركة.',
-    p_cameras_8_name: 'Hikvision ColorVu Bullet Camera', p_cameras_8_desc: 'كاميرا خارجية بتصميم Bullet مزودة بتقنية ColorVu للإضاءة الهجينة الذكية. تسجيل ملون نهاراً وليلاً، وتصميم مقاوم للعوامل الجوية بمعيار IP67.',
-    p_cameras_9_name: 'Hikvision Turbo HD Bullet Camera', p_cameras_9_desc: 'كاميرا Bullet بدقة HD مزودة بتقنية HDTVI لصورة واضحة. مقاومة للعوامل الجوية بمعيار IP67 مع رؤية ليلية EXIR للاستخدام الخارجي.',
-    p_cameras_10_name: 'Imou Cruiser Dual 2 (10MP)', p_cameras_10_desc: 'كاميرا مراقبة خارجية بعدستين مزدوجتين ودقة إجمالية 10 ميغابكسل. كشف الأشخاص والمركبات مع أضواء تحذير حمراء وزرقاء.',
+    p_cameras_1_name: 'كاميرا شمسية بالذكاء الاصطناعي 3 في 1 (سلسلة SPM-T)', p_cameras_1_desc: 'كاميرا مراقبة 4K تعمل بالطاقة الشمسية بثلاث عدسات في وحدة واحدة. اتصال 4G/واي فاي، تغطية 360°، ورؤية ليلية ملونة.',
+    p_cameras_2_name: 'AOV كاميرا شمسية ذكية (4 عدسات)', p_cameras_2_desc: 'كاميرا ذكية تعمل بالطاقة الشمسية بأربع عدسات حقيقية ودقة Ultra HD بقوة 20MP. تخزين سحابي، اتصال صوتي، وتسجيل ملون نهاراً وليلاً.',
+    p_cameras_3_name: 'كاميرا مراقبة خارجية شمسية بدقة HD', p_cameras_3_desc: 'كاميرا مراقبة خارجية تعمل بالطاقة الشمسية بدقة Ultra HD 4K ورؤية 360°. بطارية مدمجة، كشف حركة PIR، ومراقبة عبر 4G للمناطق النائية.',
+    p_cameras_4_name: 'Hikvision كاميرا Turret ملونة بدقة 3K', p_cameras_4_desc: 'كاميرا داخلية بتصميم Turret بدقة 3K وتقنية الإضاءة الهجينة الذكية. فيديو ملون واضح نهاراً وليلاً بزاوية رؤية واسعة.',
+    p_cameras_5_name: 'Imou كاميرا خارجية Bullet 2E', p_cameras_5_desc: 'كاميرا خارجية بتصميم Bullet بدقة 2K وكشف الأشخاص. كشاف يعمل بالحركة ورؤية ليلية ملونة ذكية.',
+    p_cameras_6_name: 'TP-Link Tapo C212 كاميرا دوارة', p_cameras_6_desc: 'كاميرا منزلية دوارة (أفقياً وعمودياً) بدقة 2K وتتبع للحركة. كشف الأشخاص، صوت ثنائي الاتجاه، وتخزين محلي أو سحابي.',
+    p_cameras_7_name: 'Ezviz H8c كاميرا منزلية ذكية', p_cameras_7_desc: 'كاميرا منزلية ذكية بدقة 1080p ورؤية بانورامية 360°. تتبع ذكي وتنبيه دفاعي فوري عند رصد أي حركة.',
+    p_cameras_8_name: 'Hikvision كاميرا Bullet بتقنية ColorVu', p_cameras_8_desc: 'كاميرا خارجية بتصميم Bullet مزودة بتقنية ColorVu للإضاءة الهجينة الذكية. تسجيل ملون نهاراً وليلاً، وتصميم مقاوم للعوامل الجوية بمعيار IP67.',
+    p_cameras_9_name: 'Hikvision كاميرا Bullet بتقنية Turbo HD', p_cameras_9_desc: 'كاميرا Bullet بدقة HD مزودة بتقنية HDTVI لصورة واضحة. مقاومة للعوامل الجوية بمعيار IP67 مع رؤية ليلية EXIR للاستخدام الخارجي.',
+    p_cameras_10_name: 'Imou كاميرا Cruiser Dual 2 (10MP)', p_cameras_10_desc: 'كاميرا مراقبة خارجية بعدستين مزدوجتين ودقة إجمالية 10MP. كشف الأشخاص والمركبات مع أضواء تحذير حمراء وزرقاء.',
     /* ── SHOP PRODUCTS: SPEAKERS & RADIOS ── */
-    p_speakers_1_name: 'Sing-e Dual 8-Inch Party Speaker', p_speakers_1_desc: 'مكبر صوت مزدوج بحجم 8 إنش بشبكة بتصميم مثمن. حلقات إضاءة RGB متعددة الألوان حول كل مكبر. شاشة LED لعرض الوقت في الأعلى؛ يشمل ميكروفوناً وجهاز تحكم عن بعد.',
-    p_speakers_2_name: 'Sing-e 50W HiFi Speaker ZQS8239', p_speakers_2_desc: 'مكبر صوت HiFi مزدوج بحجم 8 إنش بقدرة إخراج 50 واط. معالج صوت DSP مدمج وإضاءة LED ملونة على شكل حلقة. بطارية 7.4 فولت بسعة 5000 مللي أمبير؛ يشمل ميكروفوناً وجهاز تحكم عن بعد.',
-    p_speakers_3_name: 'Sing-e Dual 10-Inch Tower Speaker', p_speakers_3_desc: 'مكبر صوت مزدوج بحجم 10 إنش بصوت جهير عميق. مدخلا ميكروفون بالإضافة إلى مدخل غيتار/AUX للفنانين. منفذ USB، بطاقة TF، شاشة LED؛ يعمل بالتيار الكهربائي.',
-    p_speakers_4_name: 'Avcrowns 15-Inch Trolley Speaker CH-8615', p_speakers_4_desc: 'مكبر صوت احترافي بعجلات بحجم 15 إنش وقدرة P.M.P.O تصل إلى 5500 واط. يشمل ميكروفونين لاسلكيين وجهاز تحكم عن بعد. اقتران TWS، منفذ USB، بطاقة TF، راديو FM، وإضاءة LED.',
-    p_speakers_5_name: 'NNS RGB Retro Radio NS-7069BT', p_speakers_5_desc: 'راديو AM/FM/موجة قصيرة مع شريط إضاءة RGB ملون. بلوتوث مع اقتران TWS، وتشغيل عبر USB وبطاقة TF. هوائي قابل للسحب ومقبض حمل علوي لسهولة التنقل.',
-    p_speakers_6_name: 'NNS Ribbed Copper Radio & Clock NS-7211BT', p_speakers_6_desc: 'راديو AM/FM/موجة قصيرة بساعة تناظرية مدمجة. تشغيل عبر البلوتوث وUSB وبطاقة TF مع أزرار تحكم مخصصة. يعمل ببطارية 18650، ويشمل كابل شحن.',
-    p_speakers_7_name: 'NNS Compact Copper Radio NS-6655BT', p_speakers_7_desc: 'راديو AM/FM/موجة قصيرة بهيكل مضغوط بلمسات نحاسية. بلوتوث مع اقتران TWS، وتشغيل عبر USB وبطاقة TF. يعمل ببطارية 18650، ويشمل كابل شحن.',
-    p_speakers_8_name: 'NNS Wood Radio & Clock NS-7116BT', p_speakers_8_desc: 'راديو AM/FM/موجة قصيرة بهيكل بلون خشبي دافئ. ساعة مدمجة، بلوتوث، وتشغيل عبر USB وبطاقة TF. يعمل ببطارية 18650، ويشمل كابل شحن.',
-    p_speakers_9_name: 'Avcrowns 12-Inch Karaoke Speaker CH-126', p_speakers_9_desc: 'مكبر صوت كاريوكي قابل لإعادة الشحن بحجم 12 إنش وقدرة P.M.P.O تصل إلى 10000 واط. يشمل ميكروفونين لاسلكيين وجهاز تحكم عن بعد. منفذ USB، بطاقة TF، راديو FM، مدخل AUX، وإضاءة LED بألوان RGB.',
-    p_speakers_10_name: 'Meier Retro Gramophone Speaker', p_speakers_10_desc: 'مكبر صوت بتصميم كلاسيكي على شكل غرامافون مع اتصال بلوتوث 5.4. يشغل راديو FM، USB، بطاقة TF، أو مدخل AUX. بطارية قابلة لإعادة الشحن؛ يشمل كابلي USB و AUX.',
+    p_speakers_1_name: 'Sing-e مكبر صوت للحفلات مزدوج 8 إنش', p_speakers_1_desc: 'مكبر صوت مزدوج بحجم 8 إنش بشبكة بتصميم مثمن. حلقات إضاءة RGB متعددة الألوان حول كل مكبر. شاشة LED لعرض الوقت في الأعلى؛ يشمل ميكروفوناً وجهاز تحكم عن بعد.',
+    p_speakers_2_name: 'Sing-e مكبر صوت HiFi بقوة 50W ZQS8239', p_speakers_2_desc: 'مكبر صوت HiFi مزدوج بحجم 8 إنش بقدرة إخراج 50W. معالج صوت DSP مدمج وإضاءة LED ملونة على شكل حلقة. بطارية 7.4V بسعة 5000mAh؛ يشمل ميكروفوناً وجهاز تحكم عن بعد.',
+    p_speakers_3_name: 'Sing-e مكبر صوت برجي مزدوج 10 إنش', p_speakers_3_desc: 'مكبر صوت مزدوج بحجم 10 إنش بصوت جهير عميق. مدخلا ميكروفون بالإضافة إلى مدخل غيتار/AUX للفنانين. منفذ USB، بطاقة TF، شاشة LED؛ يعمل بالتيار الكهربائي.',
+    p_speakers_4_name: 'Avcrowns مكبر صوت بعجلات 15 إنش CH-8615', p_speakers_4_desc: 'مكبر صوت احترافي بعجلات بحجم 15 إنش وقدرة P.M.P.O تصل إلى 5500W. يشمل ميكروفونين لاسلكيين وجهاز تحكم عن بعد. اقتران TWS، منفذ USB، بطاقة TF، راديو FM، وإضاءة LED.',
+    p_speakers_5_name: 'NNS راديو كلاسيكي بإضاءة RGB طراز NS-7069BT', p_speakers_5_desc: 'راديو AM/FM/موجة قصيرة مع شريط إضاءة RGB ملون. بلوتوث مع اقتران TWS، وتشغيل عبر USB وبطاقة TF. هوائي قابل للسحب ومقبض حمل علوي لسهولة التنقل.',
+    p_speakers_6_name: 'NNS راديو وساعة نحاسية مخططة طراز NS-7211BT', p_speakers_6_desc: 'راديو AM/FM/موجة قصيرة بساعة تناظرية مدمجة. تشغيل عبر البلوتوث وUSB وبطاقة TF مع أزرار تحكم مخصصة. يعمل ببطارية 18650، ويشمل كابل شحن.',
+    p_speakers_7_name: 'NNS راديو نحاسي مضغوط طراز NS-6655BT', p_speakers_7_desc: 'راديو AM/FM/موجة قصيرة بهيكل مضغوط بلمسات نحاسية. بلوتوث مع اقتران TWS، وتشغيل عبر USB وبطاقة TF. يعمل ببطارية 18650، ويشمل كابل شحن.',
+    p_speakers_8_name: 'NNS راديو وساعة خشبية طراز NS-7116BT', p_speakers_8_desc: 'راديو AM/FM/موجة قصيرة بهيكل بلون خشبي دافئ. ساعة مدمجة، بلوتوث، وتشغيل عبر USB وبطاقة TF. يعمل ببطارية 18650، ويشمل كابل شحن.',
+    p_speakers_9_name: 'Avcrowns مكبر صوت كاريوكي 12 إنش CH-126', p_speakers_9_desc: 'مكبر صوت كاريوكي قابل لإعادة الشحن بحجم 12 إنش وقدرة P.M.P.O تصل إلى 10000W. يشمل ميكروفونين لاسلكيين وجهاز تحكم عن بعد. منفذ USB، بطاقة TF، راديو FM، مدخل AUX، وإضاءة LED بألوان RGB.',
+    p_speakers_10_name: 'Meier مكبر صوت بتصميم غرامافون كلاسيكي', p_speakers_10_desc: 'مكبر صوت بتصميم كلاسيكي على شكل غرامافون مع اتصال بلوتوث 5.4. يشغل راديو FM، USB، بطاقة TF، أو مدخل AUX. بطارية قابلة لإعادة الشحن؛ يشمل كابلي USB و AUX.',
     /* ── SHOP PRODUCTS: SMART WATCHES ── */
-    p_watches_1_name: 'Smartbarry C90 MAX (4G Ultra Watch)', p_watches_1_desc: 'ساعة ذكية تعمل بشبكة 4G بشاشة كبيرة مقاس 2.2 إنش وكاميرا مزدوجة بدقة Full HD. شحن مغناطيسي، ومتوافقة مع 3 مشغلي شبكات.',
+    p_watches_1_name: 'Smartbarry C90 MAX (ساعة ألترا بشبكة 4G)', p_watches_1_desc: 'ساعة ذكية تعمل بشبكة 4G بشاشة كبيرة مقاس 2.2 إنش وكاميرا مزدوجة بدقة Full HD. شحن مغناطيسي، ومتوافقة مع 3 مشغلي شبكات.',
     p_watches_2_name: 'Riversong Motive 10 GT', p_watches_2_desc: 'ساعة ذكية بنظام GPS بشاشة AMOLED مقاس 1.43 إنش وتحديد مواقع متعدد الأقمار الصناعية. مقاومة للماء بمعيار 3 ATM، مع سوار مغناطيسي إضافي.',
-    p_watches_3_name: 'Smartbarry C006pro Kids Watch', p_watches_3_desc: 'ساعة ذكية للأطفال تدعم 5G بشاشة قابلة للفصل مقاس 2.01 إنش وكاميرا HD. مقاومة للماء بمعيار IP67، مع تحديد الموقع LBS، واتصال بالفيديو ودردشة صوتية.',
+    p_watches_3_name: 'Smartbarry C006pro ساعة أطفال', p_watches_3_desc: 'ساعة ذكية للأطفال تدعم 5G بشاشة قابلة للفصل مقاس 2.01 إنش وكاميرا HD. مقاومة للماء بمعيار IP67، مع تحديد الموقع LBS، واتصال بالفيديو ودردشة صوتية.',
     p_watches_4_name: 'Black Shark A3', p_watches_4_desc: 'ساعة ذكية بشاشة HD مقاس 1.53 إنش وبطارية تدوم حتى 14 يوماً. تتتبع مؤشرات اللياقة البدنية بتصميم متين مناسب للاستخدام اليومي.',
     p_watches_5_name: 'Kieslect Kr3', p_watches_5_desc: 'ساعة ذكية بإطار من الفولاذ المقاوم للصدأ ونظام GPS ثنائي التردد بست أقمار صناعية. توليد أوجه ساعة مخصصة بالذكاء الاصطناعي.',
     p_watches_6_name: 'Kieslect Elite2', p_watches_6_desc: 'ساعة ذكية بإطار سيراميك مشطوف ونظام GPS ثنائي التردد مع ملاحة المسارات. مساعد صوتي بالذكاء الاصطناعي متصل بالإنترنت للتحكم دون استخدام اليدين.',
     p_watches_7_name: 'Mibro Lite3 Pro', p_watches_7_desc: 'ساعة ذكية بنظام GPS بشاشة AMOLED مع طقم سوارين من الجلد الطبيعي. تتتبع معدل ضربات القلب والنوم ومستوى الترطيب طوال اليوم.',
     p_watches_8_name: 'Riversong Motive 6 Pro', p_watches_8_desc: 'ساعة ذكية بشاشة لمس كاملة مقاس 1.83 إنش ومكالمات بلوتوث. أكثر من 100 وضع رياضي بالإضافة إلى قياس نسبة الأكسجين في الدم.',
-    p_watches_9_name: 'Kieslect Elfin', p_watches_9_desc: 'ساعة ذكية فائقة النحافة بسمك 6 ملم وشاشة AMOLED بدقة HD مقاس 1.32 إنش. أوجه ساعة قابلة للتخصيص بالذكاء الاصطناعي لمظهر شخصي مميز.',
+    p_watches_9_name: 'Kieslect Elfin', p_watches_9_desc: 'ساعة ذكية فائقة النحافة بسمك 6mm وشاشة AMOLED بدقة HD مقاس 1.32 إنش. أوجه ساعة قابلة للتخصيص بالذكاء الاصطناعي لمظهر شخصي مميز.',
     p_watches_10_name: 'Kieslect Lora 3', p_watches_10_desc: 'ساعة ذكية معدنية فائقة النحافة بتصميم عصري للاستخدام اليومي. مراقبة صحية على مدار 24 ساعة مع مكالمات بلوتوث بلمسة واحدة.',
     /* ── SHOP PRODUCTS: BEAUTY & CARE ── */
-    p_beauty_1_name: 'Braun Silk-épil 5 SensoSmart Epilator', p_beauty_1_desc: 'جهاز إزالة شعر للاستخدام الجاف والمبلل بتقنية SensoSmart لإزالة شعر لطيفة. إزالة فائقة النعومة تحافظ على نعومة البشرة حتى 4 أسابيع، مع ملحقين إضافيين.',
-    p_beauty_2_name: 'Sokany Ceramic Hair Straightener SK-993', p_beauty_2_desc: 'مكواة فرد شعر للاستخدام الجاف والمبلل بألواح سيراميك ونانو فضة. تسخن حتى 400 درجة مئوية لنتيجة احترافية بمستوى الصالونات.',
-    p_beauty_3_name: 'DSP Steam Lustre Styler 10242', p_beauty_3_desc: 'مكواة فرد بالبخار بألواح ألومنيوم لنتيجة ناعمة ولامعة. شاشة LED رقمية مع ترطيب بالبروتين والكيراتين من تمريرة واحدة.',
-    p_beauty_4_name: 'Enzo Professional One-Step Volumiser PLUS', p_beauty_4_desc: 'فرشاة تصفيف بالهواء الساخن تجفف الشعر وتمنحه الحجم في خطوة واحدة. إعدادات حرارة متعددة مع نفخة هواء بارد لتثبيت التسريحة.',
-    p_beauty_5_name: 'Enzo Professional 2-in-1 Magic Brush', p_beauty_5_desc: 'تجفف الشعر وتفرده في آن واحد بفضل فرشاة دوارة. تأتي مع حقيبة سفر لسهولة التخزين.',
-    p_beauty_6_name: 'BaByliss 19mm Curling Tong', p_beauty_6_desc: 'مكواة تجعيد بقطر 19 ملم لتجعيدات وموجات محددة وطويلة الثبات. حرارة متحكم بها حتى 210 درجة مئوية لتصفيف مثالي.',
+    p_beauty_1_name: 'Braun Silk-épil 5 SensoSmart جهاز إزالة الشعر', p_beauty_1_desc: 'جهاز إزالة شعر للاستخدام الجاف والمبلل بتقنية SensoSmart لإزالة شعر لطيفة. إزالة فائقة النعومة تحافظ على نعومة البشرة حتى 4 أسابيع، مع ملحقين إضافيين.',
+    p_beauty_2_name: 'Sokany مكواة فرد شعر سيراميك SK-993', p_beauty_2_desc: 'مكواة فرد شعر للاستخدام الجاف والمبلل بألواح سيراميك ونانو فضة. تسخن حتى 400°C لنتيجة احترافية بمستوى الصالونات.',
+    p_beauty_3_name: 'DSP مكواة بخار لامعة 10242', p_beauty_3_desc: 'مكواة فرد بالبخار بألواح ألومنيوم لنتيجة ناعمة ولامعة. شاشة LED رقمية مع ترطيب بالبروتين والكيراتين من تمريرة واحدة.',
+    p_beauty_4_name: 'Enzo Professional فرشاة تصفيف ومنح حجم بخطوة واحدة PLUS', p_beauty_4_desc: 'فرشاة تصفيف بالهواء الساخن تجفف الشعر وتمنحه الحجم في خطوة واحدة. إعدادات حرارة متعددة مع نفخة هواء بارد لتثبيت التسريحة.',
+    p_beauty_5_name: 'Enzo Professional فرشاة سحرية 2 في 1', p_beauty_5_desc: 'تجفف الشعر وتفرده في آن واحد بفضل فرشاة دوارة. تأتي مع حقيبة سفر لسهولة التخزين.',
+    p_beauty_6_name: 'BaByliss مكواة تجعيد 19mm', p_beauty_6_desc: 'مكواة تجعيد بقطر 19mm لتجعيدات وموجات محددة وطويلة الثبات. حرارة متحكم بها حتى 210°C لتصفيف مثالي.',
     /* ── SHOP PRODUCTS: MEN'S GROOMING ── */
-    p_grooming_1_name: 'ماكينة حلاقة اللحية Kemei 1677', p_grooming_1_desc: 'ماكينة حلاقة لحية دقيقة بإعدادات طول من 0 إلى 7 ملم. شفرات ذاتية الشحذ تحافظ على حدتها مع الاستخدام المنتظم. شحن عبر USB-C يوفر حتى 4 ساعات من الاستخدام.',
+    p_grooming_1_name: 'ماكينة حلاقة اللحية Kemei 1677', p_grooming_1_desc: 'ماكينة حلاقة لحية دقيقة بإعدادات طول من 0 إلى 7mm. شفرات ذاتية الشحذ تحافظ على حدتها مع الاستخدام المنتظم. شحن عبر USB-C يوفر حتى 4 ساعات من الاستخدام.',
     p_grooming_2_name: 'Philips One Blade 360', p_grooming_2_desc: 'ماكينة حلاقة دوارة برؤوس عائمة ثلاثية الأبعاد لحلاقة قريبة من الجلد. للاستخدام الجاف أو المبلل، مع مقص تشذيب قابل للطي للتفاصيل الدقيقة. شحنة واحدة توفر حتى 60 دقيقة من الاستخدام.',
-    p_grooming_3_name: 'Oraimo Electric Shaver', p_grooming_3_desc: 'رؤوس حلاقة دوارة تنزلق بسلاسة لحلاقة قريبة من الجلد. للاستخدام الجاف أو المبلل، مع مقص تشذيب قابل للطي للسوالف والشارب. تشحن عبر USB-C بسهولة ودون الحاجة لأسلاك إضافية.',
-    p_grooming_4_name: 'Braun Hair Clipper Set', p_grooming_4_desc: 'طقم مقص شعر بشفرة من الفولاذ المقاوم للصدأ المتين. يشمل 4 أمشاط توجيه لأطوال قص مختلفة. شحن عبر USB-C ومحرك منخفض الضجيج للاستخدام اليومي.',
-    p_grooming_5_name: 'Kemei Hair Straightener', p_grooming_5_desc: 'مكواة فرد شعر أيونية تصل حرارتها إلى 200 درجة مئوية لنتيجة ناعمة. تسخن خلال 30 ثانية فقط، وتصبح جاهزة على الفور تقريباً. إعدادات حرارة قابلة للتعديل تناسب أنواع الشعر المختلفة.',
-    p_grooming_6_name: 'Kemei Epilator 8536', p_grooming_6_desc: 'جهاز إزالة شعر بـ72 ملقطاً لإزالة شعر شاملة. تصميم لاسلكي يعمل جافاً أو مبللاً، مع إضاءة LED مدمجة. الشحن الكامل يوفر حتى 40 دقيقة من الاستخدام.',
-    p_grooming_7_name: 'Kemei Ionic Hair Dryer 2200W', p_grooming_7_desc: 'مجفف شعر أيوني بقوة 2200 واط لتجفيف سريع يقلل التطاير والتجعد. زر نفخة هواء بارد لتثبيت التسريحة بعد الانتهاء. 3 سرعات ومستويان للحرارة للتكيف مع احتياجاتك.',
-    p_grooming_8_name: 'Anti-Aging EMS Face Massager', p_grooming_8_desc: 'جهاز تدليك للوجه يجمع بين الاهتزاز والحرارة اللطيفة للعناية بالبشرة. تقنية شد EMS تستهدف الخطوط الدقيقة وترهل الجلد. 5 أوضاع وشحن عبر USB-C للاستخدام المرن.',
-    p_grooming_9_name: 'Kemei Electric Nail Grinder', p_grooming_9_desc: 'جهاز برد أظافر كهربائي بـ6 رؤوس قابلة للتبديل للتشكيل. لطيف بما يكفي للرضع وآمن لجميع أفراد الأسرة. محرك هادئ وشحن عبر USB-C لراحة الاستخدام اليومي.',
+    p_grooming_3_name: 'Oraimo ماكينة حلاقة كهربائية', p_grooming_3_desc: 'رؤوس حلاقة دوارة تنزلق بسلاسة لحلاقة قريبة من الجلد. للاستخدام الجاف أو المبلل، مع مقص تشذيب قابل للطي للسوالف والشارب. تشحن عبر USB-C بسهولة ودون الحاجة لأسلاك إضافية.',
+    p_grooming_4_name: 'Braun طقم مقص شعر', p_grooming_4_desc: 'طقم مقص شعر بشفرة من الفولاذ المقاوم للصدأ المتين. يشمل 4 أمشاط توجيه لأطوال قص مختلفة. شحن عبر USB-C ومحرك منخفض الضجيج للاستخدام اليومي.',
+    p_grooming_5_name: 'Kemei مكواة فرد شعر', p_grooming_5_desc: 'مكواة فرد شعر أيونية تصل حرارتها إلى 200°C لنتيجة ناعمة. تسخن خلال 30 ثانية فقط، وتصبح جاهزة على الفور تقريباً. إعدادات حرارة قابلة للتعديل تناسب أنواع الشعر المختلفة.',
+    p_grooming_6_name: 'Kemei جهاز إزالة شعر 8536', p_grooming_6_desc: 'جهاز إزالة شعر بـ72 ملقطاً لإزالة شعر شاملة. تصميم لاسلكي يعمل جافاً أو مبللاً، مع إضاءة LED مدمجة. الشحن الكامل يوفر حتى 40 دقيقة من الاستخدام.',
+    p_grooming_7_name: 'Kemei مجفف شعر أيوني 2200W', p_grooming_7_desc: 'مجفف شعر أيوني بقوة 2200W لتجفيف سريع يقلل التطاير والتجعد. زر نفخة هواء بارد لتثبيت التسريحة بعد الانتهاء. 3 سرعات ومستويان للحرارة للتكيف مع احتياجاتك.',
+    p_grooming_8_name: 'جهاز تدليك الوجه EMS المضاد للشيخوخة', p_grooming_8_desc: 'جهاز تدليك للوجه يجمع بين الاهتزاز والحرارة اللطيفة للعناية بالبشرة. تقنية شد EMS تستهدف الخطوط الدقيقة وترهل الجلد. 5 أوضاع وشحن عبر USB-C للاستخدام المرن.',
+    p_grooming_9_name: 'Kemei جهاز برد أظافر كهربائي', p_grooming_9_desc: 'جهاز برد أظافر كهربائي بـ6 رؤوس قابلة للتبديل للتشكيل. لطيف بما يكفي للرضع وآمن لجميع أفراد الأسرة. محرك هادئ وشحن عبر USB-C لراحة الاستخدام اليومي.',
     /* ── SHOP PRODUCTS: CLOCKS & ALARMS ── */
-    p_wallwatch_1_name: 'Rhythm Quartz Alarm Clock (Gold)', p_wallwatch_1_desc: 'منبه بحركة الكوارتز بأرقام وعقارب مضيئة في الظلام. تصميم مضغوط لطاولة السرير مع مفتاح تشغيل وإيقاف بسيط للمنبه.',
-    p_wallwatch_2_name: 'Rhythm Quartz Alarm Clock (Black)', p_wallwatch_2_desc: 'منبه بحركة الكوارتز بأرقام وعقارب مضيئة في الظلام. تصميم مضغوط لطاولة السرير مع مفتاح تشغيل وإيقاف بسيط للمنبه.',
-    p_wallwatch_3_name: 'Rhythm Alarm Clock (Blue)', p_wallwatch_3_desc: 'منبه تناظري مضغوط بمينا أبيض واضح. حركة كوارتز بسيطة وموثوقة للاستخدام اليومي على طاولة السرير.',
-    p_wallwatch_4_name: 'Silent Scanning Alarm Clock 3567', p_wallwatch_4_desc: 'منبه تناظري بحركة صامتة تماماً دون صوت تكتكة. جرس إنذار بنغمتين وإضاءة ليلية مدمجة.',
-    p_wallwatch_5_name: 'LED Digital Clock GS-5308', p_wallwatch_5_desc: 'ساعة رقمية LED بأرقام كبيرة وواضحة سهلة القراءة. منبه مدمج مع مؤشر صباحاً/مساءً.',
+    p_wallwatch_1_name: 'Rhythm منبه كوارتز (ذهبي)', p_wallwatch_1_desc: 'منبه بحركة الكوارتز بأرقام وعقارب مضيئة في الظلام. تصميم مضغوط لطاولة السرير مع مفتاح تشغيل وإيقاف بسيط للمنبه.',
+    p_wallwatch_2_name: 'Rhythm منبه كوارتز (أسود)', p_wallwatch_2_desc: 'منبه بحركة الكوارتز بأرقام وعقارب مضيئة في الظلام. تصميم مضغوط لطاولة السرير مع مفتاح تشغيل وإيقاف بسيط للمنبه.',
+    p_wallwatch_3_name: 'Rhythm منبه (أزرق)', p_wallwatch_3_desc: 'منبه تناظري مضغوط بمينا أبيض واضح. حركة كوارتز بسيطة وموثوقة للاستخدام اليومي على طاولة السرير.',
+    p_wallwatch_4_name: 'منبه بحركة صامتة 3567', p_wallwatch_4_desc: 'منبه تناظري بحركة صامتة تماماً دون صوت تكتكة. جرس إنذار بنغمتين وإضاءة ليلية مدمجة.',
+    p_wallwatch_5_name: 'ساعة رقمية LED طراز GS-5308', p_wallwatch_5_desc: 'ساعة رقمية LED بأرقام كبيرة وواضحة سهلة القراءة. منبه مدمج مع مؤشر صباحاً/مساءً.',
     /* ── SHOP PRODUCTS: PHONE ACCESSORIES ── */
-    p_phones_1_name: 'DINEX 50W type C Fast Charger', p_phones_1_desc: 'شاحن سريع بقوة 50 واط بخيارات شحن متعددة. تقنية ذكية تضمن شحناً آمناً. مثالي لتشغيل أجهزة متعددة.',
-    p_phones_2_name: 'Dinex Data Cable 100W 3m', p_phones_2_desc: 'كابل شحن USB-C عالي السرعة بقوة 100 واط. تصميم متين لاستخدام طويل الأمد. مثالي للهواتف والأجهزة اللوحية وأجهزة الحاسوب المحمولة.',
-    p_phones_3_name: 'Dinex 20w Fast Charger lightning', p_phones_3_desc: 'شاحن سريع بقوة 20 واط مع كابل Lightning مرفق. تصميم مضغوط مناسب للمنزل أو السفر. شحن يومي آمن وموثوق.',
-    p_phones_4_name: 'Dinex Car Phone Holder', p_phones_4_desc: 'حامل هاتف قابل للتعديل بدوران 360°. يوفر تثبيتاً آمناً وثابتاً. مثالي للقيادة والاستخدام دون استعمال اليدين.',
-    p_phones_5_name: 'SHtel type C CABLE 3.4A', p_phones_5_desc: 'شحن سريع بقوة 3.4 أمبير مع نقل بيانات موثوق. تصميم متين مخصص للاستخدام اليومي. متوافق مع معظم أجهزة USB-C.',
-    p_phones_6_name: 'Dinex Fast Charging Cable 3.0A', p_phones_6_desc: 'كابل Lightning متين للشحن والمزامنة. يوفر أداءً سريعاً وثابتاً. مصمم لأجهزة Apple.',
-    p_phones_7_name: 'Xiaomi Fast charger 120W', p_phones_7_desc: 'شاحن GaN فائق السرعة بقوة 120 واط بتصميم مضغوط. يوفر شحناً قوياً وفعالاً. مثالي لأجهزة USB-C المتوافقة.',
-    p_phones_8_name: 'Oraimo lightning charger 20w', p_phones_8_desc: 'شاحن موثوق بقوة 24 واط مع كابل شحن مرفق. تزويد بالطاقة سريع وآمن وفعال. مثالي لاحتياجات الشحن اليومية.',
-    p_phones_9_name: 'Dinex 4OW type C adapter', p_phones_9_desc: 'شاحن سريع مضغوط بقوة 40 واط للاستخدام اليومي. يوفر أداء شحن آمناً وثابتاً. متوافق مع أجهزة USB-C.',
-    p_phones_10_name: 'Plokama tripod and selfie stick', p_phones_10_desc: 'حامل ثلاثي القوائم ثابت وخفيف الوزن للصور والفيديوهات. ارتفاع قابل للتعديل برأس دوار 360°. مثالي للكاميرات والهواتف الذكية.',
+    p_phones_1_name: 'DINEX شاحن سريع Type C بقوة 50W', p_phones_1_desc: 'شاحن سريع بقوة 50W بخيارات شحن متعددة. تقنية ذكية تضمن شحناً آمناً. مثالي لتشغيل أجهزة متعددة.',
+    p_phones_2_name: 'Dinex كابل شحن 100W 3m', p_phones_2_desc: 'كابل شحن USB-C عالي السرعة بقوة 100W. تصميم متين لاستخدام طويل الأمد. مثالي للهواتف والأجهزة اللوحية وأجهزة الحاسوب المحمولة.',
+    p_phones_3_name: 'Dinex شاحن سريع Lightning بقوة 20W', p_phones_3_desc: 'شاحن سريع بقوة 20W مع كابل Lightning مرفق. تصميم مضغوط مناسب للمنزل أو السفر. شحن يومي آمن وموثوق.',
+    p_phones_4_name: 'Dinex حامل هاتف للسيارة', p_phones_4_desc: 'حامل هاتف قابل للتعديل بدوران 360°. يوفر تثبيتاً آمناً وثابتاً. مثالي للقيادة والاستخدام دون استعمال اليدين.',
+    p_phones_5_name: 'SHtel كابل Type C بقوة 3.4A', p_phones_5_desc: 'شحن سريع بقوة 3.4A مع نقل بيانات موثوق. تصميم متين مخصص للاستخدام اليومي. متوافق مع معظم أجهزة USB-C.',
+    p_phones_6_name: 'Dinex كابل شحن سريع 3.0A', p_phones_6_desc: 'كابل Lightning متين للشحن والمزامنة. يوفر أداءً سريعاً وثابتاً. مصمم لأجهزة Apple.',
+    p_phones_7_name: 'Xiaomi شاحن سريع بقوة 120W', p_phones_7_desc: 'شاحن GaN فائق السرعة بقوة 120W بتصميم مضغوط. يوفر شحناً قوياً وفعالاً. مثالي لأجهزة USB-C المتوافقة.',
+    p_phones_8_name: 'Oraimo شاحن Lightning بقوة 20W', p_phones_8_desc: 'شاحن موثوق بقوة 24W مع كابل شحن مرفق. تزويد بالطاقة سريع وآمن وفعال. مثالي لاحتياجات الشحن اليومية.',
+    p_phones_9_name: 'Dinex محول Type C طاقة 4OW', p_phones_9_desc: 'شاحن سريع مضغوط بقوة 40W للاستخدام اليومي. يوفر أداء شحن آمناً وثابتاً. متوافق مع أجهزة USB-C.',
+    p_phones_10_name: 'Plokama حامل ثلاثي وعصا سيلفي', p_phones_10_desc: 'حامل ثلاثي القوائم ثابت وخفيف الوزن للصور والفيديوهات. ارتفاع قابل للتعديل برأس دوار 360°. مثالي للكاميرات والهواتف الذكية.',
     /* ── SHOP PRODUCTS: ANDROID BOXES ── */
-    p_android_1_name: 'D-Plus D96 AndroidTV Box', p_android_1_desc: 'جهاز تلفاز أندرويد 14 بدقة 8K Ultra HD وواي فاي 6. مساعد جوجل مدمج، ويدعم Netflix وYouTube وPrime Video.',
-    p_android_2_name: 'Xiaomi Smart TV Stick 4K', p_android_2_desc: 'عصا تلفاز أندرويد صغيرة بدقة 4K مع مساعد جوجل مدمج. تأتي مع تطبيقات Netflix وPrime Video وYouTube مثبتة مسبقاً.',
-    p_android_3_name: 'Xiaomi TV Box S (3rd Gen)', p_android_3_desc: 'جهاز Google TV بدقة إخراج 4K Ultra-HD وChromecast مدمج. يشمل الوصول إلى Netflix وPrime Video وGoogle Play.',
-    p_android_4_name: 'Senic H96 Max Android Box', p_android_4_desc: 'جهاز تلفاز أندرويد 11 بدقة إخراج 4K HDR Ultra HD. تصميم مضغوط مع جهاز تحكم عن بعد بسيط.',
+    p_android_1_name: 'D-Plus D96 جهاز أندرويد تي في', p_android_1_desc: 'جهاز تلفاز أندرويد 14 بدقة 8K Ultra HD وواي فاي 6. مساعد جوجل مدمج، ويدعم Netflix وYouTube وPrime Video.',
+    p_android_2_name: 'Xiaomi عصا تلفاز ذكية 4K', p_android_2_desc: 'عصا تلفاز أندرويد صغيرة بدقة 4K مع مساعد جوجل مدمج. تأتي مع تطبيقات Netflix وPrime Video وYouTube مثبتة مسبقاً.',
+    p_android_3_name: 'Xiaomi جهاز تلفاز TV S (الجيل الثالث)', p_android_3_desc: 'جهاز Google TV بدقة إخراج 4K Ultra-HD وChromecast مدمج. يشمل الوصول إلى Netflix وPrime Video وGoogle Play.',
+    p_android_4_name: 'Senic H96 Max جهاز أندرويد', p_android_4_desc: 'جهاز تلفاز أندرويد 11 بدقة إخراج 4K HDR Ultra HD. تصميم مضغوط مع جهاز تحكم عن بعد بسيط.',
     p_android_5_name: 'Vectron VBox Alpha', p_android_5_desc: 'جهاز تلفاز أندرويد 12 بواي فاي 5G ومعالج رباعي النواة Allwinner H313. يوفر دقة 4K Ultra HD مع Netflix وYouTube وPrime Video.',
-    p_android_6_name: 'Senic X98Q Android Box', p_android_6_desc: 'جهاز تلفاز أندرويد 12 بدقة إخراج 8K Ultra HD. منفذا USB 3.0 مزدوجان بالإضافة إلى فتحة بطاقة TF للتخزين.',
-    p_android_7_name: 'Tanix A3 Android Box', p_android_7_desc: 'جهاز تلفاز أندرويد 11 بدقة 4K Ultra HD ودعم HDR. واي فاي ثنائي التردد 2.4G/5G مع معالج رباعي النواة.',
-    p_android_8_name: 'Echolink S400B Android Box', p_android_8_desc: 'جهاز تلفاز أندرويد بدقة 4K Ultra HD مع مساعد جوجل مدمج. يدعم Netflix وDisney+ وHBO Max وPlex.',
+    p_android_6_name: 'Senic X98Q جهاز أندرويد', p_android_6_desc: 'جهاز تلفاز أندرويد 12 بدقة إخراج 8K Ultra HD. منفذا USB 3.0 مزدوجان بالإضافة إلى فتحة بطاقة TF للتخزين.',
+    p_android_7_name: 'Tanix A3 جهاز أندرويد', p_android_7_desc: 'جهاز تلفاز أندرويد 11 بدقة 4K Ultra HD ودعم HDR. واي فاي ثنائي التردد 2.4G/5G مع معالج رباعي النواة.',
+    p_android_8_name: 'Echolink S400B جهاز أندرويد', p_android_8_desc: 'جهاز تلفاز أندرويد بدقة 4K Ultra HD مع مساعد جوجل مدمج. يدعم Netflix وDisney+ وHBO Max وPlex.',
     /* ── SHOP PRODUCTS: CALCULATORS ── */
     p_calculators_1_name: 'Texas Instruments TI-Nspire CX II-T CAS', p_calculators_1_desc: 'آلة حاسبة بيانية بنظام الجبر الحاسوبي CAS وشاشة ملونة. تدعم لغة بايثون، ومعتمدة لامتحانات الباكالوريا والجامعة.',
-    p_calculators_2_name: 'NumWorks Graphing Calculator', p_calculators_2_desc: 'آلة حاسبة بيانية بوضع خاص للامتحانات وتطبيق بايثون مدمج. شاشة لمس ملونة، من تصميم شركة فرنسية.',
+    p_calculators_2_name: 'NumWorks آلة حاسبة بيانية', p_calculators_2_desc: 'آلة حاسبة بيانية بوضع خاص للامتحانات وتطبيق بايثون مدمج. شاشة لمس ملونة، من تصميم شركة فرنسية.',
     p_calculators_3_name: 'Casio Graph Math+ CLASSW40', p_calculators_3_desc: 'آلة حاسبة بيانية بوضع للامتحانات ودعم لغة بايثون. شاشة ملونة مناسبة للثانوية والجامعة، بضمان 3 سنوات.',
-    p_calculators_4_name: 'Casio fx-991ES PLUS (2nd Edition)', p_calculators_4_desc: 'آلة حاسبة علمية بـ417 دالة وعرض طبيعي يحاكي الكتاب المدرسي. تعمل بالطاقة الشمسية والبطارية، غير قابلة للبرمجة.',
-    p_calculators_5_name: 'Deli D991ES PLUS Scientific Calculator', p_calculators_5_desc: 'آلة حاسبة علمية بـ417 دالة وعرض على طريقة الكتاب المدرسي. تعمل بالطاقة الشمسية والبطارية، بضمان 3 سنوات.',
-    p_calculators_6_name: 'Casio fx-82ES PLUS (2nd Edition)', p_calculators_6_desc: 'آلة حاسبة علمية بـ252 دالة وعرض طبيعي يحاكي الكتاب المدرسي. تعمل ببطارية AAA، غير قابلة للبرمجة.',
+    p_calculators_4_name: 'Casio fx-991ES PLUS (الإصدار الثاني)', p_calculators_4_desc: 'آلة حاسبة علمية بـ417 دالة وعرض طبيعي يحاكي الكتاب المدرسي. تعمل بالطاقة الشمسية والبطارية، غير قابلة للبرمجة.',
+    p_calculators_5_name: 'Deli D991ES PLUS آلة حاسبة علمية', p_calculators_5_desc: 'آلة حاسبة علمية بـ417 دالة وعرض على طريقة الكتاب المدرسي. تعمل بالطاقة الشمسية والبطارية، بضمان 3 سنوات.',
+    p_calculators_6_name: 'Casio fx-82ES PLUS (الإصدار الثاني)', p_calculators_6_desc: 'آلة حاسبة علمية بـ252 دالة وعرض طبيعي يحاكي الكتاب المدرسي. تعمل ببطارية AAA، غير قابلة للبرمجة.',
     p_calculators_7_name: 'Casio fx-92 Collège ClassWiz', p_calculators_7_desc: 'آلة حاسبة علمية بـ417 دالة مخصصة لتلاميذ الإعدادي والثانوي. شاشة عالية الدقة، معتمدة للامتحانات وفق النظام الفرنسي.',
     /* ── SHOP PRODUCTS: ELECTRONIC GADGETS ── */
-    p_gadgets_1_name: '360° Sports Armband', p_gadgets_1_desc: 'حزام رياضي للذراع قابل للتعديل 360° للهواتف من 4 إلى 7 إنش. إغلاق مزدوج آمن، وحزام مطاطي مريح.',
-    p_gadgets_2_name: 'Aerbes 400W Solar LED Flood Light', p_gadgets_2_desc: 'كشاف إضاءة LED شمسي بقوة 400 واط بلوح شمسي قابل للفصل. مقاوم للماء بمعيار IP67 مع جهاز تحكم عن بعد لاسلكي.',
-    p_gadgets_3_name: 'Electronic Arm Blood Pressure Monitor', p_gadgets_3_desc: 'جهاز قياس ضغط الدم من الذراع بقياس ذكي. يعرض الضغط الانقباضي والانبساطي ومعدل النبض، بذاكرة تخزن 120 قراءة.',
-    p_gadgets_4_name: 'LED Flashlight Set (2-Pack)', p_gadgets_4_desc: 'طقم من مصباحين LED يدويين بقوة إضاءة 1200 لومن وخاصية التكبير. قابلان لإعادة الشحن عبر USB ببطاريات 18650، ومقاومان للماء بمعيار IPX4.',
-    p_gadgets_5_name: 'AI Tracking Gimbal Stabilizer Q625', p_gadgets_5_desc: 'مثبت جيمبال بتتبع بالذكاء الاصطناعي مع تتبع تلقائي للوجه. دوران 360°، توازن تلقائي، ودعم لحامل ثلاثي القوائم.',
-    p_gadgets_6_name: 'TL16 Clip-On Phone Cooling Fan', p_gadgets_6_desc: 'مروحة تبريد للهاتف بمشبك تثبيت لتبديد الحرارة بسرعة. تعمل بهدوء مع إضاءة RGB ملونة.',
-    p_gadgets_7_name: 'DuraM RGB Light-Up Bluetooth Speaker', p_gadgets_7_desc: 'مكبر صوت بلوتوث محمول بتصميم مضيء بألوان RGB. صوت جهير قوي ومدة تشغيل طويلة.',
-    p_gadgets_8_name: 'Celet Smart Fitness Bracelet', p_gadgets_8_desc: 'سوار ذكي يتتبع معدل ضربات القلب والنوم وعدد الخطوات. سوار شبكي أنيق متوفر باللون الأسود أو الذهبي أو الفضي.',
-    p_gadgets_9_name: 'SUITU Handheld Vacuum Cleaner', p_gadgets_9_desc: 'مكنسة كهربائية يدوية مضغوطة ولاسلكية بقوة شفط 6000 باسكال. شحن سريع عبر Type-C، مناسبة للسيارة أو المنزل.',
-    p_gadgets_10_name: 'Intelli System Wrist Blood Pressure Monitor', p_gadgets_10_desc: 'جهاز قياس ضغط الدم من المعصم بقياس ذكي. تسجيل في الذاكرة، وضع مستخدمين اثنين، وإعلان صوتي للنتائج.',
+    p_gadgets_1_name: 'حزام رياضي للذراع 360°', p_gadgets_1_desc: 'حزام رياضي للذراع قابل للتعديل 360° للهواتف من 4 إلى 7 إنش. إغلاق مزدوج آمن، وحزام مطاطي مريح.',
+    p_gadgets_2_name: 'Aerbes كشاف LED شمسي بقوة 400W', p_gadgets_2_desc: 'كشاف إضاءة LED شمسي بقوة 400W بلوح شمسي قابل للفصل. مقاوم للماء بمعيار IP67 مع جهاز تحكم عن بعد لاسلكي.',
+    p_gadgets_3_name: 'جهاز قياس ضغط الدم الإلكتروني من الذراع', p_gadgets_3_desc: 'جهاز قياس ضغط الدم من الذراع بقياس ذكي. يعرض الضغط الانقباضي والانبساطي ومعدل النبض، بذاكرة تخزن 120 قراءة.',
+    p_gadgets_4_name: 'طقم مصابيح LED يدوية (قطعتان)', p_gadgets_4_desc: 'طقم من مصباحين LED يدويين بقوة إضاءة 1200 لومن وخاصية التكبير. قابلان لإعادة الشحن عبر USB ببطاريات 18650، ومقاومان للماء بمعيار IPX4.',
+    p_gadgets_5_name: 'مثبت جيمبال بتتبع الذكاء الاصطناعي Q625', p_gadgets_5_desc: 'مثبت جيمبال بتتبع بالذكاء الاصطناعي مع تتبع تلقائي للوجه. دوران 360°، توازن تلقائي، ودعم لحامل ثلاثي القوائم.',
+    p_gadgets_6_name: 'TL16 مروحة تبريد بمشبك للهاتف', p_gadgets_6_desc: 'مروحة تبريد للهاتف بمشبك تثبيت لتبديد الحرارة بسرعة. تعمل بهدوء مع إضاءة RGB ملونة.',
+    p_gadgets_7_name: 'DuraM مكبر صوت بلوتوث مضيء RGB', p_gadgets_7_desc: 'مكبر صوت بلوتوث محمول بتصميم مضيء بألوان RGB. صوت جهير قوي ومدة تشغيل طويلة.',
+    p_gadgets_8_name: 'Celet سوار لياقة ذكي', p_gadgets_8_desc: 'سوار ذكي يتتبع معدل ضربات القلب والنوم وعدد الخطوات. سوار شبكي أنيق متوفر باللون الأسود أو الذهبي أو الفضي.',
+    p_gadgets_9_name: 'SUITU مكنسة كهربائية يدوية', p_gadgets_9_desc: 'مكنسة كهربائية يدوية مضغوطة ولاسلكية بقوة شفط 6000 باسكال. شحن سريع عبر Type-C، مناسبة للسيارة أو المنزل.',
+    p_gadgets_10_name: 'Intelli System جهاز قياس ضغط الدم من المعصم', p_gadgets_10_desc: 'جهاز قياس ضغط الدم من المعصم بقياس ذكي. تسجيل في الذاكرة، وضع مستخدمين اثنين، وإعلان صوتي للنتائج.',
   }
 };
 
@@ -708,6 +733,7 @@ function applyTranslation(lang) {
   const cartTotal = document.querySelector('.cart-total-row span:first-child');
   if (cartTotal) cartTotal.innerText = t.cart_total;
   updateCartCheckoutLabel();
+
 
   /* ── ABOUT PAGE ── */
   const setT = (sel, val) => { const el = document.querySelector(sel); if (el && val) el.innerText = val; };
@@ -842,9 +868,81 @@ function applyTranslation(lang) {
   document.querySelectorAll('.btn-cart').forEach(btn => { btn.innerText = t.shop_add_cart; });
   document.querySelectorAll('.btn-order').forEach(btn => { btn.innerText = t.shop_order_now; });
 
-  localStorage.setItem('language', lang);
+    localStorage.setItem('language', lang);
+
+  const privacyPopupEl = document.getElementById('privacyPopup');
+  if (privacyPopupEl && privacyPopupEl.classList.contains('active') && currentPrivacyMode) {
+    renderPrivacyPopup(currentPrivacyMode);
+  }
+
+}
+  let pendingPrivacyAction = null;
+  let currentPrivacyMode = null;
+
+function renderPrivacyPopup(mode) {
+   currentPrivacyMode = mode;
+  const popup = document.getElementById('privacyPopup');
+  const textEl = document.getElementById('privacyPopupText');
+  const actionsEl = document.getElementById('privacyPopupActions');
+  if (!popup || !textEl || !actionsEl) return;
+
+  const lang = localStorage.getItem('language') || 'en';
+  const t = translations[lang];
+  popup.classList.remove('show-close');
+  actionsEl.innerHTML = '';
+
+  if (mode === 'initial') {
+    textEl.textContent = t.privacy_text;
+    const noBtn = document.createElement('button');
+    noBtn.className = 'privacy-btn-no';
+    noBtn.textContent = t.privacy_no;
+    noBtn.addEventListener('click', () => renderPrivacyPopup('warning'));
+    const acceptBtn = document.createElement('button');
+    acceptBtn.className = 'privacy-btn-accept';
+    acceptBtn.textContent = t.privacy_accept;
+    acceptBtn.addEventListener('click', acceptPrivacy);
+    actionsEl.append(noBtn, acceptBtn);
+
+  } else if (mode === 'warning') {
+    textEl.textContent = t.privacy_warning_text;
+    const continueBtn = document.createElement('button');
+    continueBtn.className = 'privacy-btn-no';
+    continueBtn.textContent = t.privacy_continue_without;
+    continueBtn.addEventListener('click', declinePrivacy);
+    const acceptBtn = document.createElement('button');
+    acceptBtn.className = 'privacy-btn-accept';
+    acceptBtn.textContent = t.privacy_accept_terms;
+    acceptBtn.addEventListener('click', acceptPrivacy);
+    actionsEl.append(continueBtn, acceptBtn);
+
+    } else if (mode === 'gate') {
+    textEl.textContent = t.privacy_warning_text;
+    popup.classList.add('show-close');
+    const acceptBtn = document.createElement('button');
+    acceptBtn.className = 'privacy-btn-accept';
+    acceptBtn.textContent = t.privacy_accept_anyway;
+    acceptBtn.addEventListener('click', acceptPrivacy);
+    actionsEl.append(acceptBtn);
+  }
+
+  popup.classList.add('active');
 }
 
+function acceptPrivacy() {
+  localStorage.setItem('privacyChoice', 'accepted');
+  document.getElementById('privacyPopup')?.classList.remove('active');
+  if (typeof pendingPrivacyAction === 'function') {
+    const action = pendingPrivacyAction;
+    pendingPrivacyAction = null;
+    action();
+  }
+}
+
+function declinePrivacy() {
+  localStorage.setItem('privacyChoice', 'declined');
+  document.getElementById('privacyPopup')?.classList.remove('active');
+  pendingPrivacyAction = null;
+}
 /* ── LANGUAGE SWITCHER ── */
 const languageSwitcher = document.getElementById('languageSwitcher');
 if (languageSwitcher) {
@@ -989,12 +1087,28 @@ function changeQty(delta) {
   if (m1total) m1total.textContent = currentOrder.total + ' DH';
 }
 
-function goToStep2()   { showModal('modal2'); }
+function goToStep2() {
+  if (localStorage.getItem('privacyChoice') !== 'accepted') {
+    pendingPrivacyAction = () => showModal('modal2');
+    renderPrivacyPopup('gate');
+    return;
+  }
+  showModal('modal2');
+}
 function backToStep1() { showModal('modal1'); }
+
+function getSelectedCity() {
+  const citySelect = document.getElementById('cust-city');
+  if (!citySelect) return '';
+  if (citySelect.value === 'Other') {
+    return document.getElementById('cust-city-other')?.value.trim() || '';
+  }
+  return citySelect.value.trim();
+}
 
 function goToStep3() {
   const name    = document.getElementById('cust-name')?.value.trim();
-  const city    = document.getElementById('cust-city')?.value.trim();
+  const city    = getSelectedCity();
   const phone   = document.getElementById('cust-phone')?.value.trim();
   const address = document.getElementById('cust-address')?.value.trim();
   if (!name || !city || !phone || !address) { alert('Please fill in all required fields.'); return; }
@@ -1002,19 +1116,26 @@ function goToStep3() {
 }
 
 function backToStep2() { showModal('modal2'); }
-
-async function confirmOrder() {
+function escapeHTML(str) {
+  const div = document.createElement('div');
+  div.textContent = str;
+  return div.innerHTML;
+}
+async function confirmOrder() { 
+  const honeypot = document.getElementById('cust-website');
+  if (honeypot && honeypot.value.trim() !== '') { return; }
   const name    = document.getElementById('cust-name')?.value.trim();
-  const city    = document.getElementById('cust-city')?.value.trim();
+  const city    = getSelectedCity();
   const phone   = document.getElementById('cust-phone')?.value.trim();
   const email   = document.getElementById('cust-email')?.value.trim() || '';
   const address = document.getElementById('cust-address')?.value.trim();
   if (!name || !city || !phone || !address) { alert('Please fill in all required fields.'); return; }
   const confirmBtn = document.querySelector('#modal3 .modal-btn');
   if (confirmBtn) { confirmBtn.textContent = 'Sending...'; confirmBtn.disabled = true; }
-  const body = new URLSearchParams({
+    const body = new URLSearchParams({
     product: currentOrder.name, quantity: String(currentOrder.qty),
-    total: String(currentOrder.total), name, phone, email, city, address, payment: 'Cash On Delivery'
+    total: String(currentOrder.total), name, phone, email, city, address, payment: 'Cash On Delivery',
+    website: honeypot ? honeypot.value.trim() : ''
   }).toString();
   try {
     await fetch(SHEET_URL, { method: 'POST', mode: 'no-cors', headers: { 'Content-Type': 'application/x-www-form-urlencoded' }, body });
@@ -1023,16 +1144,16 @@ async function confirmOrder() {
     alert('Connection error. Please try again or contact us on WhatsApp.');
     return;
   }
-  const finalSummary = document.getElementById('final-summary');
+    const finalSummary = document.getElementById('final-summary');
   if (finalSummary) {
     finalSummary.innerHTML = `
       <p>📦 <span>Product:</span> ${currentOrder.name}</p>
       <p>🔢 <span>Quantity:</span> ${currentOrder.qty}</p>
       <p>💰 <span>Total:</span> ${currentOrder.total} DH</p>
-      <p>👤 <span>Name:</span> ${name}</p>
-      <p>📞 <span>Phone:</span> ${phone}</p>
-      <p>📍 <span>City:</span> ${city}</p>
-      <p>🏠 <span>Address:</span> ${address}</p>
+      <p>👤 <span>Name:</span> ${escapeHTML(name)}</p>
+      <p>📞 <span>Phone:</span> ${escapeHTML(phone)}</p>
+      <p>📍 <span>City:</span> ${escapeHTML(city)}</p>
+      <p>🏠 <span>Address:</span> ${escapeHTML(address)}</p>
       <p>💵 <span>Payment:</span> Cash On Delivery</p>`;
   }
  showModal('modal4');
@@ -1093,9 +1214,26 @@ function showCategory(cat, e) {
 
 /* ── DOM CONTENT LOADED ── */
 document.addEventListener('DOMContentLoaded', () => {
+     if (document.getElementById('privacyPopup')) {
+    const isShopPage = window.location.pathname.toLowerCase().includes('shop.html');
+    if (!isShopPage && !localStorage.getItem('privacyChoice')) {
+      setTimeout(() => renderPrivacyPopup('initial'), 800);
+    }
+    document.getElementById('privacyPopupClose')?.addEventListener('click', () => {
+      document.getElementById('privacyPopup').classList.remove('active');
+    });
+  }
   const cartIcon = document.querySelector('.cart-icon');
   if (cartIcon) cartIcon.addEventListener('click', openCart);
   updateCartCount();
+
+  const cityDropdown = document.getElementById('cust-city');
+  if (cityDropdown) {
+    cityDropdown.addEventListener('change', function () {
+      const wrap = document.getElementById('cust-city-other-wrap');
+      if (wrap) wrap.style.display = (this.value === 'Other') ? 'flex' : 'none';
+    });
+  }
 
   ['modal1','modal2','modal3','modal4'].forEach(id => {
     const el = document.getElementById(id);
@@ -1164,17 +1302,25 @@ document.addEventListener('DOMContentLoaded', () => {
       const t    = translations[lang];
       if (!query || query.length < 1) { dropdown.classList.remove('active'); dropdown.innerHTML = ''; return; }
       const q = query.toLowerCase();
-      const matches = PRODUCTS.filter(p => p.name.toLowerCase().includes(q)).slice(0, 6);
+      const nameField = lang === 'fr' ? 'name_fr' : lang === 'ar' ? 'name_ar' : 'name';
+           const matches = PRODUCTS.filter(p =>
+        p.name.toLowerCase().includes(q) ||
+        (p.name_fr || '').toLowerCase().includes(q) ||
+        (p.name_ar || '').toLowerCase().includes(q)
+      ).slice(0, 6);
       if (matches.length === 0) { dropdown.innerHTML = `<p class="search-no-results">${t.no_results}</p>`; dropdown.classList.add('active'); return; }
-      dropdown.innerHTML = matches.map(p => `
+      dropdown.innerHTML = matches.map(p => {
+        const displayName = p[nameField] || p.name;
+        return `
         <a href="shop.html?cat=${p.cat}&prod=${encodeURIComponent(p.name)}" class="search-suggestion">
-          <img src="${p.img}" alt="${p.name}" onerror="this.style.display='none'">
+          <img src="${p.img}" alt="${displayName}" onerror="this.style.display='none'">
           <div class="suggestion-info">
-            <p class="suggestion-name">${highlight(p.name, query)}</p>
+            <p class="suggestion-name">${highlight(displayName, query)}</p>
             <p class="suggestion-price">${p.price} DH</p>
-            <p class="suggestion-cat">${CAT_LABELS[p.cat]}</p>
+            <p class="suggestion-cat">${t['cat_' + p.cat] || p.cat}</p>
           </div>
-        </a>`).join('');
+        </a>`;
+      }).join('');
       dropdown.classList.add('active');
     }
     input.addEventListener('input', () => showSuggestions(input.value.trim()));
@@ -1256,101 +1402,101 @@ window.addEventListener('load', () => { const loader = document.getElementById('
 
 /* ── PRODUCTS DATA ── */
 const PRODUCTS = [
-  { name: 'SHtel Power Bank 20000mAh 45W SP-32', price: '199', cat: 'powerbanks', img: 'IMAGES/PowerSH20.png' },
-  { name: 'SHtel Power Bank 20000mAh 22.5W SP-24', price: '229', cat: 'powerbanks', img: 'IMAGES/SH 22.5W.png' },
-  { name: 'SHtel Power Bank 10000mAh 22.5W SP-90', price: '179', cat: 'powerbanks', img: 'IMAGES/SHtel 10000W.png' },
-  { name: 'Konfulon Magnetic Wireless Power Bank 10000mAh M22W', price: '249', cat: 'powerbanks', img: 'IMAGES/Konfulon wireless 10000mah.png' },
-  { name: 'Xiaomi Wireless Power Bank 20000mAh', price: '229', cat: 'powerbanks', img: 'IMAGES/Xiaomi 20Mah.png' },
-  { name: 'Oryx CUBE-10 Wireless Power Bank 10000mAh', price: '89', cat: 'powerbanks', img: 'IMAGES/Oryx 10000Mah.png' },
-  { name: 'Dinex Portable LED Power Bank 20000mAh X-200', price: '239', cat: 'powerbanks', img: 'IMAGES/dinex power.png' },
-  { name: 'Dinex Mini Power Bank 5000mAh A333', price: '219', cat: 'powerbanks', img: 'IMAGES/dinex 5000 mini.png' },
-  { name: 'Konfulon Outdoor Power Bank 100000mAh A45Q', price: '699', cat: 'powerbanks', img: 'IMAGES/big power 100000Mah.png' },
-  { name: 'Konfulon Power Bank 70000mAh A66Q', price: '579', cat: 'powerbanks', img: 'IMAGES/Konfulon 70000Mah.png' },
-  { name: 'AI Solar Camera 3-in-1 (SPM-T Series)', price: '1399', cat: 'cameras', img: 'IMAGES/4g-wifi cam solar.png' },
-  { name: 'AOV Smart Solar Camera (4-Lens)', price: '1499', cat: 'cameras', img: 'IMAGES/AOV cam.png' },
-  { name: 'HD Outdoor & Solar Security Camera', price: '1299', cat: 'cameras', img: 'IMAGES/Camera solaire tvt 4cam.png' },
-  { name: 'Hikvision 3K Color Turret Camera', price: '199', cat: 'cameras', img: 'IMAGES/hikvision int cam 3k.png' },
-  { name: 'Imou Bullet 2E Outdoor Camera', price: '749', cat: 'cameras', img: 'IMAGES/imou etanche bullet.png' },
-  { name: 'TP-Link Tapo C212 Pan/Tilt Camera', price: '399', cat: 'cameras', img: 'IMAGES/tapo home.png' },
-  { name: 'Ezviz H8c Smart Home Camera', price: '499', cat: 'cameras', img: 'IMAGES/Ezviz etanche.png' },
-  { name: 'Hikvision ColorVu Bullet Camera', price: '269', cat: 'cameras', img: 'IMAGES/Hikvision ClolorVu HD cam.png' },
-  { name: 'Hikvision Turbo HD Bullet Camera', price: '229', cat: 'cameras', img: 'IMAGES/hik etanche 4k.png' },
-  { name: 'Imou Cruiser Dual 2 (10MP)', price: '799', cat: 'cameras', img: 'IMAGES/imou 10mp.png' },
-  { name: 'Sing-e Dual 8-Inch Party Speaker', price: '1299', cat: 'speakers', img: 'IMAGES/speakersing1mic.png' },
-  { name: 'Sing-e 50W HiFi Speaker ZQS8239', price: '899', cat: 'speakers', img: 'IMAGES/speakerzqs50Wpng.png' },
-  { name: 'Sing-e Dual 10-Inch Tower Speaker', price: '1399', cat: 'speakers', img: 'IMAGES/SPEAKERMEUBLEZQS.png' },
-  { name: 'Avcrowns 15-Inch Trolley Speaker CH-8615', price: '2499', cat: 'speakers', img: 'IMAGES/avcrownsspeaker.png' },
-  { name: 'NNS RGB Retro Radio NS-7069BT', price: '229', cat: 'speakers', img: 'IMAGES/radioLED.jpeg' },
-  { name: 'NNS Ribbed Copper Radio & Clock NS-7211BT', price: '229', cat: 'speakers', img: 'IMAGES/RADIOclassic1.png' },
-  { name: 'NNS Compact Copper Radio NS-6655BT', price: '249', cat: 'speakers', img: 'IMAGES/Radioclassic2.png' },
-  { name: 'NNS Wood Radio & Clock NS-7116BT', price: '249', cat: 'speakers', img: 'IMAGES/radiomontre.jpeg' },
-  { name: 'Avcrowns 12-Inch Karaoke Speaker CH-126', price: '1799', cat: 'speakers', img: 'IMAGES/CH126.png' },
-  { name: 'Meier Retro Gramophone Speaker', price: '279', cat: 'speakers', img: 'IMAGES/Radioclssic2.jpeg' },
-  { name: 'Smartbarry C90 MAX (4G Ultra Watch)', price: '849', cat: 'watches', img: 'IMAGES/c90 centre.png' },
-  { name: 'Riversong Motive 10 GT', price: '349', cat: 'watches', img: 'IMAGES/motive10gt.png' },
-  { name: 'Smartbarry C006pro Kids Watch', price: '199', cat: 'watches', img: 'IMAGES/kidswatchsmart.png' },
-  { name: 'Black Shark A3', price: '599', cat: 'watches', img: 'IMAGES/blacksharkA3.png' },
-  { name: 'Kieslect Kr3', price: '459', cat: 'watches', img: 'IMAGES/kr3.png' },
-  { name: 'Kieslect Elite2', price: '479', cat: 'watches', img: 'IMAGES/elite2.png' },
-  { name: 'Mibro Lite3 Pro', price: '899', cat: 'watches', img: 'IMAGES/lite 3pro.png' },
-  { name: 'Riversong Motive 6 Pro', price: '499', cat: 'watches', img: 'IMAGES/motive 6 pro.png' },
-  { name: 'Kieslect Elfin', price: '389', cat: 'watches', img: 'IMAGES/ks elfin.png' },
-  { name: 'Kieslect Lora 3', price: '649', cat: 'watches', img: 'IMAGES/ks lora3.png' },
-  { name: 'Braun Silk-épil 5 SensoSmart Epilator', price: '449', cat: 'beauty', img: 'IMAGES/Braun epil 5.png' },
-  { name: 'Sokany Ceramic Hair Straightener SK-993', price: '199', cat: 'beauty', img: 'IMAGES/lisseur sokany.png' },
-  { name: 'DSP Steam Lustre Styler 10242', price: '349', cat: 'beauty', img: 'IMAGES/dsp lisseur.png' },
-  { name: 'Enzo Professional One-Step Volumiser PLUS', price: '299', cat: 'beauty', img: 'IMAGES/enzo bross.png' },
-  { name: 'Enzo Professional 2-in-1 Magic Brush', price: '399', cat: 'beauty', img: 'IMAGES/enzo2in1.png' },
-  { name: 'BaByliss 19mm Curling Tong', price: '449', cat: 'beauty', img: 'IMAGES/babyliss curler.png' },
-  { name: 'Tondeuse barbe Kemei 1677', price: '219', cat: 'grooming', img: 'IMAGES/tondeuse kemei.png' },
-  { name: 'Philips One Blade 360', price: '649', cat: 'grooming', img: 'IMAGES/philis one blade 360 one of 1.png' },
-  { name: 'Oraimo Electric Shaver', price: '299', cat: 'grooming', img: 'IMAGES/Rasoir Oraimo.png' },
-  { name: 'Braun Hair Clipper Set', price: '699', cat: 'grooming', img: 'IMAGES/braun shaver small.png' },
-  { name: 'Kemei Hair Straightener', price: '199', cat: 'grooming', img: 'IMAGES/kemei intime whitebg.png' },
-  { name: 'Kemei Epilator 8536', price: '249', cat: 'grooming', img: 'IMAGES/pack kemei 8536.png' },
-  { name: 'Kemei Ionic Hair Dryer 2200W', price: '249', cat: 'grooming', img: 'IMAGES/kemei shaving.png' },
-  { name: 'Anti-Aging EMS Face Massager', price: '799', cat: 'grooming', img: 'IMAGES/one blade intimate.png' },
-  { name: 'Kemei Electric Nail Grinder', price: '249', cat: 'grooming', img: 'IMAGES/kemei 3in1.png' },
-  { name: 'Rhythm Quartz Alarm Clock (Gold)', price: '179', cat: 'wallwatch', img: 'IMAGES/rhythmcra824.png' },
-  { name: 'Rhythm Quartz Alarm Clock (Black)', price: '199', cat: 'wallwatch', img: 'IMAGES/rythmcra829.png' },
-  { name: 'Rhythm Alarm Clock (Blue)', price: '189', cat: 'wallwatch', img: 'IMAGES/rhythmrev.jpeg' },
-  { name: 'Silent Scanning Alarm Clock 3567', price: '99', cat: 'wallwatch', img: 'IMAGES/alarmnor.jpeg' },
-  { name: 'LED Digital Clock GS-5308', price: '129', cat: 'wallwatch', img: 'IMAGES/reveil electro.jpeg' },
-  { name: 'DINEX 50W type C Fast Charger', price: '129', cat: 'phones', img: 'IMAGES/chargeur dinex 50w.png' },
-  { name: 'Dinex Data Cable 100W 3m', price: '99', cat: 'phones', img: 'IMAGES/Dinex data 100w.png' },
-  { name: 'Dinex 20w Fast Charger lightning', price: '119', cat: 'phones', img: 'IMAGES/DINEX 20w.png' },
-  { name: 'Dinex Car Phone Holder', price: '89', cat: 'phones', img: 'IMAGES/dinex phone holder.png' },
-  { name: 'SHtel type C CABLE 3.4A', price: '79', cat: 'phones', img: 'IMAGES/2m shtel cable.png' },
-  { name: 'Dinex Fast Charging Cable 3.0A', price: '79', cat: 'phones', img: 'IMAGES/dinex lightning cable 3A.png' },
-  { name: 'Xiaomi Fast charger 120W', price: '199', cat: 'phones', img: 'IMAGES/chargeur xiaomi 120w.png' },
-  { name: 'Oraimo lightning charger 20w', price: '79', cat: 'phones', img: 'IMAGES/oraimo lightning.png' },
-  { name: 'Dinex 4OW type C adapter', price: '99', cat: 'phones', img: 'IMAGES/dinex type c adapter.png' },
-  { name: 'Plokama tripod and selfie stick', price: '299', cat: 'phones', img: 'IMAGES/tripod plokama.png' },
-  { name: 'D-Plus D96 AndroidTV Box', price: '449', cat: 'android', img: 'IMAGES/D96pluspro.png' },
-  { name: 'Xiaomi Smart TV Stick 4K', price: '249', cat: 'android', img: 'IMAGES/xiaomi stick.png' },
-  { name: 'Xiaomi TV Box S (3rd Gen)', price: '299', cat: 'android', img: 'IMAGES/xiaomi tv box s.png' },
-  { name: 'Senic H96 Max Android Box', price: '349', cat: 'android', img: 'IMAGES/Senic H96MAX.png' },
-  { name: 'Vectron VBox Alpha', price: '399', cat: 'android', img: 'IMAGES/vectron box.png' },
-  { name: 'Senic X98Q Android Box', price: '379', cat: 'android', img: 'IMAGES/SenicX98.png' },
-  { name: 'Tanix A3 Android Box', price: '349', cat: 'android', img: 'IMAGES/Tanix senic.png' },
-  { name: 'Echolink S400B Android Box', price: '299', cat: 'android', img: 'IMAGES/Echolink.png' },
-  { name: 'Texas Instruments TI-Nspire CX II-T CAS', price: '1499', cat: 'calculators', img: 'IMAGES/TI-Nspire CX II-T CAS.png' },
-  { name: 'NumWorks Graphing Calculator', price: '1999', cat: 'calculators', img: 'IMAGES/numworks.png' },
-  { name: 'Casio Graph Math+ CLASSW40', price: '999', cat: 'calculators', img: 'IMAGES/Casiograph1.png' },
-  { name: 'Casio fx-991ES PLUS (2nd Edition)', price: '299', cat: 'calculators', img: 'IMAGES/casio91.png' },
-  { name: 'Deli D991ES PLUS Scientific Calculator', price: '199', cat: 'calculators', img: 'IMAGES/deli91.png' },
-  { name: 'Casio fx-82ES PLUS (2nd Edition)', price: '249', cat: 'calculators', img: 'IMAGES/casio82.png' },
-  { name: 'Casio fx-92 Collège ClassWiz', price: '299', cat: 'calculators', img: 'IMAGES/fx92college.png' },
-  { name: '360° Sports Armband', price: '179', cat: 'gadgets', img: 'IMAGES/sportarmband.png' },
-  { name: 'Aerbes 400W Solar LED Flood Light', price: '399', cat: 'gadgets', img: 'IMAGES/LED solar projector.png' },
-  { name: 'Electronic Arm Blood Pressure Monitor', price: '279', cat: 'gadgets', img: 'IMAGES/appareil tension1png.png' },
-  { name: 'LED Flashlight Set (2-Pack)', price: '249', cat: 'gadgets', img: 'IMAGES/flashlightpng.png' },
-  { name: 'AI Tracking Gimbal Stabilizer Q625', price: '199', cat: 'gadgets', img: 'IMAGES/phone stand.png' },
-  { name: 'TL16 Clip-On Phone Cooling Fan', price: '149', cat: 'gadgets', img: 'IMAGES/minimobilefan.png' },
-  { name: 'DuraM RGB Light-Up Bluetooth Speaker', price: '249', cat: 'gadgets', img: 'IMAGES/RGBlightup.png' },
-  { name: 'Celet Smart Fitness Bracelet', price: '349', cat: 'gadgets', img: 'IMAGES/WhatsApp Image 2026-08-21 at 00.05.00.jpeg' },
-  { name: 'SUITU Handheld Vacuum Cleaner', price: '199', cat: 'gadgets', img: 'IMAGES/vaccumcleaner.jpeg' },
-  { name: 'Intelli System Wrist Blood Pressure Monitor', price: '249', cat: 'gadgets', img: 'IMAGES/tension2.jpeg' },
+  { name: 'SHtel Power Bank 20000mAh 45W SP-32', name_fr: 'SHtel Batterie Externe 20000mAh 45W SP-32', name_ar: 'SHtel شاحن متنقل 20000mAh 45W SP-32', price: '199', cat: 'powerbanks', img: 'IMAGES/PowerSH20.png' },
+  { name: 'SHtel Power Bank 20000mAh 22.5W SP-24', name_fr: 'SHtel Batterie Externe 20000mAh 22.5W SP-24', name_ar: 'SHtel شاحن متنقل 20000mAh 22.5W SP-24', price: '229', cat: 'powerbanks', img: 'IMAGES/SH 22.5W.png' },
+  { name: 'SHtel Power Bank 10000mAh 22.5W SP-90', name_fr: 'SHtel Batterie Externe 10000mAh 22.5W SP-90', name_ar: 'SHtel شاحن متنقل 10000mAh 22.5W SP-90', price: '179', cat: 'powerbanks', img: 'IMAGES/SHtel 10000W.png' },
+  { name: 'Konfulon Magnetic Wireless Power Bank 10000mAh M22W', name_fr: 'Konfulon Batterie Externe Magnétique Sans Fil 10000mAh M22W', name_ar: 'Konfulon شاحن متنقل مغناطيسي لاسلكي 10000mAh M22W', price: '249', cat: 'powerbanks', img: 'IMAGES/Konfulon wireless 10000mah.png' },
+  { name: 'Xiaomi Wireless Power Bank 20000mAh', name_fr: 'Xiaomi Batterie Externe Sans Fil 20000mAh', name_ar: 'Xiaomi شاحن متنقل لاسلكي 20000mAh', price: '229', cat: 'powerbanks', img: 'IMAGES/Xiaomi 20Mah.png' },
+  { name: 'Oryx CUBE-10 Wireless Power Bank 10000mAh', name_fr: 'Oryx CUBE-10 Batterie Externe Sans Fil 10000mAh', name_ar: 'Oryx CUBE-10 شاحن متنقل لاسلكي 10000mAh', price: '89', cat: 'powerbanks', img: 'IMAGES/Oryx 10000Mah.png' },
+  { name: 'Dinex Portable LED Power Bank 20000mAh X-200', name_fr: 'Dinex Batterie Externe LED Portable 20000mAh X-200', name_ar: 'Dinex شاحن متنقل بإضاءة LED 20000mAh X-200', price: '239', cat: 'powerbanks', img: 'IMAGES/dinex power.png' },
+  { name: 'Dinex Mini Power Bank 5000mAh A333', name_fr: 'Dinex Mini Batterie Externe 5000mAh A333', name_ar: 'Dinex شاحن متنقل صغير 5000mAh A333', price: '219', cat: 'powerbanks', img: 'IMAGES/dinex 5000 mini.png' },
+  { name: 'Konfulon Outdoor Power Bank 100000mAh A45Q', name_fr: 'Konfulon Batterie Externe Outdoor 100000mAh A45Q', name_ar: 'Konfulon شاحن متنقل خارجي 100000mAh A45Q', price: '699', cat: 'powerbanks', img: 'IMAGES/big power 100000Mah.png' },
+  { name: 'Konfulon Power Bank 70000mAh A66Q', name_fr: 'Konfulon Batterie Externe 70000mAh A66Q', name_ar: 'Konfulon شاحن متنقل 70000mAh A66Q', price: '579', cat: 'powerbanks', img: 'IMAGES/Konfulon 70000Mah.png' },
+  { name: 'AI Solar Camera 3-in-1 (SPM-T Series)', name_fr: 'Caméra Solaire IA 3-en-1 (Série SPM-T)', name_ar: 'كاميرا شمسية بالذكاء الاصطناعي 3 في 1 (سلسلة SPM-T)', price: '1399', cat: 'cameras', img: 'IMAGES/4g-wifi cam solar.png' },
+  { name: 'AOV Smart Solar Camera (4-Lens)', name_fr: 'AOV Caméra Solaire Intelligente (4 Objectifs)', name_ar: 'AOV كاميرا شمسية ذكية (4 عدسات)', price: '1499', cat: 'cameras', img: 'IMAGES/AOV cam.png' },
+  { name: 'HD Outdoor & Solar Security Camera', name_fr: 'Caméra de Sécurité Extérieure Solaire HD', name_ar: 'كاميرا مراقبة خارجية شمسية بدقة HD', price: '1299', cat: 'cameras', img: 'IMAGES/Camera solaire tvt 4cam.png' },
+  { name: 'Hikvision 3K Color Turret Camera', name_fr: 'Hikvision Caméra Tourelle Couleur 3K', name_ar: 'Hikvision كاميرا Turret ملونة بدقة 3K', price: '199', cat: 'cameras', img: 'IMAGES/hikvision int cam 3k.png' },
+  { name: 'Imou Bullet 2E Outdoor Camera', name_fr: 'Imou Caméra Extérieure Bullet 2E', name_ar: 'Imou كاميرا خارجية Bullet 2E', price: '749', cat: 'cameras', img: 'IMAGES/imou etanche bullet.png' },
+  { name: 'TP-Link Tapo C212 Pan/Tilt Camera', name_fr: 'TP-Link Tapo C212 Caméra Motorisée (Pan/Tilt)', name_ar: 'TP-Link Tapo C212 كاميرا دوارة', price: '399', cat: 'cameras', img: 'IMAGES/tapo home.png' },
+  { name: 'Ezviz H8c Smart Home Camera', name_fr: 'Ezviz H8c Caméra Domestique Intelligente', name_ar: 'Ezviz H8c كاميرا منزلية ذكية', price: '499', cat: 'cameras', img: 'IMAGES/Ezviz etanche.png' },
+  { name: 'Hikvision ColorVu Bullet Camera', name_fr: 'Hikvision Caméra Bullet ColorVu', name_ar: 'Hikvision كاميرا Bullet بتقنية ColorVu', price: '269', cat: 'cameras', img: 'IMAGES/Hikvision ClolorVu HD cam.png' },
+  { name: 'Hikvision Turbo HD Bullet Camera', name_fr: 'Hikvision Caméra Bullet Turbo HD', name_ar: 'Hikvision كاميرا Bullet بتقنية Turbo HD', price: '229', cat: 'cameras', img: 'IMAGES/hik etanche 4k.png' },
+  { name: 'Imou Cruiser Dual 2 (10MP)', name_fr: 'Imou Caméra Cruiser Dual 2 (10MP)', name_ar: 'Imou كاميرا Cruiser Dual 2 (10MP)', price: '799', cat: 'cameras', img: 'IMAGES/imou 10mp.png' },
+  { name: 'Sing-e Dual 8-Inch Party Speaker', name_fr: 'Sing-e Enceinte de Fête Double 8 Pouces', name_ar: 'Sing-e مكبر صوت للحفلات مزدوج 8 إنش', price: '1299', cat: 'speakers', img: 'IMAGES/speakersing1mic.png' },
+  { name: 'Sing-e 50W HiFi Speaker ZQS8239', name_fr: 'Sing-e Enceinte HiFi 50W ZQS8239', name_ar: 'Sing-e مكبر صوت HiFi بقوة 50W ZQS8239', price: '899', cat: 'speakers', img: 'IMAGES/speakerzqs50Wpng.png' },
+  { name: 'Sing-e Dual 10-Inch Tower Speaker', name_fr: 'Sing-e Enceinte Tour Double 10 Pouces', name_ar: 'Sing-e مكبر صوت برجي مزدوج 10 إنش', price: '1399', cat: 'speakers', img: 'IMAGES/SPEAKERMEUBLEZQS.png' },
+  { name: 'Avcrowns 15-Inch Trolley Speaker CH-8615', name_fr: 'Avcrowns Enceinte sur Chariot 15 Pouces CH-8615', name_ar: 'Avcrowns مكبر صوت بعجلات 15 إنش CH-8615', price: '2499', cat: 'speakers', img: 'IMAGES/avcrownsspeaker.png' },
+  { name: 'NNS RGB Retro Radio NS-7069BT', name_fr: 'NNS Radio Rétro RGB NS-7069BT', name_ar: 'NNS راديو كلاسيكي بإضاءة RGB طراز NS-7069BT', price: '229', cat: 'speakers', img: 'IMAGES/radioLED.jpeg' },
+  { name: 'NNS Ribbed Copper Radio & Clock NS-7211BT', name_fr: 'NNS Radio & Horloge Cuivrée Striée NS-7211BT', name_ar: 'NNS راديو وساعة نحاسية مخططة طراز NS-7211BT', price: '229', cat: 'speakers', img: 'IMAGES/RADIOclassic1.png' },
+  { name: 'NNS Compact Copper Radio NS-6655BT', name_fr: 'NNS Radio Cuivrée Compacte NS-6655BT', name_ar: 'NNS راديو نحاسي مضغوط طراز NS-6655BT', price: '249', cat: 'speakers', img: 'IMAGES/Radioclassic2.png' },
+  { name: 'NNS Wood Radio & Clock NS-7116BT', name_fr: 'NNS Radio & Horloge en Bois NS-7116BT', name_ar: 'NNS راديو وساعة خشبية طراز NS-7116BT', price: '249', cat: 'speakers', img: 'IMAGES/radiomontre.jpeg' },
+  { name: 'Avcrowns 12-Inch Karaoke Speaker CH-126', name_fr: 'Avcrowns Enceinte Karaoké 12 Pouces CH-126', name_ar: 'Avcrowns مكبر صوت كاريوكي 12 إنش CH-126', price: '1799', cat: 'speakers', img: 'IMAGES/CH126.png' },
+  { name: 'Meier Retro Gramophone Speaker', name_fr: 'Meier Enceinte Style Gramophone Rétro', name_ar: 'Meier مكبر صوت بتصميم غرامافون كلاسيكي', price: '279', cat: 'speakers', img: 'IMAGES/Radioclssic2.jpeg' },
+  { name: 'Smartbarry C90 MAX (4G Ultra Watch)', name_fr: 'Smartbarry C90 MAX (Montre Ultra 4G)', name_ar: 'Smartbarry C90 MAX (ساعة ألترا بشبكة 4G)', price: '849', cat: 'watches', img: 'IMAGES/c90 centre.png' },
+  { name: 'Riversong Motive 10 GT', name_fr: 'Riversong Motive 10 GT', name_ar: 'Riversong Motive 10 GT', price: '349', cat: 'watches', img: 'IMAGES/motive10gt.png' },
+  { name: 'Smartbarry C006pro Kids Watch', name_fr: 'Smartbarry C006pro Montre Enfant', name_ar: 'Smartbarry C006pro ساعة أطفال', price: '199', cat: 'watches', img: 'IMAGES/kidswatchsmart.png' },
+  { name: 'Black Shark A3', name_fr: 'Black Shark A3', name_ar: 'Black Shark A3', price: '599', cat: 'watches', img: 'IMAGES/blacksharkA3.png' },
+  { name: 'Kieslect Kr3', name_fr: 'Kieslect Kr3', name_ar: 'Kieslect Kr3', price: '459', cat: 'watches', img: 'IMAGES/kr3.png' },
+  { name: 'Kieslect Elite2', name_fr: 'Kieslect Elite2', name_ar: 'Kieslect Elite2', price: '479', cat: 'watches', img: 'IMAGES/elite2.png' },
+  { name: 'Mibro Lite3 Pro', name_fr: 'Mibro Lite3 Pro', name_ar: 'Mibro Lite3 Pro', price: '899', cat: 'watches', img: 'IMAGES/lite 3pro.png' },
+  { name: 'Riversong Motive 6 Pro', name_fr: 'Riversong Motive 6 Pro', name_ar: 'Riversong Motive 6 Pro', price: '499', cat: 'watches', img: 'IMAGES/motive 6 pro.png' },
+  { name: 'Kieslect Elfin', name_fr: 'Kieslect Elfin', name_ar: 'Kieslect Elfin', price: '389', cat: 'watches', img: 'IMAGES/ks elfin.png' },
+  { name: 'Kieslect Lora 3', name_fr: 'Kieslect Lora 3', name_ar: 'Kieslect Lora 3', price: '649', cat: 'watches', img: 'IMAGES/ks lora3.png' },
+  { name: 'Braun Silk-épil 5 SensoSmart Epilator', name_fr: 'Braun Silk-épil 5 SensoSmart Épilateur', name_ar: 'Braun Silk-épil 5 SensoSmart جهاز إزالة الشعر', price: '449', cat: 'beauty', img: 'IMAGES/Braun epil 5.png' },
+  { name: 'Sokany Ceramic Hair Straightener SK-993', name_fr: 'Sokany Lisseur Céramique SK-993', name_ar: 'Sokany مكواة فرد شعر سيراميك SK-993', price: '199', cat: 'beauty', img: 'IMAGES/lisseur sokany.png' },
+  { name: 'DSP Steam Lustre Styler 10242', name_fr: 'DSP Lisseur Vapeur Lustre 10242', name_ar: 'DSP مكواة بخار لامعة 10242', price: '349', cat: 'beauty', img: 'IMAGES/dsp lisseur.png' },
+  { name: 'Enzo Professional One-Step Volumiser PLUS', name_fr: 'Enzo Professional Brosse Volumisante Une Étape PLUS', name_ar: 'Enzo Professional فرشاة تصفيف ومنح حجم بخطوة واحدة PLUS', price: '299', cat: 'beauty', img: 'IMAGES/enzo bross.png' },
+  { name: 'Enzo Professional 2-in-1 Magic Brush', name_fr: 'Enzo Professional Brosse Magique 2-en-1', name_ar: 'Enzo Professional فرشاة سحرية 2 في 1', price: '399', cat: 'beauty', img: 'IMAGES/enzo2in1.png' },
+  { name: 'BaByliss 19mm Curling Tong', name_fr: 'BaByliss Fer à Boucler 19mm', name_ar: 'BaByliss مكواة تجعيد 19mm', price: '449', cat: 'beauty', img: 'IMAGES/babyliss curler.png' },
+  { name: 'Tondeuse barbe Kemei 1677', name_fr: 'Tondeuse Barbe Kemei 1677', name_ar: 'ماكينة حلاقة اللحية Kemei 1677', price: '219', cat: 'grooming', img: 'IMAGES/tondeuse kemei.png' },
+  { name: 'Philips One Blade 360', name_fr: 'Philips One Blade 360', name_ar: 'Philips One Blade 360', price: '649', cat: 'grooming', img: 'IMAGES/philis one blade 360 one of 1.png' },
+  { name: 'Oraimo Electric Shaver', name_fr: 'Oraimo Rasoir Électrique', name_ar: 'Oraimo ماكينة حلاقة كهربائية', price: '299', cat: 'grooming', img: 'IMAGES/Rasoir Oraimo.png' },
+  { name: 'Braun Hair Clipper Set', name_fr: 'Braun Kit Tondeuse Cheveux', name_ar: 'Braun طقم مقص شعر', price: '699', cat: 'grooming', img: 'IMAGES/braun shaver small.png' },
+  { name: 'Kemei Hair Straightener', name_fr: 'Kemei Lisseur Cheveux', name_ar: 'Kemei مكواة فرد شعر', price: '199', cat: 'grooming', img: 'IMAGES/kemei intime whitebg.png' },
+  { name: 'Kemei Epilator 8536', name_fr: 'Kemei Épilateur 8536', name_ar: 'Kemei جهاز إزالة شعر 8536', price: '249', cat: 'grooming', img: 'IMAGES/pack kemei 8536.png' },
+  { name: 'Kemei Ionic Hair Dryer 2200W', name_fr: 'Kemei Sèche-Cheveux Ionique 2200W', name_ar: 'Kemei مجفف شعر أيوني 2200W', price: '249', cat: 'grooming', img: 'IMAGES/kemei shaving.png' },
+  { name: 'Anti-Aging EMS Face Massager', name_fr: 'Masseur Facial EMS Anti-Âge', name_ar: 'جهاز تدليك الوجه EMS المضاد للشيخوخة', price: '799', cat: 'grooming', img: 'IMAGES/one blade intimate.png' },
+  { name: 'Kemei Electric Nail Grinder', name_fr: 'Kemei Ponceuse à Ongles Électrique', name_ar: 'Kemei جهاز برد أظافر كهربائي', price: '249', cat: 'grooming', img: 'IMAGES/kemei 3in1.png' },
+  { name: 'Rhythm Quartz Alarm Clock (Gold)', name_fr: 'Rhythm Réveil à Quartz (Doré)', name_ar: 'Rhythm منبه كوارتز (ذهبي)', price: '179', cat: 'wallwatch', img: 'IMAGES/rhythmcra824.png' },
+  { name: 'Rhythm Quartz Alarm Clock (Black)', name_fr: 'Rhythm Réveil à Quartz (Noir)', name_ar: 'Rhythm منبه كوارتز (أسود)', price: '199', cat: 'wallwatch', img: 'IMAGES/rythmcra829.png' },
+  { name: 'Rhythm Alarm Clock (Blue)', name_fr: 'Rhythm Réveil (Bleu)', name_ar: 'Rhythm منبه (أزرق)', price: '189', cat: 'wallwatch', img: 'IMAGES/rhythmrev.jpeg' },
+  { name: 'Silent Scanning Alarm Clock 3567', name_fr: 'Réveil à Balayage Silencieux 3567', name_ar: 'منبه بحركة صامتة 3567', price: '99', cat: 'wallwatch', img: 'IMAGES/alarmnor.jpeg' },
+  { name: 'LED Digital Clock GS-5308', name_fr: 'Horloge Numérique LED GS-5308', name_ar: 'ساعة رقمية LED طراز GS-5308', price: '129', cat: 'wallwatch', img: 'IMAGES/reveil electro.jpeg' },
+  { name: 'DINEX 50W type C Fast Charger', name_fr: 'DINEX Chargeur Rapide Type C 50W', name_ar: 'DINEX شاحن سريع Type C بقوة 50W', price: '129', cat: 'phones', img: 'IMAGES/chargeur dinex 50w.png' },
+  { name: 'Dinex Data Cable 100W 3m', name_fr: 'Dinex Câble de Charge 100W 3m', name_ar: 'Dinex كابل شحن 100W 3m', price: '99', cat: 'phones', img: 'IMAGES/Dinex data 100w.png' },
+  { name: 'Dinex 20w Fast Charger lightning', name_fr: 'Dinex Chargeur Rapide Lightning 20W', name_ar: 'Dinex شاحن سريع Lightning بقوة 20W', price: '119', cat: 'phones', img: 'IMAGES/DINEX 20w.png' },
+  { name: 'Dinex Car Phone Holder', name_fr: 'Dinex Support Téléphone Voiture', name_ar: 'Dinex حامل هاتف للسيارة', price: '89', cat: 'phones', img: 'IMAGES/dinex phone holder.png' },
+  { name: 'SHtel type C CABLE 3.4A', name_fr: 'SHtel Câble Type C 3.4A', name_ar: 'SHtel كابل Type C بقوة 3.4A', price: '79', cat: 'phones', img: 'IMAGES/2m shtel cable.png' },
+  { name: 'Dinex Fast Charging Cable 3.0A', name_fr: 'Dinex Câble de Charge Rapide 3.0A', name_ar: 'Dinex كابل شحن سريع 3.0A', price: '79', cat: 'phones', img: 'IMAGES/dinex lightning cable 3A.png' },
+  { name: 'Xiaomi Fast charger 120W', name_fr: 'Xiaomi Chargeur Rapide 120W', name_ar: 'Xiaomi شاحن سريع بقوة 120W', price: '199', cat: 'phones', img: 'IMAGES/chargeur xiaomi 120w.png' },
+  { name: 'Oraimo lightning charger 20w', name_fr: 'Oraimo Chargeur Lightning 20W', name_ar: 'Oraimo شاحن Lightning بقوة 20W', price: '79', cat: 'phones', img: 'IMAGES/oraimo lightning.png' },
+  { name: 'Dinex 4OW type C adapter', name_fr: 'Dinex Adaptateur Type C 4OW', name_ar: 'Dinex محول Type C طاقة 4OW', price: '99', cat: 'phones', img: 'IMAGES/dinex type c adapter.png' },
+  { name: 'Plokama tripod and selfie stick', name_fr: 'Plokama Trépied et Perche à Selfie', name_ar: 'Plokama حامل ثلاثي وعصا سيلفي', price: '299', cat: 'phones', img: 'IMAGES/tripod plokama.png' },
+  { name: 'D-Plus D96 AndroidTV Box', name_fr: 'D-Plus D96 Boîtier AndroidTV', name_ar: 'D-Plus D96 جهاز أندرويد تي في', price: '449', cat: 'android', img: 'IMAGES/D96pluspro.png' },
+  { name: 'Xiaomi Smart TV Stick 4K', name_fr: 'Xiaomi Clé TV Intelligente 4K', name_ar: 'Xiaomi عصا تلفاز ذكية 4K', price: '249', cat: 'android', img: 'IMAGES/xiaomi stick.png' },
+  { name: 'Xiaomi TV Box S (3rd Gen)', name_fr: 'Xiaomi Boîtier TV S (3ème Génération)', name_ar: 'Xiaomi جهاز تلفاز TV S (الجيل الثالث)', price: '299', cat: 'android', img: 'IMAGES/xiaomi tv box s.png' },
+  { name: 'Senic H96 Max Android Box', name_fr: 'Senic H96 Max Boîtier Android', name_ar: 'Senic H96 Max جهاز أندرويد', price: '349', cat: 'android', img: 'IMAGES/Senic H96MAX.png' },
+  { name: 'Vectron VBox Alpha', name_fr: 'Vectron VBox Alpha', name_ar: 'Vectron VBox Alpha', price: '399', cat: 'android', img: 'IMAGES/vectron box.png' },
+  { name: 'Senic X98Q Android Box', name_fr: 'Senic X98Q Boîtier Android', name_ar: 'Senic X98Q جهاز أندرويد', price: '379', cat: 'android', img: 'IMAGES/SenicX98.png' },
+  { name: 'Tanix A3 Android Box', name_fr: 'Tanix A3 Boîtier Android', name_ar: 'Tanix A3 جهاز أندرويد', price: '349', cat: 'android', img: 'IMAGES/Tanix senic.png' },
+  { name: 'Echolink S400B Android Box', name_fr: 'Echolink S400B Boîtier Android', name_ar: 'Echolink S400B جهاز أندرويد', price: '299', cat: 'android', img: 'IMAGES/Echolink.png' },
+  { name: 'Texas Instruments TI-Nspire CX II-T CAS', name_fr: 'Texas Instruments TI-Nspire CX II-T CAS', name_ar: 'Texas Instruments TI-Nspire CX II-T CAS', price: '1499', cat: 'calculators', img: 'IMAGES/TI-Nspire CX II-T CAS.png' },
+  { name: 'NumWorks Graphing Calculator', name_fr: 'NumWorks Calculatrice Graphique', name_ar: 'NumWorks آلة حاسبة بيانية', price: '1999', cat: 'calculators', img: 'IMAGES/numworks.png' },
+  { name: 'Casio Graph Math+ CLASSW40', name_fr: 'Casio Graph Math+ CLASSW40', name_ar: 'Casio Graph Math+ CLASSW40', price: '999', cat: 'calculators', img: 'IMAGES/Casiograph1.png' },
+  { name: 'Casio fx-991ES PLUS (2nd Edition)', name_fr: 'Casio fx-991ES PLUS (2ème Édition)', name_ar: 'Casio fx-991ES PLUS (الإصدار الثاني)', price: '299', cat: 'calculators', img: 'IMAGES/casio91.png' },
+  { name: 'Deli D991ES PLUS Scientific Calculator', name_fr: 'Deli D991ES PLUS Calculatrice Scientifique', name_ar: 'Deli D991ES PLUS آلة حاسبة علمية', price: '199', cat: 'calculators', img: 'IMAGES/deli91.png' },
+  { name: 'Casio fx-82ES PLUS (2nd Edition)', name_fr: 'Casio fx-82ES PLUS (2ème Édition)', name_ar: 'Casio fx-82ES PLUS (الإصدار الثاني)', price: '249', cat: 'calculators', img: 'IMAGES/casio82.png' },
+  { name: 'Casio fx-92 Collège ClassWiz', name_fr: 'Casio fx-92 Collège ClassWiz', name_ar: 'Casio fx-92 Collège ClassWiz', price: '299', cat: 'calculators', img: 'IMAGES/fx92college.png' },
+  { name: '360° Sports Armband', name_fr: 'Brassard de Sport 360°', name_ar: 'حزام رياضي للذراع 360°', price: '179', cat: 'gadgets', img: 'IMAGES/sportarmband.png' },
+  { name: 'Aerbes 400W Solar LED Flood Light', name_fr: 'Aerbes Projecteur LED Solaire 400W', name_ar: 'Aerbes كشاف LED شمسي بقوة 400W', price: '399', cat: 'gadgets', img: 'IMAGES/LED solar projector.png' },
+  { name: 'Electronic Arm Blood Pressure Monitor', name_fr: 'Tensiomètre Électronique de Bras', name_ar: 'جهاز قياس ضغط الدم الإلكتروني من الذراع', price: '279', cat: 'gadgets', img: 'IMAGES/appareil tension1png.png' },
+  { name: 'LED Flashlight Set (2-Pack)', name_fr: 'Lot de Lampes Torches LED (2 Pièces)', name_ar: 'طقم مصابيح LED يدوية (قطعتان)', price: '249', cat: 'gadgets', img: 'IMAGES/flashlightpng.png' },
+  { name: 'AI Tracking Gimbal Stabilizer Q625', name_fr: 'Stabilisateur Gimbal à Suivi IA Q625', name_ar: 'مثبت جيمبال بتتبع الذكاء الاصطناعي Q625', price: '199', cat: 'gadgets', img: 'IMAGES/phone stand.png' },
+  { name: 'TL16 Clip-On Phone Cooling Fan', name_fr: 'TL16 Ventilateur de Refroidissement à Clipser', name_ar: 'TL16 مروحة تبريد بمشبك للهاتف', price: '149', cat: 'gadgets', img: 'IMAGES/minimobilefan.png' },
+  { name: 'DuraM RGB Light-Up Bluetooth Speaker', name_fr: 'DuraM Enceinte Bluetooth Lumineuse RGB', name_ar: 'DuraM مكبر صوت بلوتوث مضيء RGB', price: '249', cat: 'gadgets', img: 'IMAGES/RGBlightup.png' },
+  { name: 'Celet Smart Fitness Bracelet', name_fr: 'Celet Bracelet Connecté Fitness', name_ar: 'Celet سوار لياقة ذكي', price: '349', cat: 'gadgets', img: 'IMAGES/WhatsApp Image 2026-08-21 at 00.05.00.jpeg' },
+  { name: 'SUITU Handheld Vacuum Cleaner', name_fr: 'SUITU Aspirateur à Main', name_ar: 'SUITU مكنسة كهربائية يدوية', price: '199', cat: 'gadgets', img: 'IMAGES/vaccumcleaner.jpeg' },
+  { name: 'Intelli System Wrist Blood Pressure Monitor', name_fr: 'Intelli System Tensiomètre de Poignet', name_ar: 'Intelli System جهاز قياس ضغط الدم من المعصم', price: '249', cat: 'gadgets', img: 'IMAGES/tension2.jpeg' },
 ];
 
 const CAT_LABELS = {

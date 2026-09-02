@@ -65,9 +65,11 @@
     .ab-val-desc { font-size:12px; color:#555; line-height:1.6; }
     .ab-brands { padding:60px 8%; border-bottom:1px solid rgba(255,255,255,0.05); }
     .ab-brands-grid { display:flex; flex-wrap:wrap; gap:10px; margin-top:24px; }
-    .ab-brand-chip { background:rgba(255,123,34,0.05); border:1px solid rgba(255,123,34,0.12); border-radius:10px; padding:10px 20px; font-family:'Bebas Neue',sans-serif; font-size:14px; letter-spacing:3px; color:#666; transition:background .3s ease,border-color .3s ease,color .3s ease,transform .3s ease; opacity:0; transform:scale(0.8); }
-    .ab-brand-chip.chip-visible { opacity:1; transform:scale(1); transition:background .3s ease,border-color .3s ease,color .3s ease,transform .4s cubic-bezier(.22,.61,.36,1),opacity .4s ease; }
-    .ab-brand-chip:hover { background:rgba(255,123,34,0.12); border-color:rgba(255,123,34,0.35); color:#ff7b22; transform:translateY(-3px) scale(1.05); }
+    .ab-brand-chip { background:rgba(255,123,34,0.05); border:1px solid rgba(255,123,34,0.12); border-radius:10px; padding:10px 20px; font-family:'Bebas Neue',sans-serif; font-size:14px; letter-spacing:3px; color:#666; transition:background .3s ease,border-color .3s ease,color .3s ease,transform .3s ease; opacity:0; transform:scale(0.8); width:110px; height:50px; display:flex; align-items:center; justify-content:center; }
+.ab-brand-chip.chip-visible { opacity:1; transform:scale(1); transition:background .3s ease,border-color .3s ease,color .3s ease,transform .4s cubic-bezier(.22,.61,.36,1),opacity .4s ease; }
+.ab-brand-chip:hover { background:rgba(255,123,34,0.12); border-color:rgba(255,123,34,0.35); color:#ff7b22; transform:translateY(-3px) scale(1.05); }
+.ab-brand-chip img { max-width:100%; max-height:100%; width:auto; height:auto; object-fit:contain; filter:brightness(0) invert(1); opacity:0.75; transition:opacity .3s ease, filter .3s ease, transform .3s ease; }
+.ab-brand-chip:hover img { opacity:1; filter:brightness(0) invert(1) sepia(1) saturate(5) hue-rotate(5deg); transform:scale(1.05); }
     .ab-cta { display:grid; grid-template-columns:1fr 1fr; gap:0; }
     .ab-cta-left { padding:60px 6%; border-right:1px solid rgba(255,255,255,0.05); }
     .ab-cta-title { font-family:'Bebas Neue',sans-serif; font-size:36px; letter-spacing:3px; color:white; margin-bottom:12px; line-height:1.1; }
@@ -103,7 +105,13 @@
       .ab-cta { grid-template-columns:1fr; }
       .ab-cta-left { border-right:none; border-bottom:1px solid rgba(255,255,255,0.05); }
     }
-
+body.light-mode .ab-hero h1 { color:#111; }
+body.light-mode .ab-story-text strong { color:#111; }
+body.light-mode .ab-val-name { color:#111; }
+body.light-mode .ab-cta-title { color:#111; }
+body.light-mode .ab-loc-text strong { color:#111; }
+body.light-mode .ab-contact-val { color:#111; }
+body.light-mode .ab-quote-text { color:#111; }
   </style>
 </head>
 <body>
@@ -126,7 +134,7 @@
     <p data-i18n="follow_us">FOLLOW US</p>
     <div class="hb-footer-socials">
       <a href="https://wa.me/212664700752" target="_blank" class="hb-soc"><i class="fab fa-whatsapp"></i></a>
-      <a href="#" class="hb-soc"><i class="fab fa-instagram"></i></a>
+      <a href="https://www.instagram.com/electrobadr00" target="_blank" class="hb-soc"><i class="fab fa-instagram"></i></a>
       <a href="#" class="hb-soc"><i class="fab fa-facebook"></i></a>
       <a href="#" class="hb-soc"><i class="fab fa-tiktok"></i></a>
     </div>
@@ -203,7 +211,7 @@
   <div class="ab-story-left">
     <p class="ab-section-label" data-i18n="ab_who">Who We Are</p>
     <p class="ab-story-text" data-i18n="ab_story">
-      Electro Badr was born in Casablanca in 1883 as a specialist watch house — a family business built on one simple belief: every Moroccan family deserves access to quality timepieces at honest prices.
+      Electro Badr was born in Casablanca in 1983 as a specialist watch house — a family business built on one simple belief: every Moroccan family deserves access to quality timepieces at honest prices.
     </p>
     <div class="ab-quote">
       <p class="ab-quote-text" data-i18n="ab_quote">"We don't just sell electronics — we build relationships that last generations."</p>
@@ -216,7 +224,7 @@
     <div class="ab-tl-item">
       <div class="ab-tl-track"><div class="ab-tl-dot"></div><div class="ab-tl-line"></div></div>
       <div>
-        <p class="ab-tl-year">1883</p>
+        <p class="ab-tl-year">1983</p>
         <p class="ab-tl-event" data-i18n="tl_1883">Electro Badr is founded in Casablanca — a small watch house built on a passion for high-quality timepieces.</p>
         <span class="ab-tl-tag" data-i18n="tl_tag_founded">Founded</span>
       </div>
@@ -286,22 +294,21 @@
 <!-- BRANDS -->
 <section class="ab-brands">
   <p class="ab-section-label" data-i18n="ab_brands">Brands We Carry</p>
-  <div class="ab-brands-grid">
-    <div class="ab-brand-chip">Hikvision</div>
-    <div class="ab-brand-chip">Sony</div>
-    <div class="ab-brand-chip">Samsung</div>
-    <div class="ab-brand-chip">JBL</div>
-    <div class="ab-brand-chip">Xiaomi</div>
-    <div class="ab-brand-chip">Oraimo</div>
-    <div class="ab-brand-chip">Philips</div>
-    <div class="ab-brand-chip">Kemei</div>
-    <div class="ab-brand-chip">Imou</div>
-    <div class="ab-brand-chip">Casio</div>
-    <div class="ab-brand-chip">Revoox</div>
-    <div class="ab-brand-chip">Riversong</div>
-    <div class="ab-brand-chip">Braun</div>
-    <div class="ab-brand-chip">Wahl</div>
-    <div class="ab-brand-chip">Dinex</div>
+    <div class="ab-brands-grid">
+    <div class="ab-brand-chip"><img src="IMAGES/Hikvision-logo.png" style="transform:scale(2);" alt="Hikvision" loading="lazy"></div>
+    <div class="ab-brand-chip"><img src="IMAGES/sony-logo.png" style="transform:scale(2);" alt="Sony" loading="lazy"></div>
+    <div class="ab-brand-chip"><img src="IMAGES/samsung_logo_PNG8.png"style="transform:scale(2);" alt="Samsung" loading="lazy"></div>
+    <div class="ab-brand-chip"><img src="IMAGES/jbl-2-logo.png" alt="JBL" loading="lazy"></div>
+    <div class="ab-brand-chip"><img src="IMAGES/Xiaomi-removebg-preview.png"style="transform:scale(1.5);" alt="Xiaomi" loading="lazy"></div>
+    <div class="ab-brand-chip"><img src="IMAGES/oraimo.png" alt="Oraimo" loading="lazy"></div>
+    <div class="ab-brand-chip"><img src="IMAGES/Phillips-Logo-2008.png" alt="Philips" loading="lazy"></div>
+    <div class="ab-brand-chip"><img src="IMAGES/kemei.png" alt="Kemei" loading="lazy"></div>
+    <div class="ab-brand-chip"><img src="IMAGES/imou-logo.png" alt="Imou" loading="lazy"></div>
+<div class="ab-brand-chip"><img src="IMAGES/enzo-removebg-preview.png" style="transform:scale(2);" alt="enzo" loading="lazy"></div>    <div class="ab-brand-chip"><img src="IMAGES/revoox-removebg-preview.png" alt="Revoox" loading="lazy"></div>
+    <div class="ab-brand-chip"><img src="IMAGES/riverrr-removebg-preview.png" style="transform:scale(3);" alt="Riversong" loading="lazy"></div>
+    <div class="ab-brand-chip"><img src="IMAGES/braunchat-removebg-preview.png" style="transform:scale(1.5);" alt="Braun" loading="lazy"></div>
+    <div class="ab-brand-chip"><img src="IMAGES/wahl-removebg-preview.png" alt="Wahl" loading="lazy"></div>
+    <div class="ab-brand-chip"><img src="IMAGES/dinex-removebg-preview.png" style="transform:scale(2.5);" alt="Dinex" loading="lazy"></div>
     <div class="ab-brand-chip" data-i18n="ab_more">+ More</div>
   </div>
 </section>
@@ -358,7 +365,7 @@
       <p class="footer-desc" data-i18n="footer_desc">Morocco's trusted destination for quality gadgets. Cash on delivery, nationwide.</p>
       <div class="footer-socials">
         <a href="https://wa.me/212664700752" target="_blank" class="fsocial"><i class="fab fa-whatsapp"></i></a>
-        <a href="#" class="fsocial"><i class="fab fa-instagram"></i></a>
+        <a href="https://www.instagram.com/electrobadr00" target="_blank" class="hb-soc"><i class="fab fa-instagram"></i></a>
         <a href="#" class="fsocial"><i class="fab fa-facebook"></i></a>
         <a href="#" class="fsocial"><i class="fab fa-tiktok"></i></a>
       </div>

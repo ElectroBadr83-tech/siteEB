@@ -806,7 +806,7 @@ body.light-mode .brand-item:hover img { filter: brightness(0) sepia(1) saturate(
 .product-card p  { padding: 0 15px 15px; color: var(--gray); }
 .product-card .btn { margin: 15px; }
 .product-card .btn:hover { transform: translateY(-3px) scale(1.05); box-shadow: 0 10px 30px rgba(255,123,34,0.45); }
-
+.product-card .bs-price { color: #ff7b22; font-size: 20px; font-weight: 700; }
 /* ── REVIEWS ────────────────────────── */
 .reviews {
   padding: 100px 8%;
@@ -1133,17 +1133,6 @@ body.light-mode .review-card { background: white; }
   transform: scale(1.15) translateY(-4px) rotate(8deg);
   animation: none;
   box-shadow: 0 12px 30px rgba(255,123,34,0.50), 0 0 40px rgba(255,123,34,0.20);
-}
-
-@keyframes whatsappPulse {
-  0%, 100% { box-shadow: 0 0 0 0 rgba(37,211,102,0.50), 0 4px 15px rgba(0,0,0,0.30); }
-  50%       { box-shadow: 0 0 0 12px rgba(37,211,102,0), 0 4px 15px rgba(0,0,0,0.30); }
-}
-
-.whatsapp-btn:hover {
-  transform: scale(1.15) translateY(-4px) rotate(8deg);
-  animation: none;
-  box-shadow: 0 12px 30px rgba(37,211,102,0.50), 0 0 40px rgba(37,211,102,0.20);
 }
 
 /* ── SCROLL REVEAL ──────────────────── */
@@ -1864,4 +1853,51 @@ body.light-mode .footer-bottom { color: #888; }
   #cart-count { width: 16px; height: 16px; font-size: 10px; top: -6px; right: -8px; }
   .logo { margin-left: 40px; }
 
+}
+body.light-mode .modal-field input,
+body.light-mode .modal-field textarea { background:#f7f7f7; color:#111; border:1px solid rgba(0,0,0,0.10); }
+body.light-mode .modal-field input:focus,
+body.light-mode .modal-field textarea:focus { background:#ffffff; border-color:rgba(255,123,34,0.50); }
+
+body.light-mode .modal-field input,
+body.light-mode .modal-field textarea,
+body.light-mode .modal-field select { background:#f7f7f7; color:#111; border:1px solid rgba(0,0,0,0.10); }
+body.light-mode .modal-field input:focus,
+body.light-mode .modal-field textarea:focus,
+body.light-mode .modal-field select:focus { background:#ffffff; border-color:rgba(255,123,34,0.50); }
+.privacy-popup {
+  position: fixed;
+  bottom: 24px;
+  left: 24px;
+  max-width: 340px;
+  background: var(--dark-card);
+  border: 1px solid rgba(255,123,34,0.20);
+  border-radius: 16px;
+  padding: 20px;
+  box-shadow: 0 20px 50px rgba(0,0,0,0.45);
+  z-index: 100000;
+  transform: translateY(30px);
+  opacity: 0;
+  pointer-events: none;
+  transition: transform .4s cubic-bezier(.22,.61,.36,1), opacity .4s ease;
+}
+.privacy-popup.active { transform: translateY(0); opacity: 1; pointer-events: auto; }
+.privacy-popup-text { font-size: 13px; line-height: 1.6; color: var(--gray); margin-bottom: 16px; padding-right: 10px; }
+.privacy-popup-actions { display: flex; gap: 10px; justify-content: flex-end; flex-wrap: wrap; }
+.privacy-btn-no, .privacy-btn-accept { padding: 9px 20px; border-radius: 20px; font-size: 13px; font-weight: 600; border: none; cursor: pointer; transition: transform .2s ease, background .2s ease; }
+.privacy-btn-no { background: rgba(161,161,170,0.15); color: var(--gray); }
+.privacy-btn-no:hover { background: rgba(161,161,170,0.25); }
+.privacy-btn-accept { background: var(--orange); color: white; }
+.privacy-btn-accept:hover { background: var(--orange-hover); transform: translateY(-2px); }
+.privacy-popup-close { display: none; position: absolute; top: 10px; right: 14px; background: none; border: none; color: var(--gray); font-size: 16px; cursor: pointer; padding: 4px; transition: color .2s ease; }
+.privacy-popup-close:hover { color: var(--orange); }
+.privacy-popup.show-close .privacy-popup-close { display: block; }
+body[dir="rtl"] .privacy-popup-close { right: auto; left: 14px; }
+body.light-mode .privacy-popup { background: var(--light-card); border-color: rgba(255,123,34,0.25); box-shadow: 0 20px 50px rgba(0,0,0,0.15); }
+body.light-mode .privacy-popup-text { color: #555; }
+body.light-mode .privacy-btn-no { background: rgba(0,0,0,0.06); color: #555; }
+body.light-mode .privacy-btn-no:hover { background: rgba(0,0,0,0.10); }
+
+@media (max-width: 480px) {
+  .privacy-popup { left: 12px; right: 12px; bottom: 12px; max-width: none; }
 }

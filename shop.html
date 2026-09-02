@@ -108,8 +108,10 @@
     .total-row span:last-child { color:#ff7b22; font-size:24px; font-weight:700; font-family:'Bebas Neue',sans-serif; letter-spacing:2px; }
     .modal-field { display:flex; flex-direction:column; gap:6px; margin-bottom:14px; }
     .modal-field label { font-size:12px; letter-spacing:2px; color:#a1a1aa; font-family:'Bebas Neue',sans-serif; }
-    .modal-field input,.modal-field textarea { padding:13px 16px; border:1px solid rgba(255,255,255,0.08); border-radius:12px; background:rgba(255,255,255,0.05); color:white; font-family:'Poppins',sans-serif; font-size:14px; outline:none; transition:border .3s ease,box-shadow .3s ease,background .3s ease; }
-    .modal-field input:focus,.modal-field textarea:focus { border-color:rgba(255,123,34,0.50); box-shadow:0 0 0 3px rgba(255,123,34,0.10); background:rgba(255,123,34,0.04); }
+    .modal-field input,.modal-field textarea,.modal-field select { padding:13px 16px; border:1px solid rgba(255,255,255,0.08); border-radius:12px; background:rgba(255,255,255,0.05); color:white; font-family:'Poppins',sans-serif; font-size:14px; outline:none; transition:border .3s ease,box-shadow .3s ease,background .3s ease; }
+.modal-field select { color-scheme: dark; }
+.modal-field select option { background-color: #18181b !important; color: #ffffff !important; }
+.modal-field input:focus,.modal-field textarea:focus,.modal-field select:focus { border-color:rgba(255,123,34,0.50); box-shadow:0 0 0 3px rgba(255,123,34,0.10); background:rgba(255,123,34,0.04); }
     .modal-field textarea { height:80px; resize:none; }
     .payment-option { display:flex; align-items:center; gap:16px; padding:20px; border-radius:16px; border:2px solid rgba(255,123,34,0.30); background:rgba(255,123,34,0.06); margin-bottom:20px; }
     .payment-option.selected { border-color:#ff7b22; box-shadow:0 0 30px rgba(255,123,34,0.20); }
@@ -172,7 +174,7 @@
     <p data-i18n="follow_us">FOLLOW US</p>
     <div class="hb-footer-socials">
       <a href="https://wa.me/212664700752" target="_blank" class="hb-soc"><i class="fab fa-whatsapp"></i></a>
-      <a href="#" class="hb-soc"><i class="fab fa-instagram"></i></a>
+      <a href="https://www.instagram.com/electrobadr00" target="_blank" class="hb-soc"><i class="fab fa-instagram"></i></a>
       <a href="#" class="hb-soc"><i class="fab fa-facebook"></i></a>
       <a href="#" class="hb-soc"><i class="fab fa-tiktok"></i></a>
     </div>
@@ -1351,7 +1353,7 @@
       <p class="footer-desc" data-i18n="footer_desc">Morocco's trusted destination for quality gadgets. Cash on delivery, nationwide.</p>
       <div class="footer-socials">
         <a href="https://wa.me/212664700752" target="_blank" class="fsocial"><i class="fab fa-whatsapp"></i></a>
-        <a href="#" class="fsocial"><i class="fab fa-instagram"></i></a>
+        <a href="https://www.instagram.com/electrobadr00" target="_blank" class="hb-soc"><i class="fab fa-instagram"></i></a>
         <a href="#" class="fsocial"><i class="fab fa-facebook"></i></a>
         <a href="#" class="fsocial"><i class="fab fa-tiktok"></i></a>
       </div>
@@ -1436,7 +1438,76 @@
     <h2 data-i18n="modal_details_title">Your Details</h2>
     <p class="modal-sub" data-i18n="modal_details_sub">Fill in your delivery information</p>
     <div class="modal-field"><label data-i18n="modal_name">Full Name</label><input type="text" id="cust-name" placeholder="Ex: Ahmed Benali"></div>
-    <div class="modal-field"><label data-i18n="modal_city">City</label><input type="text" id="cust-city" placeholder="Ex: Casablanca"></div>
+    <div class="modal-field"><label data-i18n="modal_city">City</label>
+      <div class="modal-field" style="position:absolute; left:-9999px; top:-9999px;" aria-hidden="true">
+  <label for="cust-website">Website</label>
+  <input type="text" id="cust-website" name="website" tabindex="-1" autocomplete="off">
+</div>
+  <select id="cust-city">
+    <option value="" disabled selected>-- Select your city --</option>
+    <option value="Agadir">Agadir</option>
+    <option value="Al Hoceïma">Al Hoceïma</option>
+    <option value="Assa">Assa</option>
+    <option value="Azemmour">Azemmour</option>
+    <option value="Azrou">Azrou</option>
+    <option value="Beni Mellal">Beni Mellal</option>
+    <option value="Berkane">Berkane</option>
+    <option value="Berrechid">Berrechid</option>
+    <option value="Bouarfa">Bouarfa</option>
+    <option value="Bouznika">Bouznika</option>
+    <option value="Casablanca">Casablanca</option>
+    <option value="Chefchaouen">Chefchaouen</option>
+    <option value="Dakhla">Dakhla</option>
+    <option value="El Jadida">El Jadida</option>
+    <option value="Errachidia">Errachidia</option>
+    <option value="Essaouira">Essaouira</option>
+    <option value="Fès">Fès</option>
+    <option value="Fquih Ben Salah">Fquih Ben Salah</option>
+    <option value="Guelmim">Guelmim</option>
+    <option value="Ifrane">Ifrane</option>
+    <option value="Kénitra">Kénitra</option>
+    <option value="Khemisset">Khemisset</option>
+    <option value="Khénifra">Khénifra</option>
+    <option value="Khouribga">Khouribga</option>
+    <option value="Ksar El Kébir">Ksar El Kébir</option>
+    <option value="Laâyoune">Laâyoune</option>
+    <option value="Larache">Larache</option>
+    <option value="Marrakech">Marrakech</option>
+    <option value="Martil">Martil</option>
+    <option value="Meknès">Meknès</option>
+    <option value="Midelt">Midelt</option>
+    <option value="Mohammédia">Mohammédia</option>
+    <option value="Nador">Nador</option>
+    <option value="Ouarzazate">Ouarzazate</option>
+    <option value="Oued Zem">Oued Zem</option>
+    <option value="Oujda">Oujda</option>
+    <option value="Rabat">Rabat</option>
+    <option value="Safi">Safi</option>
+    <option value="Salé">Salé</option>
+    <option value="Sefrou">Sefrou</option>
+    <option value="Settat">Settat</option>
+    <option value="Sidi Bennour">Sidi Bennour</option>
+    <option value="Sidi Ifni">Sidi Ifni</option>
+    <option value="Sidi Kacem">Sidi Kacem</option>
+    <option value="Sidi Slimane">Sidi Slimane</option>
+    <option value="Skhirat">Skhirat</option>
+    <option value="Tan-Tan">Tan-Tan</option>
+    <option value="Taourirt">Taourirt</option>
+    <option value="Taroudant">Taroudant</option>
+    <option value="Taza">Taza</option>
+    <option value="Témara">Témara</option>
+    <option value="Tétouan">Tétouan</option>
+    <option value="Tinghir">Tinghir</option>
+    <option value="Tiznit">Tiznit</option>
+    <option value="Youssoufia">Youssoufia</option>
+    <option value="Zagora">Zagora</option>
+    <option value="Other">Other / Autre ville</option>
+  </select>
+</div>
+<div class="modal-field" id="cust-city-other-wrap" style="display:none;">
+  <label data-i18n="modal_city_other">Please specify your city</label>
+  <input type="text" id="cust-city-other" placeholder="Type your city name">
+</div>
     <div class="modal-field"><label data-i18n="modal_phone">Phone Number</label><input type="tel" id="cust-phone" placeholder="Ex: 0661 234 567"></div>
     <div class="modal-field"><label data-i18n="modal_email">Email (optional)</label><input type="email" id="cust-email" placeholder="Ex: ahmed@email.com"></div>
     <div class="modal-field"><label data-i18n="modal_address">Full Address</label><textarea id="cust-address" placeholder="Street, neighbourhood, building..."></textarea></div>
@@ -1599,7 +1670,13 @@ document.addEventListener('DOMContentLoaded', () => {
   animate();
 })();
 </script>
-
+ 
+<!-- PRIVACY NOTICE POPUP -->
+<div class="privacy-popup" id="privacyPopup">
+  <button class="privacy-popup-close" id="privacyPopupClose" aria-label="Close">✕</button>
+  <p class="privacy-popup-text" id="privacyPopupText"></p>
+  <div class="privacy-popup-actions" id="privacyPopupActions"></div>
+</div>
 
 <!-- CURSOR — MUST BE ABSOLUTE LAST -->
 <div class="hero-cursor-dot" id="heroCursorDot"></div>
