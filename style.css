@@ -757,8 +757,7 @@ body.light-mode .brand-item:hover img { filter: brightness(0) sepia(1) saturate(
 
 .products-preview h2 {
   text-align: center; margin-bottom: 50px; font-size: 40px;
-  position: relative; display: inline-block;
-  left: 50%; transform: translateX(-50%);
+  position: relative;
   z-index: 1;
 }
 
@@ -816,8 +815,7 @@ body.light-mode .brand-item:hover img { filter: brightness(0) sepia(1) saturate(
 
 .reviews h2 {
   text-align: center; margin-bottom: 50px; font-size: 40px;
-  position: relative; display: inline-block;
-  left: 50%; transform: translateX(-50%);
+  position: relative;
   z-index: 1;
 }
 

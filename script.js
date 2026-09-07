@@ -99,6 +99,17 @@ privacy_accept_anyway: 'Accept Anyway',
     ab_phone_label: 'Phone', ab_email_label: 'Email',
     ab_location_label: 'Location', ab_hours_label: 'Support Hours',
     ab_hours_val: '24/7 via WhatsApp',
+   
+
+
+review_write: '✍️ Write a Review', review_name_ph: 'Your name', review_phone_ph: 'Phone used for your order',
+review_comment_ph: 'Share your experience with this product', review_submit: 'Submit Review',
+review_fill_all: 'Please fill in all fields and select a rating.', review_sending: 'Sending...',
+review_photo_too_large: 'Photo is too large (max 5MB).', review_success: 'Thank you! Your review will appear once approved.',
+review_not_verified: 'We couldn\'t verify a purchase of this product with that phone number.', review_error: 'Connection error. Please try again.',
+
+
+
     /* ── CONTACT PAGE ── */
     ct_badge: 'GET IN TOUCH',
     ct_hero_title: 'Talk to Electro Badr',
@@ -325,6 +336,11 @@ privacy_accept_anyway: 'Accepter Quand Même',
     ab_phone_label: 'Téléphone', ab_email_label: 'Email',
     ab_location_label: 'Adresse', ab_hours_label: 'Heures de Support',
     ab_hours_val: '24/7 via WhatsApp',
+    review_write: '✍️ Laisser un Avis', review_name_ph: 'Votre nom', review_phone_ph: 'Téléphone utilisé pour votre commande',
+review_comment_ph: 'Partagez votre expérience avec ce produit', review_submit: 'Envoyer l\'Avis',
+review_fill_all: 'Veuillez remplir tous les champs et choisir une note.', review_sending: 'Envoi...',
+review_photo_too_large: 'Photo trop volumineuse (5 Mo max).', review_success: 'Merci ! Votre avis apparaîtra après approbation.',
+review_not_verified: 'Nous n\'avons pas pu vérifier d\'achat de ce produit avec ce numéro.', review_error: 'Erreur de connexion. Veuillez réessayer.',
     /* ── CONTACT PAGE ── */
     ct_badge: 'NOUS CONTACTER',
     ct_hero_title: 'Parlez à Electro Badr',
@@ -515,6 +531,11 @@ privacy_no: 'لا',
 privacy_accept_terms: 'قبول الشروط',
 privacy_continue_without: 'المتابعة دون الموافقة',
 privacy_accept_anyway: 'الموافقة على أي حال',
+review_write: '✍️ أضف تقييماً', review_name_ph: 'اسمك', review_phone_ph: 'الهاتف المستخدم في طلبك',
+review_comment_ph: 'شاركنا تجربتك مع هذا المنتج', review_submit: 'إرسال التقييم',
+review_fill_all: 'يرجى تعبئة جميع الحقول واختيار تقييم.', review_sending: 'جارٍ الإرسال...',
+review_photo_too_large: 'الصورة كبيرة جداً (5 ميجابايت كحد أقصى).', review_success: 'شكراً! سيظهر تقييمك بعد الموافقة عليه.',
+review_not_verified: 'لم نتمكن من التحقق من شراء هذا المنتج بهذا الرقم.', review_error: 'خطأ في الاتصال. يرجى المحاولة مرة أخرى.',
     /* ── MODAL KEYS ── */
     modal_order_title: 'طلبك', modal_order_sub: 'راجع المنتج وحدد الكمية',
     modal_qty: 'الكمية', modal_purchase: 'شراء →',
@@ -734,7 +755,6 @@ function applyTranslation(lang) {
   if (cartTotal) cartTotal.innerText = t.cart_total;
   updateCartCheckoutLabel();
 
-
   /* ── ABOUT PAGE ── */
   const setT = (sel, val) => { const el = document.querySelector(sel); if (el && val) el.innerText = val; };
   const setP = (sel, val) => { const el = document.querySelector(sel); if (el && val) el.placeholder = val; };
@@ -838,6 +858,9 @@ function applyTranslation(lang) {
   setP('#ct-email',   t.ct_email_field);
   setP('#ct-subject', t.ct_subject_label);
   setP('#ct-message', t.ct_msg_label);
+  setP('#reviewName', t.review_name_ph);
+  setP('#reviewPhone', t.review_phone_ph);
+  setP('#reviewComment', t.review_comment_ph);
 
   const ctSectionLabels = document.querySelectorAll('.ct-section-label');
   if (ctSectionLabels[0]) ctSectionLabels[0].innerText = t.ct_fastest;
@@ -868,19 +891,218 @@ function applyTranslation(lang) {
   document.querySelectorAll('.btn-cart').forEach(btn => { btn.innerText = t.shop_add_cart; });
   document.querySelectorAll('.btn-order').forEach(btn => { btn.innerText = t.shop_order_now; });
 
-    localStorage.setItem('language', lang);
+  localStorage.setItem('language', lang);
 
   const privacyPopupEl = document.getElementById('privacyPopup');
   if (privacyPopupEl && privacyPopupEl.classList.contains('active') && currentPrivacyMode) {
     renderPrivacyPopup(currentPrivacyMode);
   }
-
 }
-  let pendingPrivacyAction = null;
-  let currentPrivacyMode = null;
+
+let currentDetailImages = [];
+let currentDetailIndex = 0;
+
+function openProductDetail(card) {
+  const img = card.querySelector('.shop-card-img');
+  const name = card.querySelector('h3').textContent;
+  const price = card.querySelector('.price').textContent;
+  const desc = card.querySelector('.desc').textContent;
+  const cartBtn = card.querySelector('.btn-cart');
+  const orderBtn = card.querySelector('.btn-order');
+  const extraImages = card.dataset.extraImages ? card.dataset.extraImages.split(',') : [];
+
+  document.getElementById('detailName').textContent = name;
+  document.getElementById('detailPrice').textContent = price;
+  document.getElementById('detailDesc').textContent = desc;
+
+  currentDetailImages = [img.src, ...extraImages];
+  currentDetailIndex = 0;
+  renderDetailImage();
+
+  const thumbsContainer = document.getElementById('detailThumbs');
+  const dotsContainer = document.getElementById('detailDots');
+  const prevBtn = document.getElementById('detailPrevBtn');
+  const nextBtn = document.getElementById('detailNextBtn');
+  thumbsContainer.innerHTML = '';
+  dotsContainer.innerHTML = '';
+
+  const hasMultiple = currentDetailImages.length > 1;
+  thumbsContainer.style.display = hasMultiple ? 'flex' : 'none';
+  dotsContainer.style.display = hasMultiple ? 'flex' : 'none';
+  prevBtn.style.display = hasMultiple ? 'block' : 'none';
+  nextBtn.style.display = hasMultiple ? 'block' : 'none';
+
+  if (hasMultiple) {
+    currentDetailImages.forEach((src, i) => {
+      const thumb = document.createElement('img');
+      thumb.src = src;
+      thumb.addEventListener('click', () => { currentDetailIndex = i; renderDetailImage(); });
+      thumbsContainer.appendChild(thumb);
+
+      const dot = document.createElement('span');
+      dot.className = 'detail-dot';
+      dotsContainer.appendChild(dot);
+    });
+  }
+
+    document.getElementById('detailCartBtn').onclick = () => {
+    allowDirectClick = true;
+    cartBtn.click();
+    allowDirectClick = false;
+  };
+  document.getElementById('detailOrderBtn').onclick = () => {
+    document.getElementById('productDetailModal').classList.remove('active');
+    allowDirectClick = true;
+    orderBtn.click();
+    allowDirectClick = false;
+  };
+
+  document.getElementById('productDetailModal').classList.add('active');
+  document.body.style.overflow = 'hidden';
+}
+
+function renderDetailImage() {
+  document.getElementById('detailMainImg').src = currentDetailImages[currentDetailIndex];
+  document.querySelectorAll('#detailThumbs img').forEach((t, i) => t.classList.toggle('active-thumb', i === currentDetailIndex));
+  document.querySelectorAll('#detailDots .detail-dot').forEach((d, i) => d.classList.toggle('active-dot', i === currentDetailIndex));
+}
+
+function showNextDetailImage() {
+  if (currentDetailImages.length <= 1) return;
+  currentDetailIndex = (currentDetailIndex + 1) % currentDetailImages.length;
+  renderDetailImage();
+}
+
+function showPrevDetailImage() {
+  if (currentDetailImages.length <= 1) return;
+  currentDetailIndex = (currentDetailIndex - 1 + currentDetailImages.length) % currentDetailImages.length;
+  renderDetailImage();
+}
+let allowDirectClick = false;
+let selectedRating = 0;
+
+document.addEventListener('DOMContentLoaded', () => {
+     document.querySelectorAll('.shop-card').forEach(card => {
+    card.style.cursor = 'pointer';
+    card.addEventListener('click', (e) => {
+      if (allowDirectClick) return;
+      e.stopPropagation();
+      e.preventDefault();
+      openProductDetail(card);
+    }, true);
+  });
+  document.getElementById('detailClose')?.addEventListener('click', () => {
+    document.getElementById('productDetailModal').classList.remove('active');
+    document.body.style.overflow = '';
+  });
+
+  document.getElementById('detailNextBtn')?.addEventListener('click', showNextDetailImage);
+  document.getElementById('detailPrevBtn')?.addEventListener('click', showPrevDetailImage);
+
+  let touchStartX = 0;
+  const mainImg = document.getElementById('detailMainImg');
+  if (mainImg) {
+    mainImg.addEventListener('touchstart', (e) => { touchStartX = e.changedTouches[0].screenX; }, { passive: true });
+    mainImg.addEventListener('touchend', (e) => {
+      const diff = touchStartX - e.changedTouches[0].screenX;
+      if (Math.abs(diff) > 40) { diff > 0 ? showNextDetailImage() : showPrevDetailImage(); }
+    }, { passive: true });
+  }
+
+  document.getElementById('reviewToggleBtn')?.addEventListener('click', () => {
+    const form = document.getElementById('reviewForm');
+    form.style.display = form.style.display === 'none' ? 'flex' : 'none';
+  });
+
+  document.querySelectorAll('#reviewStars .star').forEach(star => {
+    star.addEventListener('click', () => {
+      selectedRating = parseInt(star.dataset.value);
+      document.querySelectorAll('#reviewStars .star').forEach(s => {
+        s.classList.toggle('star-filled', parseInt(s.dataset.value) <= selectedRating);
+      });
+    });
+  });
+
+  document.getElementById('reviewSubmitBtn')?.addEventListener('click', submitReview);
+});
+
+async function submitReview() {
+  const name = document.getElementById('reviewName').value.trim();
+  const phone = document.getElementById('reviewPhone').value.trim();
+  const comment = document.getElementById('reviewComment').value.trim();
+  const photoInput = document.getElementById('reviewPhoto');
+  const statusMsg = document.getElementById('reviewStatusMsg');
+  const productName = document.getElementById('detailName').textContent;
+  const lang = localStorage.getItem('language') || 'en';
+  const t = translations[lang];
+
+  if (!name || !phone || !comment || selectedRating === 0) {
+    statusMsg.textContent = t.review_fill_all;
+    statusMsg.style.color = '#ff4444';
+    return;
+  }
+
+  const submitBtn = document.getElementById('reviewSubmitBtn');
+  submitBtn.disabled = true;
+  submitBtn.textContent = t.review_sending;
+
+  let photoBase64 = '', photoMimeType = '';
+  if (photoInput.files && photoInput.files[0]) {
+    const file = photoInput.files[0];
+    if (file.size > 5 * 1024 * 1024) {
+      statusMsg.textContent = t.review_photo_too_large;
+      statusMsg.style.color = '#ff4444';
+      submitBtn.disabled = false;
+      submitBtn.textContent = t.review_submit;
+      return;
+    }
+    photoMimeType = file.type;
+    photoBase64 = await new Promise((resolve) => {
+      const reader = new FileReader();
+      reader.onload = () => resolve(reader.result);
+      reader.readAsDataURL(file);
+    });
+  }
+
+  const body = new URLSearchParams({
+    formType: 'review', product: productName, name, phone,
+    rating: String(selectedRating), comment, photoBase64, photoMimeType
+  }).toString();
+
+  try {
+    const response = await fetch(SHEET_URL, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+      body
+    });
+    const result = await response.json();
+    if (result.success) {
+      statusMsg.textContent = t.review_success;
+      statusMsg.style.color = '#2ecc71';
+      document.getElementById('reviewName').value = '';
+      document.getElementById('reviewPhone').value = '';
+      document.getElementById('reviewComment').value = '';
+      document.getElementById('reviewPhoto').value = '';
+      selectedRating = 0;
+      document.querySelectorAll('#reviewStars .star').forEach(s => s.classList.remove('star-filled'));
+    } else {
+      statusMsg.textContent = t.review_not_verified;
+      statusMsg.style.color = '#ff4444';
+    }
+  } catch (err) {
+    statusMsg.textContent = t.review_error;
+    statusMsg.style.color = '#ff4444';
+  }
+
+  submitBtn.disabled = false;
+  submitBtn.textContent = t.review_submit;
+}
+
+let pendingPrivacyAction = null;
+let currentPrivacyMode = null;
 
 function renderPrivacyPopup(mode) {
-   currentPrivacyMode = mode;
+  currentPrivacyMode = mode;
   const popup = document.getElementById('privacyPopup');
   const textEl = document.getElementById('privacyPopupText');
   const actionsEl = document.getElementById('privacyPopupActions');
@@ -915,7 +1137,7 @@ function renderPrivacyPopup(mode) {
     acceptBtn.addEventListener('click', acceptPrivacy);
     actionsEl.append(continueBtn, acceptBtn);
 
-    } else if (mode === 'gate') {
+  } else if (mode === 'gate') {
     textEl.textContent = t.privacy_warning_text;
     popup.classList.add('show-close');
     const acceptBtn = document.createElement('button');
@@ -943,12 +1165,14 @@ function declinePrivacy() {
   document.getElementById('privacyPopup')?.classList.remove('active');
   pendingPrivacyAction = null;
 }
+
 /* ── LANGUAGE SWITCHER ── */
 const languageSwitcher = document.getElementById('languageSwitcher');
 if (languageSwitcher) {
   languageSwitcher.addEventListener('change', function () { applyTranslation(this.value); });
-  const savedLang = localStorage.getItem('language');
-  if (savedLang) { languageSwitcher.value = savedLang; applyTranslation(savedLang); }
+  const savedLang = localStorage.getItem('language') || 'en';
+  languageSwitcher.value = savedLang;
+  applyTranslation(savedLang);
 }
 
 /* ── DARK / LIGHT MODE ── */
@@ -982,10 +1206,6 @@ function updateCartCount() {
   updateCartCheckoutLabel();
 }
 
-// Swaps the cart drawer's checkout button between "Go to Shop" and "Pay Now"
-// depending on cart contents — but only where payNowFromCart() is actually wired
-// up (currently shop.html), so a page without that flow never shows a label
-// promising something the click handler doesn't do.
 function updateCartCheckoutLabel() {
   const btn = document.querySelector('.cart-checkout-btn');
   if (!btn) return;
@@ -1116,12 +1336,14 @@ function goToStep3() {
 }
 
 function backToStep2() { showModal('modal2'); }
+
 function escapeHTML(str) {
   const div = document.createElement('div');
   div.textContent = str;
   return div.innerHTML;
 }
-async function confirmOrder() { 
+
+async function confirmOrder() {
   const honeypot = document.getElementById('cust-website');
   if (honeypot && honeypot.value.trim() !== '') { return; }
   const name    = document.getElementById('cust-name')?.value.trim();
@@ -1132,7 +1354,7 @@ async function confirmOrder() {
   if (!name || !city || !phone || !address) { alert('Please fill in all required fields.'); return; }
   const confirmBtn = document.querySelector('#modal3 .modal-btn');
   if (confirmBtn) { confirmBtn.textContent = 'Sending...'; confirmBtn.disabled = true; }
-    const body = new URLSearchParams({
+  const body = new URLSearchParams({
     product: currentOrder.name, quantity: String(currentOrder.qty),
     total: String(currentOrder.total), name, phone, email, city, address, payment: 'Cash On Delivery',
     website: honeypot ? honeypot.value.trim() : ''
@@ -1144,7 +1366,7 @@ async function confirmOrder() {
     alert('Connection error. Please try again or contact us on WhatsApp.');
     return;
   }
-    const finalSummary = document.getElementById('final-summary');
+  const finalSummary = document.getElementById('final-summary');
   if (finalSummary) {
     finalSummary.innerHTML = `
       <p>📦 <span>Product:</span> ${currentOrder.name}</p>
@@ -1156,7 +1378,7 @@ async function confirmOrder() {
       <p>🏠 <span>Address:</span> ${escapeHTML(address)}</p>
       <p>💵 <span>Payment:</span> Cash On Delivery</p>`;
   }
- showModal('modal4');
+  showModal('modal4');
   if (confirmBtn) { confirmBtn.textContent = 'Confirm Order →'; confirmBtn.disabled = false; }
 
   if (currentOrder.fromCart) {
@@ -1173,12 +1395,11 @@ function showModal(id) {
   ['modal1', 'modal2', 'modal3', 'modal4'].forEach(mid => {
     if (mid !== id) document.getElementById(mid)?.classList.remove('active');
   });
-  void el.offsetWidth; // forces the change to apply immediately, no delayed frame
+  void el.offsetWidth;
   el.classList.add('active');
   document.body.style.overflow = 'hidden';
-  el.scrollIntoView({ block: 'start' }); // brings the modal into view immediately, no manual scrolling needed
+  el.scrollIntoView({ block: 'start' });
 
-  // Re-assert the cursor dot as the last element in <body> every time a modal opens
   const cursorDot = document.getElementById('heroCursorDot');
   if (cursorDot && document.body.lastElementChild !== cursorDot) {
     document.body.appendChild(cursorDot);
@@ -1214,7 +1435,7 @@ function showCategory(cat, e) {
 
 /* ── DOM CONTENT LOADED ── */
 document.addEventListener('DOMContentLoaded', () => {
-     if (document.getElementById('privacyPopup')) {
+  if (document.getElementById('privacyPopup')) {
     const isShopPage = window.location.pathname.toLowerCase().includes('shop.html');
     if (!isShopPage && !localStorage.getItem('privacyChoice')) {
       setTimeout(() => renderPrivacyPopup('initial'), 800);
@@ -1303,7 +1524,7 @@ document.addEventListener('DOMContentLoaded', () => {
       if (!query || query.length < 1) { dropdown.classList.remove('active'); dropdown.innerHTML = ''; return; }
       const q = query.toLowerCase();
       const nameField = lang === 'fr' ? 'name_fr' : lang === 'ar' ? 'name_ar' : 'name';
-           const matches = PRODUCTS.filter(p =>
+      const matches = PRODUCTS.filter(p =>
         p.name.toLowerCase().includes(q) ||
         (p.name_fr || '').toLowerCase().includes(q) ||
         (p.name_ar || '').toLowerCase().includes(q)
@@ -1376,7 +1597,7 @@ document.querySelectorAll('a[href]').forEach(link => {
   const href = link.getAttribute('href');
   if (!href || href.startsWith('#') || href.startsWith('mailto') || href.startsWith('tel') || href.startsWith('https://wa')) return;
   if (href.startsWith('http') && !href.includes(window.location.hostname)) return;
-  if (link.classList.contains('cart-checkout-btn')) return; // has its own click handler (payNowFromCart on shop.html) — don't fight it with a delayed redirect
+  if (link.classList.contains('cart-checkout-btn')) return;
   link.addEventListener('click', e => {
     e.preventDefault();
     const pt = document.getElementById('pageTransition');
