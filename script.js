@@ -891,7 +891,7 @@ function applyTranslation(lang) {
   document.querySelectorAll('.btn-cart').forEach(btn => { btn.innerText = t.shop_add_cart; });
   document.querySelectorAll('.btn-order').forEach(btn => { btn.innerText = t.shop_order_now; });
 
-  localStorage.setItem('language', lang);
+  sessionStorage.setItem('language', lang);
 
   const privacyPopupEl = document.getElementById('privacyPopup');
   if (privacyPopupEl && privacyPopupEl.classList.contains('active') && currentPrivacyMode) {
@@ -1033,7 +1033,7 @@ async function submitReview() {
   const photoInput = document.getElementById('reviewPhoto');
   const statusMsg = document.getElementById('reviewStatusMsg');
   const productName = document.getElementById('detailName').textContent;
-  const lang = localStorage.getItem('language') || 'en';
+  const lang = sessionStorage.getItem('language') || 'en';
   const t = translations[lang];
 
   if (!name || !phone || !comment || selectedRating === 0) {
@@ -1108,7 +1108,7 @@ function renderPrivacyPopup(mode) {
   const actionsEl = document.getElementById('privacyPopupActions');
   if (!popup || !textEl || !actionsEl) return;
 
-  const lang = localStorage.getItem('language') || 'en';
+  const lang = sessionStorage.getItem('language') || 'en';
   const t = translations[lang];
   popup.classList.remove('show-close');
   actionsEl.innerHTML = '';
@@ -1170,9 +1170,11 @@ function declinePrivacy() {
 const languageSwitcher = document.getElementById('languageSwitcher');
 if (languageSwitcher) {
   languageSwitcher.addEventListener('change', function () { applyTranslation(this.value); });
-  const savedLang = localStorage.getItem('language') || 'en';
-  languageSwitcher.value = savedLang;
-  applyTranslation(savedLang);
+  const savedLang = sessionStorage.getItem('language');
+  if (savedLang) {
+    languageSwitcher.value = savedLang;
+    applyTranslation(savedLang);
+  }
 }
 
 /* ── DARK / LIGHT MODE ── */
@@ -1209,7 +1211,7 @@ function updateCartCount() {
 function updateCartCheckoutLabel() {
   const btn = document.querySelector('.cart-checkout-btn');
   if (!btn) return;
-  const lang = localStorage.getItem('language') || 'en';
+  const lang = sessionStorage.getItem('language') || 'en';
   const t = translations[lang];
   if (!t) return;
   const canPayFromCart = typeof payNowFromCart === 'function';
@@ -1237,7 +1239,7 @@ function renderCartSidebar() {
   const container = document.getElementById('cartSidebarItems');
   const totalEl   = document.getElementById('cartTotalPrice');
   if (!container) return;
-  const lang = localStorage.getItem('language') || 'en';
+  const lang = sessionStorage.getItem('language') || 'en';
   const t    = translations[lang];
   if (cart.length === 0) {
     container.innerHTML = `<p class="cart-empty">${t.cart_empty}</p>`;
@@ -1415,7 +1417,7 @@ function addToCartShop(name, price, btn) {
   localStorage.setItem('cart', JSON.stringify(cart));
   updateCartCount(); openCart();
   if (btn) {
-    const lang = localStorage.getItem('language') || 'en';
+    const lang = sessionStorage.getItem('language') || 'en';
     btn.textContent = '✓ Added!';
     setTimeout(() => btn.textContent = translations[lang].shop_add_cart, 1500);
   }
@@ -1437,13 +1439,33 @@ function showCategory(cat, e) {
 document.addEventListener('DOMContentLoaded', () => {
   if (document.getElementById('privacyPopup')) {
     const isShopPage = window.location.pathname.toLowerCase().includes('shop.html');
-    if (!isShopPage && !localStorage.getItem('privacyChoice')) {
+       if (!isShopPage && !localStorage.getItem('privacyChoice') && sessionStorage.getItem('language')) {
       setTimeout(() => renderPrivacyPopup('initial'), 800);
     }
     document.getElementById('privacyPopupClose')?.addEventListener('click', () => {
       document.getElementById('privacyPopup').classList.remove('active');
     });
   }
+    const langOverlay = document.getElementById('langSelectOverlay');
+  if (langOverlay && !sessionStorage.getItem('language')) {
+    langOverlay.classList.add('active');
+    document.body.style.overflow = 'hidden';
+  }
+  document.querySelectorAll('.lang-select-option').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const lang = btn.dataset.lang;
+      const switcher = document.getElementById('languageSwitcher');
+      if (switcher) switcher.value = lang;
+      applyTranslation(lang);
+      langOverlay.classList.remove('active');
+      document.body.style.overflow = '';
+
+      const isShopPage = window.location.pathname.toLowerCase().includes('shop.html');
+      if (!isShopPage && !localStorage.getItem('privacyChoice') && document.getElementById('privacyPopup')) {
+        setTimeout(() => renderPrivacyPopup('initial'), 500);
+      }
+    });
+  });
   const cartIcon = document.querySelector('.cart-icon');
   if (cartIcon) cartIcon.addEventListener('click', openCart);
   updateCartCount();
@@ -1519,7 +1541,7 @@ document.addEventListener('DOMContentLoaded', () => {
       return text.replace(regex, '<span class="search-highlight">$1</span>');
     }
     function showSuggestions(query) {
-      const lang = localStorage.getItem('language') || 'en';
+      const lang = sessionStorage.getItem('language') || 'en';
       const t    = translations[lang];
       if (!query || query.length < 1) { dropdown.classList.remove('active'); dropdown.innerHTML = ''; return; }
       const q = query.toLowerCase();

@@ -536,7 +536,26 @@ document.querySelectorAll('.ab-brand-chip').forEach((chip, i) => {
   animate();
 })();
 </script>
-
+<!-- LANGUAGE SELECTOR (first visit only) -->
+<div class="lang-select-overlay" id="langSelectOverlay">
+  <div class="lang-select-box">
+    <p class="lang-select-title">Choose Your Language<br>Choisissez votre langue<br>اختر لغتك</p>
+    <div class="lang-select-options">
+      <button class="lang-select-option" data-lang="ar">
+        <span class="lang-select-flag">🇲🇦</span>
+        <span class="lang-select-name">العربية</span>
+      </button>
+      <button class="lang-select-option" data-lang="fr">
+        <span class="lang-select-flag">🇫🇷</span>
+        <span class="lang-select-name">Français</span>
+      </button>
+      <button class="lang-select-option" data-lang="en">
+        <span class="lang-select-flag">🇺🇸</span>
+        <span class="lang-select-name">English</span>
+      </button>
+    </div>
+  </div>
+</div>
 <!-- CURSOR — MUST BE ABSOLUTE LAST -->
 <div class="hero-cursor-dot" id="heroCursorDot"></div>
 
