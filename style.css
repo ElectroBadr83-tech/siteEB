@@ -1835,8 +1835,8 @@ body.light-mode .footer-bottom { color: #888; }
 @media (max-width: 480px) {
   .navbar nav { display: none; }
   .navbar { flex-direction: row; padding: 8px 14px; gap: 8px; top: 8px; width: 82%; }
-  .logo img { height: 32px; }
-  .logo { margin-left: 40px; }
+  .logo img { height: 25px; }
+  .logo { margin-left: 30px; }
   .nav-actions { gap: 6px; }
   .search-bar { width: 65px; padding: 8px 8px; font-size: 12px; }
   .search-bar:focus { width: 100px; }
