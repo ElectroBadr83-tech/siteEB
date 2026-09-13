@@ -2090,7 +2090,7 @@ body.light-mode .review-form input, body.light-mode .review-form textarea { back
 .btn-order:hover::before { left:160%; }
 .btn-order:hover { transform:translateY(-3px); box-shadow:0 12px 30px rgba(255,123,34,0.45); }
 /* ── BEST SELLERS CAROUSEL ── */
-.bestsellers-bar { position: relative; width: 100%; overflow-x: auto; overflow-y: hidden; -webkit-overflow-scrolling: touch; scrollbar-width: none; -ms-overflow-style: none; cursor: grab; direction: ltr; }
+.bestsellers-bar { position: relative; width: 100%; overflow-x: auto; overflow-y: hidden; scrollbar-width: none; -ms-overflow-style: none; cursor: grab; direction: ltr; }
 .bestsellers-bar::-webkit-scrollbar { display: none; }
 .bestsellers-bar.dragging { cursor: grabbing; user-select: none; }
 .bestsellers-track { display: flex; gap: 30px; width: max-content; padding: 4px 4px 20px; }
