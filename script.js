@@ -761,7 +761,9 @@ function applyTranslation(lang) {
 
   const SPEED = 0.6;
   const RESUME_DELAY = 1500;
+  const isTouchDevice = window.matchMedia('(pointer: coarse)').matches;
   let isDown = false, startX = 0, startScroll = 0, resumeTimer = null, paused = false, halfWidth = 0;
+  let touchStartX = 0, touchMoved = false;
 
   function measure() { halfWidth = track.scrollWidth / 2; }
 
@@ -794,24 +796,42 @@ function applyTranslation(lang) {
   }
   requestAnimationFrame(tick);
 
-  bar.addEventListener('mousedown', e => {
-    isDown = true; bar.classList.add('dragging');
-    startX = e.pageX; startScroll = bar.scrollLeft;
-    pause(); e.preventDefault();
-  });
-  window.addEventListener('mousemove', e => {
-    if (!isDown) return;
-    bar.scrollLeft = startScroll - (e.pageX - startX);
-    wrap();
-  });
-  window.addEventListener('mouseup', () => {
-    if (!isDown) return;
-    isDown = false; bar.classList.remove('dragging'); pause();
-  });
+  if (!isTouchDevice) {
+    bar.addEventListener('mousedown', e => {
+      isDown = true; bar.classList.add('dragging');
+      startX = e.pageX; startScroll = bar.scrollLeft;
+      pause(); e.preventDefault();
+    });
+    window.addEventListener('mousemove', e => {
+      if (!isDown) return;
+      bar.scrollLeft = startScroll - (e.pageX - startX);
+      wrap();
+    });
+    window.addEventListener('mouseup', () => {
+      if (!isDown) return;
+      isDown = false; bar.classList.remove('dragging'); pause();
+    });
+  }
 
-  bar.addEventListener('touchstart', pause, { passive: true });
-  bar.addEventListener('touchmove', () => { wrap(); pause(); }, { passive: true });
-  bar.addEventListener('touchend', pause);
+  bar.addEventListener('touchstart', e => {
+    touchStartX = e.touches[0].clientX;
+    touchMoved = false;
+    pause();
+  }, { passive: true });
+
+  bar.addEventListener('touchmove', e => {
+    if (Math.abs(e.touches[0].clientX - touchStartX) > 8) touchMoved = true;
+    wrap();
+    pause();
+  }, { passive: true });
+
+  bar.addEventListener('touchend', () => {
+    pause();
+    if (touchMoved) {
+      window.bestsellersJustDragged = true;
+      setTimeout(() => { window.bestsellersJustDragged = false; }, 300);
+    }
+  });
 
   bar.addEventListener('click', pause);
 
@@ -824,6 +844,7 @@ function applyTranslation(lang) {
 
   bar.addEventListener('scroll', wrap);
 })();
+
   /* ── ABOUT PAGE ── */
   const setT = (sel, val) => { const el = document.querySelector(sel); if (el && val) el.innerText = val; };
   const setP = (sel, val) => { const el = document.querySelector(sel); if (el && val) el.placeholder = val; };
@@ -1056,11 +1077,13 @@ document.addEventListener('DOMContentLoaded', () => {
     card.style.cursor = 'pointer';
     card.addEventListener('click', (e) => {
       if (allowDirectClick) return;
+      if (window.bestsellersJustDragged) return;
       e.stopPropagation();
       e.preventDefault();
       openProductDetail(card);
     }, true);
   });
+  
   document.getElementById('detailClose')?.addEventListener('click', () => {
     document.getElementById('productDetailModal').classList.remove('active');
     document.body.style.overflow = '';

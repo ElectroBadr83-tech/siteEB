@@ -1847,7 +1847,10 @@ body.light-mode .footer-bottom { color: #888; }
 
   .hamburger-btn { left: 2px; width: 38px; height: 38px; }
   .hb-line { width: 16px; }
+   
+  .bestsellers-track .shop-card { width: 240px; }
 }
+
 
 body.light-mode .modal-field input,
 body.light-mode .modal-field textarea { background:#f7f7f7; color:#111; border:1px solid rgba(0,0,0,0.10); }
