@@ -1693,7 +1693,7 @@ body.light-mode .footer-bottom { color: #888; }
 /* ── HAMBURGER MENU ─────────────────── */
 .hamburger-btn {
   position: fixed;
-  top: 22px; left: 15px;
+  top: 15px; left: 5px;
   width: 48px; height: 48px;
   border-radius: 50%;
   background: rgba(255,255,255,0.08);
