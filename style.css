@@ -1849,6 +1849,17 @@ body.light-mode .footer-bottom { color: #888; }
   .hb-line { width: 16px; }
    
   .bestsellers-track .shop-card { width: 240px; }
+
+    .hero-hover-buttons { gap: 10px; }
+  .hero-hover-btn { padding: 10px 18px; font-size: 0.75rem; gap: 6px; }
+
+  .shop-card-img { height: 130px; }
+  .shop-card-body { padding: 12px; }
+  .shop-card-body h3 { font-size: 14px; letter-spacing: 1px; }
+  .shop-card-body .price { font-size: 15px; }
+  .shop-card-body .desc { font-size: 11px; line-height: 1.4; margin-bottom: 12px; }
+  .shop-card-actions { flex-direction: column; gap: 6px; }
+  .btn-cart, .btn-order { padding: 9px; font-size: 11px; }
 }
 
 
