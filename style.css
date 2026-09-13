@@ -1834,14 +1834,9 @@ body.light-mode .footer-bottom { color: #888; }
 }
 @media (max-width: 480px) {
   .navbar nav { display: none; }
-  .navbar {
-    flex-direction: row;
-    padding: 8px 14px;
-    gap: 8px;
-    top: 8px;
-    width: 94%;
-  }
+  .navbar { flex-direction: row; padding: 8px 14px; gap: 8px; top: 8px; width: 94%; }
   .logo img { height: 32px; }
+  .logo { margin-left: 40px; }
   .nav-actions { gap: 6px; }
   .search-bar { width: 90px; padding: 8px 10px; font-size: 13px; }
   .search-bar:focus { width: 130px; }
@@ -1849,7 +1844,6 @@ body.light-mode .footer-bottom { color: #888; }
   #theme-toggle { width: 32px; height: 32px; font-size: 14px; }
   .cart-icon { font-size: 18px; }
   #cart-count { width: 16px; height: 16px; font-size: 10px; top: -6px; right: -8px; }
-  .logo { margin-left: 40px; }
 }
 
 body.light-mode .modal-field input,
