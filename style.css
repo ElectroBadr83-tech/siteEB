@@ -1,7 +1,7 @@
 /* ===================================
    ELECTRO BADR — FINAL CSS
 =================================== */
-
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
 :root {
   --orange:       #ff7b22;
   --orange-hover: #ff944d;
@@ -1835,7 +1835,7 @@ body.light-mode .footer-bottom { color: #888; }
 @media (max-width: 480px) {
   .navbar nav { display: none; }
   .navbar { flex-direction: row; padding: 8px 14px; gap: 8px; top: 8px; width: 82%; }
-  .logo img { height: 10px; }
+  .logo img { height: 35px; }
   .logo { margin-left: 30px; }
   .nav-actions { gap: 6px; }
   .search-bar { width: 65px; padding: 8px 8px; font-size: 12px; }
@@ -1913,6 +1913,18 @@ body.light-mode .privacy-btn-no:hover { background: rgba(0,0,0,0.10); }
   from { opacity: 0; transform: translateY(-30px) scale(0.95); }
   to   { opacity: 1; transform: translateY(0) scale(1); }
 }
+.delivery-fee-note {
+  background: rgba(255,123,34,0.10);
+  border: 1px solid rgba(255,123,34,0.30);
+  border-radius: 12px;
+  padding: 12px 16px;
+  margin-bottom: 14px;
+  color: #ff7b22;
+  font-weight: 700;
+  font-size: 15px;
+  text-align: center;
+  display: none;
+}
 .lang-select-box {
   background: #18181b;
   border: 1px solid rgba(255,123,34,0.20);
@@ -1943,3 +1955,126 @@ body.light-mode .lang-select-box { background: #ffffff; }
 body.light-mode .lang-select-title { color: #111; }
 body.light-mode .lang-select-name { color: #111; }
 body.light-mode .lang-select-option { background: rgba(255,123,34,0.05); }
+
+/* ── ORDER MODAL SYSTEM (shared with shop.html) ── */
+.modal-overlay { display:none; position:fixed; inset:0; background:rgba(0,0,0,0.85); backdrop-filter:blur(10px); z-index:4000; align-items:flex-start; justify-content:center; padding:80px 20px 20px; overflow-y:auto; }
+.modal-overlay.active { display:flex; }
+.modal-box { background:#18181b; border-radius:24px; padding:40px; width:90%; max-width:500px; border:1px solid rgba(255,123,34,0.20); box-shadow:0 40px 80px rgba(0,0,0,0.60),0 0 60px rgba(255,123,34,0.08); position:relative; animation:modalDrop .5s cubic-bezier(.22,.61,.36,1) forwards; scrollbar-width:thin; scrollbar-color:rgba(255,123,34,0.40) transparent; flex-shrink:0; }
+.modal-box::-webkit-scrollbar { width:4px; }
+.modal-box::-webkit-scrollbar-track { background:transparent; }
+.modal-box::-webkit-scrollbar-thumb { background:rgba(255,123,34,0.40); border-radius:4px; }
+@keyframes modalDrop { from{opacity:0;transform:translateY(-40px) scale(0.95);} to{opacity:1;transform:translateY(0) scale(1);} }
+.modal-close { position:absolute; top:16px; right:20px; background:none; border:none; color:#a1a1aa; font-size:22px; transition:color .3s ease,transform .3s ease; }
+.modal-close:hover { color:#ff7b22; transform:rotate(90deg) scale(1.2); }
+.modal-box h2 { font-family:'Bebas Neue',sans-serif; font-size:30px; letter-spacing:4px; color:white; margin-bottom:6px; }
+.modal-sub { color:#a1a1aa; font-size:13px; margin-bottom:24px; }
+.product-preview-card { display:flex; align-items:center; gap:16px; background:rgba(255,123,34,0.06); border:1px solid rgba(255,123,34,0.15); border-radius:16px; padding:16px; margin-bottom:24px; }
+.product-preview-card img { width:70px; height:70px; object-fit:cover; border-radius:10px; flex-shrink:0; }
+.product-preview-info h4 { font-family:'Bebas Neue',sans-serif; font-size:18px; letter-spacing:2px; color:white; }
+.product-preview-info .pprice { color:#ff7b22; font-size:20px; font-weight:700; margin-top:4px; }
+.product-preview-info .pdesc { color:#a1a1aa; font-size:12px; margin-top:4px; line-height:1.5; }
+.qty-row { display:flex; align-items:center; justify-content:space-between; margin-bottom:24px; }
+.qty-row label { font-family:'Bebas Neue',sans-serif; font-size:16px; letter-spacing:2px; color:#a1a1aa; }
+.qty-controls { display:flex; align-items:center; gap:14px; }
+.qty-btn { width:36px; height:36px; border:none; border-radius:50%; background:rgba(255,123,34,0.15); color:#ff7b22; font-size:20px; transition:background .3s ease,transform .2s ease; display:flex; align-items:center; justify-content:center; }
+.qty-btn:hover { background:rgba(255,123,34,0.30); transform:scale(1.1); }
+.qty-num { font-family:'Bebas Neue',sans-serif; font-size:28px; color:white; min-width:30px; text-align:center; }
+.total-row { display:flex; justify-content:space-between; align-items:center; padding:14px 18px; background:rgba(255,123,34,0.05); border:1px solid rgba(255,123,34,0.12); border-radius:12px; margin-bottom:24px; }
+.total-row span:first-child { color:#a1a1aa; font-size:14px; }
+.total-row span:last-child { color:#ff7b22; font-size:24px; font-weight:700; font-family:'Bebas Neue',sans-serif; letter-spacing:2px; }
+.modal-field { display:flex; flex-direction:column; gap:6px; margin-bottom:14px; }
+.modal-field label { font-size:12px; letter-spacing:2px; color:#a1a1aa; font-family:'Bebas Neue',sans-serif; }
+.modal-field input,.modal-field textarea,.modal-field select { padding:13px 16px; border:1px solid rgba(255,255,255,0.08); border-radius:12px; background:rgba(255,255,255,0.05); color:white; font-family:'Poppins',sans-serif; font-size:14px; outline:none; transition:border .3s ease,box-shadow .3s ease,background .3s ease; }
+.modal-field select { color-scheme: dark; }
+.modal-field select option { background-color: #18181b !important; color: #ffffff !important; }
+.modal-field input:focus,.modal-field textarea:focus,.modal-field select:focus { border-color:rgba(255,123,34,0.50); box-shadow:0 0 0 3px rgba(255,123,34,0.10); background:rgba(255,123,34,0.04); }
+.modal-field textarea { height:80px; resize:none; }
+.payment-option { display:flex; align-items:center; gap:16px; padding:20px; border-radius:16px; border:2px solid rgba(255,123,34,0.30); background:rgba(255,123,34,0.06); margin-bottom:20px; }
+.payment-option.selected { border-color:#ff7b22; box-shadow:0 0 30px rgba(255,123,34,0.20); }
+.payment-option i { font-size:32px; color:#ff7b22; }
+.payment-option-text h4 { font-family:'Bebas Neue',sans-serif; font-size:20px; letter-spacing:2px; color:white; }
+.payment-option-text p { color:#a1a1aa; font-size:13px; margin-top:2px; }
+.payment-check { margin-left:auto; width:22px; height:22px; border-radius:50%; border:2px solid rgba(255,123,34,0.40); display:flex; align-items:center; justify-content:center; font-size:12px; color:#ff7b22; }
+.payment-option.selected .payment-check { background:#ff7b22; border-color:#ff7b22; color:white; }
+.success-icon { width:80px; height:80px; border-radius:50%; background:rgba(255,123,34,0.12); border:2px solid #ff7b22; display:flex; align-items:center; justify-content:center; font-size:36px; color:#ff7b22; margin:0 auto 20px; animation:successPop .6s cubic-bezier(.22,.61,.36,1) forwards; }
+@keyframes successPop { from{transform:scale(0) rotate(-30deg);opacity:0;} to{transform:scale(1) rotate(0);opacity:1;} }
+.success-text { text-align:center; }
+.success-text p { color:#a1a1aa; font-size:14px; line-height:1.7; }
+.order-summary { background:rgba(255,123,34,0.06); border:1px solid rgba(255,123,34,0.15); border-radius:14px; padding:16px 20px; margin:16px 0; text-align:left; }
+.order-summary p { color:white; font-size:13px; margin:4px 0; }
+.order-summary span { color:#ff7b22; }
+.modal-btn { width:100%; padding:16px; margin-top:8px; border:none; border-radius:14px; background:#ff7b22; color:white; font-family:'Bebas Neue',sans-serif; font-size:18px; letter-spacing:3px; transition:transform .3s cubic-bezier(.22,.61,.36,1),box-shadow .3s ease; position:relative; overflow:hidden; }
+.modal-btn::before { content:''; position:absolute; top:0; left:-80%; width:60%; height:100%; background:linear-gradient(120deg,transparent,rgba(255,255,255,0.18),transparent); transform:skewX(-20deg); transition:left .5s ease; pointer-events:none; }
+.modal-btn:hover::before { left:160%; }
+.modal-btn:hover { transform:translateY(-3px); box-shadow:0 14px 35px rgba(255,123,34,0.50); }
+.modal-btn:active { transform:scale(0.97); }
+.modal-btn.secondary { background:transparent; border:1px solid rgba(255,123,34,0.30); color:#ff7b22; }
+
+/* ── PRODUCT DETAIL POPUP (shared with shop.html) ── */
+.product-detail-img-wrap { position: relative; }
+.detail-nav-arrow { position: absolute; top: 50%; transform: translateY(-50%); background: rgba(0,0,0,0.5); color: white; border: none; width: 36px; height: 36px; border-radius: 50%; font-size: 20px; cursor: pointer; z-index: 2; display: none; }
+.detail-nav-arrow:hover { background: #ff7b22; }
+.detail-nav-prev { left: 10px; }
+.detail-nav-next { right: 10px; }
+.product-detail-dots { display: none; justify-content: center; gap: 6px; margin-top: 10px; }
+.detail-dot { width: 7px; height: 7px; border-radius: 50%; background: rgba(255,255,255,0.25); transition: background .2s ease; }
+.detail-dot.active-dot { background: #ff7b22; }
+.product-detail-modal { display: none; position: fixed; inset: 0; background: rgba(0,0,0,0.75); z-index: 200000; align-items: center; justify-content: center; padding: 20px; }
+.product-detail-modal.active { display: flex; }
+.product-detail-box { background: #18181b; border-radius: 20px; max-width: 900px; width: 100%; max-height: 90vh; overflow-y: auto; padding: 30px; position: relative; display: grid; grid-template-columns: 1fr 1fr; gap: 30px; }
+.product-detail-media { display: contents; }
+.product-detail-close { position: absolute; top: 16px; right: 16px; background: rgba(255,255,255,0.08); border: none; color: white; width: 36px; height: 36px; border-radius: 50%; cursor: pointer; font-size: 16px; z-index: 2; }
+.product-detail-close:hover { background: #ff7b22; }
+.product-detail-main-img { width: 100%; border-radius: 14px; object-fit: cover; aspect-ratio: 1/1; }
+.product-detail-thumbs { display: flex; gap: 8px; margin-top: 10px; }
+.product-detail-thumbs img { width: 60px; height: 60px; object-fit: cover; border-radius: 8px; cursor: pointer; opacity: 0.6; border: 2px solid transparent; transition: opacity .2s ease, border-color .2s ease; }
+.product-detail-thumbs img:hover, .product-detail-thumbs img.active-thumb { opacity: 1; border-color: #ff7b22; }
+.product-detail-info h3 { font-size: 22px; color: white; margin-bottom: 10px; }
+.product-detail-price { color: #ff7b22; font-size: 24px; font-weight: 700; margin-bottom: 16px; }
+.product-detail-desc { color: #a1a1aa; line-height: 1.7; margin-bottom: 24px; }
+.product-detail-actions { display: flex; gap: 12px; }
+body.light-mode .product-detail-box { background: #ffffff; }
+body.light-mode .product-detail-info h3 { color: #111; }
+@media (max-width: 700px) { .product-detail-box { grid-template-columns: 1fr; } }
+.product-review-section { grid-column: 1 / -1; border-top: 1px solid rgba(255,255,255,0.08); margin-top: 20px; padding-top: 20px; }
+.review-toggle-btn { background: rgba(255,123,34,0.10); border: 1px solid rgba(255,123,34,0.25); color: #ff7b22; padding: 10px 18px; border-radius: 20px; cursor: pointer; font-weight: 600; font-size: 13px; }
+.review-toggle-btn:hover { background: rgba(255,123,34,0.18); }
+.review-form { margin-top: 16px; display: flex; flex-direction: column; gap: 10px; max-width: 400px; }
+.review-stars { font-size: 26px; color: #444; cursor: pointer; }
+.review-stars .star { transition: color .15s ease; }
+.review-stars .star.star-filled { color: #ff7b22; }
+.review-form input, .review-form textarea { padding: 11px 14px; border-radius: 10px; border: 1px solid rgba(255,255,255,0.10); background: rgba(255,255,255,0.05); color: white; font-family: inherit; font-size: 13px; }
+.review-form textarea { min-height: 70px; resize: vertical; }
+.review-submit-btn { background: #ff7b22; color: white; border: none; padding: 11px; border-radius: 20px; font-weight: 600; cursor: pointer; }
+.review-submit-btn:hover { background: #ff944d; }
+.review-submit-btn:disabled { opacity: 0.6; cursor: not-allowed; }
+.review-status-msg { font-size: 13px; min-height: 18px; }
+body.light-mode .review-form input, body.light-mode .review-form textarea { background: #f7f7f7; color: #111; border-color: rgba(0,0,0,0.1); }
+
+
+/* ── SHOP-CARD BASE (needed on index.html too, for Best Sellers) ── */
+.shop-card { background:#18181b; border-radius:20px; overflow:hidden; border:1px solid rgba(255,255,255,0.06); transition:transform .5s cubic-bezier(.22,.61,.36,1),box-shadow .5s ease,border .4s ease; }
+.shop-card:hover { transform:translateY(-14px) rotateX(5deg) rotateY(-3deg) scale(1.02); box-shadow:0 40px 80px rgba(0,0,0,0.55),0 0 40px rgba(255,123,34,0.10); border-color:rgba(255,123,34,0.30); }
+.shop-card-img { width:100%; height:220px; object-fit:cover; transition:transform .6s cubic-bezier(.22,.61,.36,1),filter .4s ease; }
+.shop-card:hover .shop-card-img { transform:scale(1.08); filter:brightness(1.08) saturate(1.1); }
+.shop-card-body { padding:20px; }
+.shop-card-body h3 { font-family:'Bebas Neue',sans-serif; font-size:20px; letter-spacing:2px; color:white; margin-bottom:6px; }
+.shop-card-body .price { color:#ff7b22; font-size:20px; font-weight:700; margin-bottom:8px; }
+.shop-card-body .desc { color:#a1a1aa; font-size:13px; line-height:1.6; margin-bottom:18px; }
+.shop-card-actions { display:flex; gap:10px; }
+.btn-cart { flex:1; padding:12px; border:none; border-radius:12px; background:rgba(255,123,34,0.12); color:#ff7b22; border:1px solid rgba(255,123,34,0.30); font-family:'Bebas Neue',sans-serif; font-size:13px; letter-spacing:2px; transition:transform .3s cubic-bezier(.22,.61,.36,1),background .3s ease,box-shadow .3s ease; }
+.btn-cart:hover { background:rgba(255,123,34,0.22); transform:translateY(-3px); box-shadow:0 8px 20px rgba(255,123,34,0.25); }
+.btn-order { flex:1; padding:12px; border:none; border-radius:12px; background:#ff7b22; color:white; font-family:'Bebas Neue',sans-serif; font-size:13px; letter-spacing:2px; transition:transform .3s cubic-bezier(.22,.61,.36,1),box-shadow .3s ease; position:relative; overflow:hidden; }
+.btn-order::before { content:''; position:absolute; top:0; left:-80%; width:60%; height:100%; background:linear-gradient(120deg,transparent,rgba(255,255,255,0.18),transparent); transform:skewX(-20deg); transition:left .5s ease; pointer-events:none; }
+.btn-order:hover::before { left:160%; }
+.btn-order:hover { transform:translateY(-3px); box-shadow:0 12px 30px rgba(255,123,34,0.45); }
+/* ── BEST SELLERS CAROUSEL ── */
+.bestsellers-bar { position: relative; width: 100%; overflow-x: auto; overflow-y: hidden; -webkit-overflow-scrolling: touch; scrollbar-width: none; -ms-overflow-style: none; cursor: grab; direction: ltr; }
+.bestsellers-bar::-webkit-scrollbar { display: none; }
+.bestsellers-bar.dragging { cursor: grabbing; user-select: none; }
+.bestsellers-track { display: flex; gap: 30px; width: max-content; padding: 4px 4px 20px; }
+.bestsellers-track .shop-card { width: 320px; flex-shrink: 0; cursor: pointer; }
+#bestsellersCanvas + h2 {
+  font-family: 'Bebas Neue', sans-serif;
+  letter-spacing: 5px;
+}

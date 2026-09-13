@@ -74,7 +74,7 @@ privacy_accept_anyway: 'Accept Anyway',
     modal_cod: 'Cash On Delivery', modal_cod_desc: 'Pay when your order arrives at your door — no card needed',
     modal_confirm: 'Confirm Order →', modal_success_title: 'Order Placed!',
     modal_success_msg: 'Thank you! Your order has been received. Our team will contact you shortly.',
-    modal_questions: 'Questions? WhatsApp us:', modal_close: 'Close',
+    modal_questions: 'Questions? WhatsApp us:', modal_close: 'Close',delivery_fee_label: 'Delivery Fee',
     /* ── ABOUT PAGE ── */
     ab_badge: 'ELECTRO BADR · CASABLANCA',
     ab_hero_title: '40 Years of Trusted Electronics in Morocco',
@@ -265,7 +265,7 @@ review_not_verified: 'We couldn\'t verify a purchase of this product with that p
     cat_speakers: 'Enceintes & Radios', cat_watches: 'Montres Connectées',
     cat_beauty: 'Beauté & Soin', cat_wallwatch: 'Horloges & Alarmes',
     cat_phones: 'Accessoires Téléphone', cat_android: 'Boîtiers Android',
-    shop_title: 'Notre Boutique', shop_subtitle: 'Parcourez nos électroniques par catégorie',
+    shop_title: 'Notre Boutique', shop_subtitle: 'Parcourez nos électroniques par catégorie',delivery_fee_label: 'Frais de Livraison',
     shop_now: 'Voir →',
     shop_add_cart: '🛒 Ajouter au Panier', shop_order_now: 'Commander',
     bs_headphones: 'TVT Solar 4G Cam AOV System', bs_headphones_desc: 'Vue panoramique à 360°, alimentation solaire, vision nocturne, système à 4 caméras.',
@@ -522,7 +522,7 @@ tl_2022: 'إطلاق Badr Luxury — خط منتجاتنا المخصص للسا
 tl_2026: 'إطلاق الطلب الإلكتروني الكامل مع الدفع عند الاستلام في جميع أنحاء المغرب.',
 tl_tag_founded: 'التأسيس', tl_tag_expansion: 'التوسع', tl_tag_milestone: 'إنجاز',
 tl_tag_innovation: 'ابتكار', tl_tag_today: 'اليوم',
-ab_more: '+ المزيد',
+ab_more: '+ المزيد',delivery_fee_label: 'رسوم التوصيل',
 privacy_text: 'من أجل معالجة وتوصيل طلبك، نقوم بجمع اسمك ورقم هاتفك وعنوان التوصيل ومدينتك. تُشارك هذه المعلومات حصرياً مع شركاء التوصيل لدينا بغرض إتمام عملية التوصيل، ولا تُباع أو تُفصح عنها لأطراف ثالثة لأي غرض آخر. لا نقوم بجمع أو تخزين أي معلومات متعلقة بالدفع، حيث تُسوّى جميع الطلبات نقداً عند الاستلام.',
 privacy_warning_text: 'تُعد الموافقة على شروط الخصوصية الخاصة بنا ضرورية لإتمام أي طلب، حيث تعتمد عملية التوصيل على المعلومات المذكورة أعلاه. يمكنك متابعة تصفح موقعنا دون الموافقة، إلا أن ميزة الطلب لن تكون متاحة لك.',
 privacy_gate_text: 'لإتمام طلبك، يرجى الموافقة على شروط الخصوصية الخاصة بنا. نقوم بجمع اسمك ورقم هاتفك وعنوان التوصيل ومدينتك فقط لمعالجة وتوصيل طلبك — ولا تُباع هذه المعلومات أبداً.',
@@ -754,7 +754,76 @@ function applyTranslation(lang) {
   const cartTotal = document.querySelector('.cart-total-row span:first-child');
   if (cartTotal) cartTotal.innerText = t.cart_total;
   updateCartCheckoutLabel();
+(function () {
+  const bar = document.getElementById('bestsellersBar');
+  const track = document.getElementById('bestsellersTrack');
+  if (!bar || !track) return;
 
+  const SPEED = 0.6;
+  const RESUME_DELAY = 1500;
+  let isDown = false, startX = 0, startScroll = 0, resumeTimer = null, paused = false, halfWidth = 0;
+
+  function measure() { halfWidth = track.scrollWidth / 2; }
+
+  function cloneOnce() {
+    if (track.dataset.cloned) return;
+    const originals = Array.from(track.children);
+    originals.forEach(card => track.appendChild(card.cloneNode(true)));
+    track.dataset.cloned = 'true';
+    measure();
+  }
+  cloneOnce();
+  window.addEventListener('load', measure);
+  window.addEventListener('resize', measure);
+
+  function wrap() {
+    if (halfWidth <= 0) return;
+    if (bar.scrollLeft >= halfWidth) bar.scrollLeft -= halfWidth;
+    else if (bar.scrollLeft <= 0) bar.scrollLeft += halfWidth;
+  }
+
+  function pause() {
+    paused = true;
+    clearTimeout(resumeTimer);
+    resumeTimer = setTimeout(() => { paused = false; }, RESUME_DELAY);
+  }
+
+  function tick() {
+    if (!paused && !isDown) { bar.scrollLeft += SPEED; wrap(); }
+    requestAnimationFrame(tick);
+  }
+  requestAnimationFrame(tick);
+
+  bar.addEventListener('mousedown', e => {
+    isDown = true; bar.classList.add('dragging');
+    startX = e.pageX; startScroll = bar.scrollLeft;
+    pause(); e.preventDefault();
+  });
+  window.addEventListener('mousemove', e => {
+    if (!isDown) return;
+    bar.scrollLeft = startScroll - (e.pageX - startX);
+    wrap();
+  });
+  window.addEventListener('mouseup', () => {
+    if (!isDown) return;
+    isDown = false; bar.classList.remove('dragging'); pause();
+  });
+
+  bar.addEventListener('touchstart', pause, { passive: true });
+  bar.addEventListener('touchmove', () => { wrap(); pause(); }, { passive: true });
+  bar.addEventListener('touchend', pause);
+
+  bar.addEventListener('click', pause);
+
+  bar.addEventListener('wheel', e => {
+    if (e.deltaY === 0) return;
+    e.preventDefault();
+    bar.scrollLeft += e.deltaY;
+    wrap(); pause();
+  }, { passive: false });
+
+  bar.addEventListener('scroll', wrap);
+})();
   /* ── ABOUT PAGE ── */
   const setT = (sel, val) => { const el = document.querySelector(sel); if (el && val) el.innerText = val; };
   const setP = (sel, val) => { const el = document.querySelector(sel); if (el && val) el.placeholder = val; };
@@ -891,7 +960,8 @@ function applyTranslation(lang) {
   document.querySelectorAll('.btn-cart').forEach(btn => { btn.innerText = t.shop_add_cart; });
   document.querySelectorAll('.btn-order').forEach(btn => { btn.innerText = t.shop_order_now; });
 
-  sessionStorage.setItem('language', lang);
+    sessionStorage.setItem('language', lang);
+  updateDeliveryFee();
 
   const privacyPopupEl = document.getElementById('privacyPopup');
   if (privacyPopupEl && privacyPopupEl.classList.contains('active') && currentPrivacyMode) {
@@ -1327,13 +1397,37 @@ function getSelectedCity() {
   }
   return citySelect.value.trim();
 }
+const DELIVERY_FEES = {
+  'Casablanca': 20,
+  'Rabat': 30, 'Mohammédia': 30, 'El Jadida': 30, 'Berrechid': 30,
+  'Kénitra': 30, 'Settat': 30, 'Bouskoura': 30,
+};
+const DEFAULT_DELIVERY_FEE = 45;
 
+function getDeliveryFee(city) {
+  if (!city) return 0;
+  return DELIVERY_FEES[city] !== undefined ? DELIVERY_FEES[city] : DEFAULT_DELIVERY_FEE;
+}
+
+function updateDeliveryFee() {
+  const citySelect = document.getElementById('cust-city');
+  const feeNote = document.getElementById('deliveryFeeNote');
+  if (!citySelect || !feeNote) return;
+  const city = citySelect.value;
+  if (!city) { feeNote.style.display = 'none'; return; }
+  const fee = getDeliveryFee(city);
+  const lang = sessionStorage.getItem('language') || 'en';
+  const label = translations[lang]?.delivery_fee_label || 'Delivery Fee';
+  feeNote.textContent = `🚚 ${label}: ${fee} DH`;
+  feeNote.style.display = 'block';
+}
 function goToStep3() {
   const name    = document.getElementById('cust-name')?.value.trim();
   const city    = getSelectedCity();
   const phone   = document.getElementById('cust-phone')?.value.trim();
   const address = document.getElementById('cust-address')?.value.trim();
   if (!name || !city || !phone || !address) { alert('Please fill in all required fields.'); return; }
+  currentOrder.deliveryFee = getDeliveryFee(city);
   showModal('modal3');
 }
 
@@ -1354,11 +1448,13 @@ async function confirmOrder() {
   const email   = document.getElementById('cust-email')?.value.trim() || '';
   const address = document.getElementById('cust-address')?.value.trim();
   if (!name || !city || !phone || !address) { alert('Please fill in all required fields.'); return; }
+  const deliveryFee = currentOrder.deliveryFee !== undefined ? currentOrder.deliveryFee : getDeliveryFee(city);
+  const grandTotal  = currentOrder.total + deliveryFee;
   const confirmBtn = document.querySelector('#modal3 .modal-btn');
   if (confirmBtn) { confirmBtn.textContent = 'Sending...'; confirmBtn.disabled = true; }
   const body = new URLSearchParams({
     product: currentOrder.name, quantity: String(currentOrder.qty),
-    total: String(currentOrder.total), name, phone, email, city, address, payment: 'Cash On Delivery',
+    total: String(grandTotal), name, phone, email, city, address, payment: 'Cash On Delivery',
     website: honeypot ? honeypot.value.trim() : ''
   }).toString();
   try {
@@ -1373,12 +1469,14 @@ async function confirmOrder() {
     finalSummary.innerHTML = `
       <p>📦 <span>Product:</span> ${currentOrder.name}</p>
       <p>🔢 <span>Quantity:</span> ${currentOrder.qty}</p>
-      <p>💰 <span>Total:</span> ${currentOrder.total} DH</p>
+      <p>💰 <span>Subtotal:</span> ${currentOrder.total} DH</p>
+      <p>🚚 <span>Delivery Fee:</span> ${deliveryFee} DH</p>
+      <p style="font-weight:700;">💵 <span>Total to Pay:</span> ${grandTotal} DH</p>
       <p>👤 <span>Name:</span> ${escapeHTML(name)}</p>
       <p>📞 <span>Phone:</span> ${escapeHTML(phone)}</p>
       <p>📍 <span>City:</span> ${escapeHTML(city)}</p>
       <p>🏠 <span>Address:</span> ${escapeHTML(address)}</p>
-      <p>💵 <span>Payment:</span> Cash On Delivery</p>`;
+      <p>✅ <span>Payment:</span> Cash On Delivery</p>`;
   }
   showModal('modal4');
   if (confirmBtn) { confirmBtn.textContent = 'Confirm Order →'; confirmBtn.disabled = false; }
@@ -1470,11 +1568,12 @@ document.addEventListener('DOMContentLoaded', () => {
   if (cartIcon) cartIcon.addEventListener('click', openCart);
   updateCartCount();
 
-  const cityDropdown = document.getElementById('cust-city');
+   const cityDropdown = document.getElementById('cust-city');
   if (cityDropdown) {
     cityDropdown.addEventListener('change', function () {
       const wrap = document.getElementById('cust-city-other-wrap');
       if (wrap) wrap.style.display = (this.value === 'Other') ? 'flex' : 'none';
+      updateDeliveryFee();
     });
   }
 
