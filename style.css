@@ -1862,6 +1862,13 @@ body.light-mode .footer-bottom { color: #888; }
   .btn-cart, .btn-order { padding: 9px; font-size: 11px; }
 }
 
+.product-detail-img-wrap { grid-column: 1; grid-row: 1; }
+.product-detail-dots { grid-column: 1; grid-row: 2; }
+.product-detail-thumbs { grid-column: 1; grid-row: 3; }
+.product-detail-info { grid-column: 2; grid-row: 1 / span 3; }
+
+
+
 
 body.light-mode .modal-field input,
 body.light-mode .modal-field textarea { background:#f7f7f7; color:#111; border:1px solid rgba(0,0,0,0.10); }
