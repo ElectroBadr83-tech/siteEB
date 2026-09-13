@@ -813,23 +813,37 @@ function applyTranslation(lang) {
     });
   }
 
+    let touchStartY = 0, gestureDecided = false, isHorizontalGesture = false;
+
   bar.addEventListener('touchstart', e => {
     touchStartX = e.touches[0].clientX;
+    touchStartY = e.touches[0].clientY;
     touchMoved = false;
-    pause();
+    gestureDecided = false;
+    isHorizontalGesture = false;
   }, { passive: true });
 
   bar.addEventListener('touchmove', e => {
-    if (Math.abs(e.touches[0].clientX - touchStartX) > 8) touchMoved = true;
-    wrap();
-    pause();
+    const dx = e.touches[0].clientX - touchStartX;
+    const dy = e.touches[0].clientY - touchStartY;
+    if (!gestureDecided && (Math.abs(dx) > 8 || Math.abs(dy) > 8)) {
+      gestureDecided = true;
+      isHorizontalGesture = Math.abs(dx) > Math.abs(dy);
+      if (isHorizontalGesture) pause();
+    }
+    if (isHorizontalGesture) {
+      touchMoved = true;
+      wrap();
+    }
   }, { passive: true });
 
   bar.addEventListener('touchend', () => {
-    pause();
-    if (touchMoved) {
-      window.bestsellersJustDragged = true;
-      setTimeout(() => { window.bestsellersJustDragged = false; }, 300);
+    if (isHorizontalGesture) {
+      pause();
+      if (touchMoved) {
+        window.bestsellersJustDragged = true;
+        setTimeout(() => { window.bestsellersJustDragged = false; }, 300);
+      }
     }
   });
 
@@ -1083,7 +1097,7 @@ document.addEventListener('DOMContentLoaded', () => {
       openProductDetail(card);
     }, true);
   });
-  
+
   document.getElementById('detailClose')?.addEventListener('click', () => {
     document.getElementById('productDetailModal').classList.remove('active');
     document.body.style.overflow = '';
