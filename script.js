@@ -754,110 +754,6 @@ function applyTranslation(lang) {
   const cartTotal = document.querySelector('.cart-total-row span:first-child');
   if (cartTotal) cartTotal.innerText = t.cart_total;
   updateCartCheckoutLabel();
-(function () {
-  const bar = document.getElementById('bestsellersBar');
-  const track = document.getElementById('bestsellersTrack');
-  if (!bar || !track) return;
-
-  const SPEED = 0.6;
-  const RESUME_DELAY = 1500;
-  const isTouchDevice = window.matchMedia('(pointer: coarse)').matches;
-  let isDown = false, startX = 0, startScroll = 0, resumeTimer = null, paused = false, halfWidth = 0;
-  let touchStartX = 0, touchMoved = false;
-
-  function measure() { halfWidth = track.scrollWidth / 2; }
-
-  function cloneOnce() {
-    if (track.dataset.cloned) return;
-    const originals = Array.from(track.children);
-    originals.forEach(card => track.appendChild(card.cloneNode(true)));
-    track.dataset.cloned = 'true';
-    measure();
-  }
-  cloneOnce();
-  window.addEventListener('load', measure);
-  window.addEventListener('resize', measure);
-
-  function wrap() {
-    if (halfWidth <= 0) return;
-    if (bar.scrollLeft >= halfWidth) bar.scrollLeft -= halfWidth;
-    else if (bar.scrollLeft <= 0) bar.scrollLeft += halfWidth;
-  }
-
-  function pause() {
-    paused = true;
-    clearTimeout(resumeTimer);
-    resumeTimer = setTimeout(() => { paused = false; }, RESUME_DELAY);
-  }
-
-  function tick() {
-    if (!paused && !isDown) { bar.scrollLeft += SPEED; wrap(); }
-    requestAnimationFrame(tick);
-  }
-  requestAnimationFrame(tick);
-
-  if (!isTouchDevice) {
-    bar.addEventListener('mousedown', e => {
-      isDown = true; bar.classList.add('dragging');
-      startX = e.pageX; startScroll = bar.scrollLeft;
-      pause(); e.preventDefault();
-    });
-    window.addEventListener('mousemove', e => {
-      if (!isDown) return;
-      bar.scrollLeft = startScroll - (e.pageX - startX);
-      wrap();
-    });
-    window.addEventListener('mouseup', () => {
-      if (!isDown) return;
-      isDown = false; bar.classList.remove('dragging'); pause();
-    });
-  }
-
-    let touchStartY = 0, gestureDecided = false, isHorizontalGesture = false;
-
-  bar.addEventListener('touchstart', e => {
-    touchStartX = e.touches[0].clientX;
-    touchStartY = e.touches[0].clientY;
-    touchMoved = false;
-    gestureDecided = false;
-    isHorizontalGesture = false;
-  }, { passive: true });
-
-  bar.addEventListener('touchmove', e => {
-    const dx = e.touches[0].clientX - touchStartX;
-    const dy = e.touches[0].clientY - touchStartY;
-    if (!gestureDecided && (Math.abs(dx) > 8 || Math.abs(dy) > 8)) {
-      gestureDecided = true;
-      isHorizontalGesture = Math.abs(dx) > Math.abs(dy);
-      if (isHorizontalGesture) pause();
-    }
-    if (isHorizontalGesture) {
-      touchMoved = true;
-      wrap();
-    }
-  }, { passive: true });
-
-  bar.addEventListener('touchend', () => {
-    if (isHorizontalGesture) {
-      pause();
-      if (touchMoved) {
-        window.bestsellersJustDragged = true;
-        setTimeout(() => { window.bestsellersJustDragged = false; }, 300);
-      }
-    }
-  });
-
-  bar.addEventListener('click', pause);
-
-  bar.addEventListener('wheel', e => {
-    if (e.deltaY === 0) return;
-    e.preventDefault();
-    bar.scrollLeft += e.deltaY;
-    wrap(); pause();
-  }, { passive: false });
-
-  bar.addEventListener('scroll', wrap);
-})();
 
   /* ── ABOUT PAGE ── */
   const setT = (sel, val) => { const el = document.querySelector(sel); if (el && val) el.innerText = val; };
@@ -1003,6 +899,130 @@ function applyTranslation(lang) {
     renderPrivacyPopup(currentPrivacyMode);
   }
 }
+
+(function () {
+  const bar = document.getElementById('bestsellersBar');
+  const track = document.getElementById('bestsellersTrack');
+  if (!bar || !track) return;
+
+  const SPEED = 0.6;
+  const RESUME_DELAY = 1200;
+  let isDown = false, startX = 0, startScroll = 0, dragMoved = false;
+  let paused = false, resumeTimer = null, halfWidth = 0, programmaticScroll = false;
+  let touchStartScroll = 0;
+
+  function measure() { halfWidth = track.scrollWidth / 2; }
+
+  function cloneOnce() {
+    if (track.dataset.cloned) return;
+    const originals = Array.from(track.children);
+    originals.forEach(card => track.appendChild(card.cloneNode(true)));
+    track.dataset.cloned = 'true';
+    measure();
+  }
+  cloneOnce();
+  window.addEventListener('load', measure);
+  window.addEventListener('resize', measure);
+
+  function wrap() {
+    if (halfWidth <= 0) return;
+    if (bar.scrollLeft >= halfWidth) bar.scrollLeft -= halfWidth;
+    else if (bar.scrollLeft <= 0) bar.scrollLeft += halfWidth;
+  }
+
+  function pause() {
+    paused = true;
+    clearTimeout(resumeTimer);
+    resumeTimer = setTimeout(() => { paused = false; }, RESUME_DELAY);
+  }
+
+  bar.addEventListener('scroll', () => {
+    if (programmaticScroll) return;
+    pause();
+  }, { passive: true });
+
+  function tick() {
+    if (!paused && !isDown) {
+      programmaticScroll = true;
+      bar.scrollLeft += SPEED;
+      wrap();
+      programmaticScroll = false;
+    }
+    requestAnimationFrame(tick);
+  }
+  if (!window.matchMedia('(max-width: 480px)').matches) requestAnimationFrame(tick);
+
+  bar.addEventListener('mousedown', e => {
+    isDown = true; dragMoved = false; bar.classList.add('dragging');
+    startX = e.pageX; startScroll = bar.scrollLeft;
+    pause(); e.preventDefault();
+  });
+  window.addEventListener('mousemove', e => {
+    if (!isDown) return;
+    if (Math.abs(e.pageX - startX) > 8) dragMoved = true;
+    bar.scrollLeft = startScroll - (e.pageX - startX);
+    wrap();
+  });
+  window.addEventListener('mouseup', () => {
+    if (!isDown) return;
+    isDown = false; bar.classList.remove('dragging'); pause();
+    if (dragMoved) {
+      window.bestsellersJustDragged = true;
+      setTimeout(() => { window.bestsellersJustDragged = false; }, 300);
+    }
+  });
+
+  bar.addEventListener('touchstart', () => {
+    touchStartScroll = bar.scrollLeft;
+  }, { passive: true });
+
+  bar.addEventListener('touchend', () => {
+    if (Math.abs(bar.scrollLeft - touchStartScroll) > 5) {
+      window.bestsellersJustDragged = true;
+      setTimeout(() => { window.bestsellersJustDragged = false; }, 300);
+    }
+  }, { passive: true });
+})();
+
+(function () {
+  const bar = document.getElementById('bestsellersBar');
+  const track = document.getElementById('bestsellersTrack');
+  const leftBtn = document.getElementById('bsArrowLeft');
+  const rightBtn = document.getElementById('bsArrowRight');
+  if (!bar || !track || !leftBtn || !rightBtn) return;
+  if (!window.matchMedia('(max-width: 480px)').matches) return;
+
+  const STEP = 270;
+  const AUTO_START_DELAY = 10000;
+  const AUTO_INTERVAL = 3000;
+  let autoTimer = null, startTimer = null;
+
+  function scrollStep(dir) {
+    const halfWidth = track.scrollWidth / 2;
+    let target = bar.scrollLeft + dir * STEP;
+    if (target >= halfWidth) target = 0;
+    else if (target < 0) target = halfWidth - STEP;
+    bar.scrollTo({ left: target, behavior: 'smooth' });
+  }
+
+  function stopAuto() { clearInterval(autoTimer); autoTimer = null; }
+
+  function startAuto() {
+    stopAuto();
+    autoTimer = setInterval(() => scrollStep(1), AUTO_INTERVAL);
+  }
+
+  function onManualInteraction() {
+    clearTimeout(startTimer);
+    stopAuto();
+    startTimer = setTimeout(startAuto, AUTO_START_DELAY);
+  }
+
+  leftBtn.addEventListener('click', () => { scrollStep(-1); onManualInteraction(); });
+  rightBtn.addEventListener('click', () => { scrollStep(1); onManualInteraction(); });
+
+  startTimer = setTimeout(startAuto, AUTO_START_DELAY);
+})();
 
 let currentDetailImages = [];
 let currentDetailIndex = 0;

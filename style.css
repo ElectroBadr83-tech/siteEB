@@ -1977,6 +1977,33 @@ body.light-mode .lang-select-title { color: #111; }
 body.light-mode .lang-select-name { color: #111; }
 body.light-mode .lang-select-option { background: rgba(255,123,34,0.05); }
 
+
+.bestsellers-wrap { position: relative; }
+.bs-arrow {
+  display: none;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+  width: 34px; height: 34px;
+  border-radius: 50%;
+  border: none;
+  background: rgba(255,123,34,0.90);
+  color: white;
+  font-size: 18px;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 14px rgba(0,0,0,0.35);
+  transition: transform .2s ease;
+}
+.bs-arrow:active { transform: translateY(-50%) scale(0.88); }
+.bs-arrow-left { left: 2px; }
+.bs-arrow-right { right: 2px; }
+
+@media (max-width: 480px) {
+  .bs-arrow { display: flex; }
+}
+
 /* ── ORDER MODAL SYSTEM (shared with shop.html) ── */
 .modal-overlay { display:none; position:fixed; inset:0; background:rgba(0,0,0,0.85); backdrop-filter:blur(10px); z-index:4000; align-items:flex-start; justify-content:center; padding:80px 20px 20px; overflow-y:auto; }
 .modal-overlay.active { display:flex; }
@@ -2090,12 +2117,13 @@ body.light-mode .review-form input, body.light-mode .review-form textarea { back
 .btn-order:hover::before { left:160%; }
 .btn-order:hover { transform:translateY(-3px); box-shadow:0 12px 30px rgba(255,123,34,0.45); }
 /* ── BEST SELLERS CAROUSEL ── */
-.bestsellers-bar { position: relative; width: 100%; overflow-x: auto; overflow-y: hidden; scrollbar-width: none; -ms-overflow-style: none; cursor: grab; direction: ltr; }
+.bestsellers-bar { position: relative; width: 100%; overflow-x: auto; overflow-y: hidden; -webkit-overflow-scrolling: touch; scrollbar-width: none; -ms-overflow-style: none; cursor: grab; direction: ltr; }
 .bestsellers-bar::-webkit-scrollbar { display: none; }
 .bestsellers-bar.dragging { cursor: grabbing; user-select: none; }
-.bestsellers-track { display: flex; gap: 30px; width: max-content; padding: 4px 4px 20px; }
-.bestsellers-track .shop-card { width: 320px; flex-shrink: 0; cursor: pointer; }
-#bestsellersCanvas + h2 {
-  font-family: 'Bebas Neue', sans-serif;
-  letter-spacing: 5px;
+.bestsellers-track { display: flex; gap: 30px; width: max-content; padding: 4px 4px 20px; animation: bestsellersScroll 90s linear infinite; will-change: transform; }
+.bestsellers-track.paused { animation-play-state: paused; }
+@keyframes bestsellersScroll {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
 }
+.bestsellers-track .shop-card { width: 320px; flex-shrink: 0; cursor: pointer; }
