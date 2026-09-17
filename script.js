@@ -1103,6 +1103,25 @@ function showPrevDetailImage() {
   currentDetailIndex = (currentDetailIndex - 1 + currentDetailImages.length) % currentDetailImages.length;
   renderDetailImage();
 }
+
+/* ── NEW: navigate to a real product page instead of opening the popup ── */
+function goToProductPage(card) {
+  const img = card.querySelector('.shop-card-img');
+  const name = card.querySelector('h3').textContent;
+  const priceText = card.querySelector('.price').textContent;
+  const price = parseFloat(priceText.replace(/[^\d.]/g, '')) || 0;
+  const desc = card.querySelector('.desc').textContent;
+  const extraImages = card.dataset.extraImages || '';
+  const params = new URLSearchParams({
+    name: name,
+    price: price,
+    desc: desc,
+    img: img.src,
+    extra: extraImages
+  });
+  window.location.href = 'product.html?' + params.toString();
+}
+
 let allowDirectClick = false;
 let selectedRating = 0;
 
@@ -1114,7 +1133,7 @@ document.addEventListener('DOMContentLoaded', () => {
       if (window.bestsellersJustDragged) return;
       e.stopPropagation();
       e.preventDefault();
-      openProductDetail(card);
+      goToProductPage(card);
     }, true);
   });
 
