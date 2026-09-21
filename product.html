@@ -15,6 +15,7 @@
     .product-back-link:hover { color:#ff7b22; }
     .product-page-box.product-detail-box { position:static; max-width:none; max-height:none; overflow:visible; margin:0; box-shadow:0 20px 60px rgba(0,0,0,0.4); }
     .product-page-title { font-family:'Bebas Neue',sans-serif; letter-spacing:2px; font-size:28px; }
+        .product-detail-img-wrap .discount-badge { top: 16px; left: 16px; font-size: 15px; padding: 6px 14px; }
     body.light-mode .product-page-box.product-detail-box { background:#ffffff; }
     @media (max-width: 700px) {
       .product-page-wrap { padding: 110px 6% 80px; }
@@ -41,7 +42,7 @@
   <div class="hb-menu-footer">
     <p data-i18n="follow_us">FOLLOW US</p>
     <div class="hb-footer-socials">
-      <a href="https://wa.me/212664700752" target="_blank" class="hb-soc"><i class="fab fa-whatsapp"></i></a>
+      <a href="https://wa.me/212661607463" target="_blank" class="hb-soc"><i class="fab fa-whatsapp"></i></a>
       <a href="https://www.instagram.com/electrobadr00" target="_blank" class="hb-soc"><i class="fab fa-instagram"></i></a>
       <a href="#" class="hb-soc"><i class="fab fa-facebook"></i></a>
       <a href="#" class="hb-soc"><i class="fab fa-tiktok"></i></a>
@@ -123,7 +124,7 @@
       <p class="footer-tagline" data-i18n="footer_tagline">Premium Electronics Since 1983</p>
       <p class="footer-desc" data-i18n="footer_desc">Morocco's trusted destination for quality gadgets. Cash on delivery, nationwide.</p>
       <div class="footer-socials">
-        <a href="https://wa.me/212664700752" target="_blank" class="fsocial"><i class="fab fa-whatsapp"></i></a>
+        <a href="https://wa.me/212661607463" target="_blank" class="fsocial"><i class="fab fa-whatsapp"></i></a>
         <a href="https://www.instagram.com/electrobadr00" target="_blank" class="hb-soc"><i class="fab fa-instagram"></i></a>
         <a href="#" class="fsocial"><i class="fab fa-facebook"></i></a>
         <a href="#" class="fsocial"><i class="fab fa-tiktok"></i></a>
@@ -311,14 +312,14 @@
       <p data-i18n="modal_success_msg">Thank you! Your order has been received.<br>Our team will contact you shortly.</p>
       <div class="order-summary" id="final-summary"></div>
       <p style="margin-top:12px;" data-i18n="modal_questions">Questions? WhatsApp us:</p>
-      <a href="https://wa.me/212664700752" target="_blank" style="color:#ff7b22;font-weight:600;">+212 664 700 752</a>
+      <a href="https://wa.me/212661607463" target="_blank" style="color:#ff7b22;font-weight:600;">+212 664 700 752</a>
     </div>
     <button class="modal-btn" style="margin-top:24px;" onclick="closeAll()" data-i18n="modal_close">Close</button>
   </div>
 </div>
 
 <!-- WHATSAPP -->
-<a href="https://wa.me/212664700752" class="whatsapp-btn" target="_blank"><i class="fab fa-whatsapp"></i></a>
+<a href="https://wa.me/212661607463" class="whatsapp-btn" target="_blank"><i class="fab fa-whatsapp"></i></a>
 
 <!-- BACK TO TOP -->
 <button class="back-to-top" id="backToTop"><i class="fas fa-chevron-up"></i></button>
@@ -360,17 +361,26 @@
 <!-- THIS PAGE'S OWN LOGIC: read the product from the URL and fill in the page -->
 <script>
 document.addEventListener('DOMContentLoaded', () => {
-  const params = new URLSearchParams(window.location.search);
+   const params = new URLSearchParams(window.location.search);
   const name  = params.get('name') || '';
   const price = parseFloat(params.get('price')) || 0;
   const desc  = params.get('desc') || '';
   const img   = params.get('img') || '';
   const extra = params.get('extra') ? params.get('extra').split(',').filter(Boolean) : [];
+  const badge = params.get('badge') || '';
+  const oldPrice = params.get('oldprice') || '';
 
   document.getElementById('detailName').textContent  = name;
-  document.getElementById('detailPrice').textContent = price + ' DH';
+  document.getElementById('detailPrice').innerHTML = price + ' DH' + (oldPrice ? ' <span class="old-price">' + oldPrice + ' DH</span>' : '');
   document.getElementById('detailDesc').textContent  = desc;
   document.title = (name ? name + ' | ' : '') + 'Electro Badr';
+
+  if (badge) {
+    const badgeEl = document.createElement('span');
+    badgeEl.className = 'discount-badge';
+    badgeEl.textContent = badge;
+    document.querySelector('.product-detail-img-wrap').appendChild(badgeEl);
+  }
 
   const images = [img, ...extra].filter(Boolean);
   let currentIndex = 0;

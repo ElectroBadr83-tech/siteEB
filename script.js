@@ -1108,16 +1108,23 @@ function showPrevDetailImage() {
 function goToProductPage(card) {
   const img = card.querySelector('.shop-card-img');
   const name = card.querySelector('h3').textContent;
-  const priceText = card.querySelector('.price').textContent;
+  const priceEl = card.querySelector('.price');
+  const priceText = priceEl.childNodes[0].textContent;
   const price = parseFloat(priceText.replace(/[^\d.]/g, '')) || 0;
   const desc = card.querySelector('.desc').textContent;
   const extraImages = card.dataset.extraImages || '';
+  const badgeEl = card.querySelector('.discount-badge');
+  const oldPriceEl = card.querySelector('.old-price');
+  const badge = badgeEl ? badgeEl.textContent : '';
+  const oldPrice = oldPriceEl ? oldPriceEl.textContent.replace(/[^\d.]/g, '') : '';
   const params = new URLSearchParams({
     name: name,
     price: price,
     desc: desc,
     img: img.src,
-    extra: extraImages
+    extra: extraImages,
+    badge: badge,
+    oldprice: oldPrice
   });
   window.location.href = 'product.html?' + params.toString();
 }
