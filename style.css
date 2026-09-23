@@ -1250,7 +1250,7 @@ body.light-mode .review-card { background: white; }
 /* ── CATEGORY LINKS ─────────────────── */
 .cat-link { text-decoration: none; color: white; display: block; }
 
-.cat-arrow {
+.product-card .cat-arrow {
   padding: 0 15px 15px;
   color: var(--orange);
   font-weight: 600;

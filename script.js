@@ -1761,10 +1761,15 @@ document.addEventListener('DOMContentLoaded', () => {
     document.querySelectorAll('.category-section').forEach(s => s.classList.remove('active'));
     const targetSection = document.getElementById('cat-' + catParam);
     const targetTab     = document.querySelector(`.cat-tab[onclick*="${catParam}"]`);
-    if (targetSection) targetSection.classList.add('active');
+       if (targetSection) targetSection.classList.add('active');
     if (targetTab)     targetTab.classList.add('active');
 
     const prodParam = urlParams.get('prod');
+    if (targetSection && !prodParam) {
+      setTimeout(() => {
+        targetSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }, 150);
+    }
     if (prodParam && targetSection) {
       setTimeout(() => {
         const btns = targetSection.querySelectorAll('.btn-cart');
