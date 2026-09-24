@@ -1854,6 +1854,11 @@ body.light-mode .footer-bottom { color: #888; }
     .hero-hover-buttons { gap: 10px; }
   .hero-hover-btn { padding: 10px 18px; font-size: 0.75rem; gap: 6px; }
 
+    .products-grid { grid-template-columns: 1fr 1fr; gap: 12px; }
+  .product-card img { height: 120px; }
+  .product-card h3 { padding: 10px; font-size: 14px; }
+  .product-card p { padding: 0 10px 10px; font-size: 11px; }
+
   .shop-card-img { height: 130px; }
   .shop-card-body { padding: 12px; }
   .shop-card-body h3 { font-size: 14px; letter-spacing: 1px; }
